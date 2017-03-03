@@ -1,11 +1,126 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Каталог товаров</title>
   </head>
   <body>
-    $END$
+    <header class="page-header">
+      <a href="index.html" title="Главная страница">
+        <img class="page-header__logo" src="http://placehold.it/100x50" alt='Логотип магазина "Мишка"'/>
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle-btn" type="button"></button>
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="catalog.html" title="Каталог товаров">Каталог товаров</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#" title="Вязание на заказ">Вязание на заказ</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#" title="Поиск по сайт">Поиск по сайту</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="basket  main-nav__link" href="basket.html" title="Перейти к корзине">
+              <span class="basket__title">Корзина</span>
+              <span class="basket__content">пока пуста</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <h1 class="page-header__title">Каталог товаров</h1>
+    </header>
+    <main class="page-content">
+      <section class="product-list">
+        <article class="product">
+          <a href="#" title="Зайчик попрыгайчик">
+            <img src="http://placehold.it/250x200" alt="Зайчик попрыгайчик" class="product__preview"/>
+          </a>
+          <a href="#" title="Зайчик попрыгайчик">
+            <h2 class="product__title">Зайчик попрыгайчик</h2>
+          </a>
+          <dl class="features product__features">
+            <dt class="features__term">Рост</dt>
+            <dd class="features__value">30 см</dd>
+            <dt class="features__term">вес</dt>
+            <dd class="features__value">200 г</dd>
+          </dl>
+          <p class="product__cost-wrapper  product__cost-wrapper--wide"><span class="product__cost">1200 руб.</span></p>
+        </article>
+        <article class="product">
+          <a href="#" title="Корзинка для белья">
+            <img src="http://placehold.it/250x200" alt="Корзинка для белья" class="product__preview"/>
+          </a>
+          <a href="#" title="Корзинка для белья">
+            <h2 class="product__title">Корзинка для белья</h2>
+          </a>
+          <dl class="features product__features">
+            <dt class="features__term">Диаметр</dt>
+            <dd class="features__value">15 см</dd>
+            <dt class="features__term">высота</dt>
+            <dd class="features__value">10 см</dd>
+          </dl>
+          <p class="product__cost-wrapper  product__cost-wrapper--wide"><span class="product__cost">690 руб.</span></p>
+        </article>
+        <article class="product">
+          <a href="#" title="Большая корзинка для игрушек">
+            <img src="http://placehold.it/250x200" alt="Большая корзинка для игрушек" class="product__preview"/>
+          </a>
+          <a href="#" title="Большая корзинка для игрушек">
+            <h2 class="product__title">Большая корзинка для игрушек</h2>
+          </a>
+          <dl class="features product__features">
+            <dt class="features__term">Диаметр</dt>
+            <dd class="features__value">30 см</dd>
+            <dt class="features__term">высота</dt>
+            <dd class="features__value">30 см</dd>
+          </dl>
+          <p class="product__cost-wrapper  product__cost-wrapper--wide"><span class="product__cost">1500 руб.</span></p>
+        </article>
+      </section>
+      <article class="video-review">
+        <h3 class="video-review__title">Процесс производства</h3>
+        <video class="video-review__video" src="#" preload="metadata" poster="http://placehold.it/250x200"></video>
+        <p class="video-review__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как
+          появляются наши товары.</p>
+        <a class="btn" href="#">Сделать заказ</a>
+      </article>
+    </main>
+    <footer class="page-footer">
+      <ul class="social-links  page-footer__social-links">
+        <li class="social-links__item">
+          <a class="social-links__link  social-links__link--inst" href="#"></a>
+        </li>
+        <li class="social-links__item">
+          <a class="social-links__link  social-links__link--fb" href="#"></a>
+        </li>
+        <li class="social-links__item">
+          <a class="social-links__link  social-links__link--tw" href="#"></a>
+        </li>
+      </ul>
+      <div class="copyright  page-footer__copyright">
+        <p class="copyright__text">Разработано</p>
+        <a class="copyright__link" href="#">
+          <img class="copyright__img" src="http://placehold.it/40x40" alt="HTML Academy"/>
+        </a>
+      </div>
+    </footer>
+    <div class="overlay" hidden>
+      <form class="size-form  modal" action="product-add" method="get">
+        <p class="size-form__title">Добавить в корзину</p>
+        <p class="size-form__text">Выберите размер:</p>
+        <label class="size-form__label">
+          <input class="size-form__field" type="radio" name="size" value="S"/>
+        </label>
+        <label class="size-form__label">
+          <input class="size-form__field" type="radio" name="size" value="M"/>
+        </label>
+        <label class="size-form__label">
+          <input class="size-form__field" type="radio" name="size" value="L"/>
+        </label>
+        <a class="btn  btn--green" href="#" title="Добавить">Добавить</a>
+      </form>
+    </div>
   </body>
 </html>
