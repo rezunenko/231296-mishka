@@ -9,6 +9,7 @@
       <a href="index.html" title="Главная страница">
         <img class="page-header__logo" src="http://placehold.it/100x50" alt='Логотип магазина "Мишка"'/>
       </a>
+      
       <nav class="main-nav">
         <button class="main-nav__toggle-btn" type="button"></button>
         <ul class="main-nav__list">
@@ -22,6 +23,7 @@
             <a class="main-nav__link" href="#" title="Поиск по сайт">Поиск по сайту</a>
           </li>
           <li class="main-nav__item">
+            
             <a class="basket  main-nav__link" href="#" title="Перейти к корзине">
               <span class="basket__title">Корзина</span>
               <span class="basket__content">пока пуста</span>
@@ -31,8 +33,11 @@
       </nav>
       <h1 class="page-header__title">Каталог товаров</h1>
     </header>
+    
     <main class="page-content">
+      
       <section class="product-list">
+        
         <article class="product">
           <a href="#" title="Зайчик попрыгайчик">
             <img src="http://placehold.it/250x200" alt="Зайчик попрыгайчик" class="product__preview"/>
@@ -40,6 +45,7 @@
           <a href="#" title="Зайчик попрыгайчик">
             <h2 class="product__title">Зайчик попрыгайчик</h2>
           </a>
+          
           <dl class="features product__features">
             <dt class="features__term">Рост</dt>
             <dd class="features__value">30 см</dd>
@@ -48,6 +54,7 @@
           </dl>
           <p class="product__cost-wrapper  product__cost-wrapper--wide"><span class="product__cost">1200 руб.</span></p>
         </article>
+        
         <article class="product">
           <a href="#" title="Корзинка для белья">
             <img src="http://placehold.it/250x200" alt="Корзинка для белья" class="product__preview"/>
@@ -55,6 +62,7 @@
           <a href="#" title="Корзинка для белья">
             <h2 class="product__title">Корзинка для белья</h2>
           </a>
+          
           <dl class="features product__features">
             <dt class="features__term">Диаметр</dt>
             <dd class="features__value">15 см</dd>
@@ -63,6 +71,7 @@
           </dl>
           <p class="product__cost-wrapper  product__cost-wrapper--wide"><span class="product__cost">690 руб.</span></p>
         </article>
+        
         <article class="product">
           <a href="#" title="Большая корзинка для игрушек">
             <img src="http://placehold.it/250x200" alt="Большая корзинка для игрушек" class="product__preview"/>
@@ -70,6 +79,7 @@
           <a href="#" title="Большая корзинка для игрушек">
             <h2 class="product__title">Большая корзинка для игрушек</h2>
           </a>
+          
           <dl class="features product__features">
             <dt class="features__term">Диаметр</dt>
             <dd class="features__value">30 см</dd>
@@ -79,15 +89,19 @@
           <p class="product__cost-wrapper  product__cost-wrapper--wide"><span class="product__cost">1500 руб.</span></p>
         </article>
       </section>
+      
       <article class="video-review">
         <h3 class="video-review__title">Процесс производства</h3>
         <video class="video-review__video" src="#" preload="metadata" poster="http://placehold.it/250x200"></video>
         <p class="video-review__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как
           появляются наши товары.</p>
+        
         <a class="btn" href="#">Сделать заказ</a>
       </article>
     </main>
+    
     <footer class="page-footer">
+      
       <ul class="social-links  page-footer__social-links">
         <li class="social-links__item">
           <a class="social-links__link  social-links__link--inst" href="#">Instagram</a>
@@ -99,6 +113,7 @@
           <a class="social-links__link  social-links__link--tw" href="#">Twitter</a>
         </li>
       </ul>
+      
       <div class="copyright  page-footer__copyright">
         <p class="copyright__text">Разработано</p>
         <a class="copyright__link" href="#">
@@ -106,19 +121,25 @@
         </a>
       </div>
     </footer>
+    
     <div class="overlay">
-      <form class="size-form  modal" action="#" method="post">
+      
+      <form class="size-form  modal" action="https://echo.htmlacademy.ru/" method="post">
         <p class="size-form__title">Добавить в корзину</p>
         <p class="size-form__text">Выберите размер:</p>
         <label class="size-form__label">
+          <span>S</span>
           <input class="size-form__field" type="radio" name="size" value="S"/>
         </label>
         <label class="size-form__label">
+          <span>M</span>
           <input class="size-form__field" type="radio" name="size" value="M"/>
         </label>
         <label class="size-form__label">
+          <span>L</span>
           <input class="size-form__field" type="radio" name="size" value="L"/>
         </label>
+        
         <button class="btn  btn--green" type="submit" title="Добавить">Добавить</button>
       </form>
     </div>
