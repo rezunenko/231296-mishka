@@ -5,8 +5,157 @@
     <title>HTML Academy: Мишка</title>
   </head>
   <body>
+    <header class="page-header">
+      <img class="page-header__logo" src="http://placehold.it/100x50" alt='Логотип магазина "Мишка"'/>
 
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">Продвинутый HTML и CSS</a>».</p>
+      <nav class="main-nav">
+        <button class="main-nav__toggle-btn" type="button"></button>
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="catalog.html" title="Каталог товаров">Каталог товаров</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="form.html" title="Вязание на заказ">Вязание на заказ</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#" title="Поиск по сайт">Поиск по сайту</a>
+          </li>
+          <li class="main-nav__item">
 
+            <a class="basket  main-nav__link" href="#" title="Перейти к корзине">
+              <span class="basket__title">Корзина</span>
+              <span class="basket__content">пока пуста</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <h1 class="page-header__title">Милые штуки ручной работы для дома</h1>
+
+      <nav class="product-nav">
+        <a class="product-nav__link" href="catalog.html" title="Предметы интерьера">Предметы интерьера</a>
+        <a class="product-nav__link" href="catalog.html" title="Детские игрушки">Детские игрушки</a>
+      </nav>
+    </header>
+
+    <main class="page-content">
+      <article class="product">
+        <h2 class="product__title">Вязаные корзинки</h2>
+        <p class="product__meta">Товар недели</p>
+        <p class="product__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+
+        <dl class="features product__features">
+          <dt class="features__term">Цвет</dt>
+          <dd class="features__value">«Тиффани»/серый</dd>
+          <dt class="features__term">Диаметр</dt>
+          <dd class="features__value">25 см</dd>
+          <dt class="features__term">Высота</dt>
+          <dd class="features__value">15 см</dd>
+        </dl>
+        <img class="product__preview" src="http://placehold.it/250x300" alt="Вязаные корзинки"/>
+        <p class="product__cost-wrapper">Цена: <span class="product__cost">990 руб.</span></p>
+
+        <a class="btn" href="#">Заказать</a>
+      </article>
+
+      <section class="company-features">
+        <h2 class="company-features__title">Коротко о нас</h2>
+        <ul class="company-features__list">
+          <li class="company-features__item">Экологически чистые материалы</li>
+          <li class="company-features__item">Скандинавский стиль по российской цене</li>
+          <li class="company-features__item">Увеличивает лайки на фотографиях</li>
+          <li class="company-features__item">Связано вручную с любовью и умилением</li>
+          <li class="company-features__item">Поддержка отечественного производителя</li>
+          <li class="company-features__item">Поставляется в подарочной упаковке</li>
+        </ul>
+      </section>
+
+      <section class="reviews">
+        <h2 class="reviews__title">Отзывы</h2>
+
+        <article class="review">
+          <p class="review__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества
+            лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои
+            фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+
+          <div class="author">
+            <p class="author__name">Анастасия Красильникова</p>
+            <p class="author__username">@misssssiskras</p>
+          </div>
+        </article>
+
+        <ul class="pagination  reviews__pagination">
+          <li class="pagination__item  pagination__item--prev">
+            <button class="pagination__link" type="button" title="Предыдущий отзыв">Предыдущий</button>
+          </li>
+          <li class="pagination__item  pagination__item--next">
+            <button class="pagination__link" type="button" title="Следующий отзыв">Следующий</button>
+          </li>
+        </ul>
+
+        <a class="reviews__add-btn  btn" href="#" title="Написать отзыв">Написать</a>
+      </section>
+
+      <section class="contacts">
+        <h2 class="contacts__title">Контакты</h2>
+        <ul class="contacts__list">
+          <li class="contacts__item">
+            <span class="contacts__title">e-mail:</span>
+            <span class="contacts__value">
+              <a class="contacts__link" href="mailto:info@mimimishkashop.ru" title="Написать e-mail">info@mimimishkashop.ru</a>
+            </span>
+          </li>
+          <li class="contacts__item">
+            <span class="contacts__title">адрес:</span>
+            <span class="contacts__value">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</span>
+          </li>
+        </ul>
+
+        <div class="contacts__map  map"></div>
+
+        <a class="contacts__feedback-btn  btn" href="#" title="Написать нам">Написать нам</a>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <ul class="social-links  page-footer__social-links">
+        <li class="social-links__item">
+          <a class="social-links__link  social-links__link--inst" href="#">Instagram</a>
+        </li>
+        <li class="social-links__item">
+          <a class="social-links__link  social-links__link--fb" href="#">Facebook</a>
+        </li>
+        <li class="social-links__item">
+          <a class="social-links__link  social-links__link--tw" href="#">Twitter</a>
+        </li>
+      </ul>
+
+      <div class="copyright  page-footer__copyright">
+        <p class="copyright__text">Разработано</p>
+        <a class="copyright__link" href="#">
+          <img class="copyright__img" src="http://placehold.it/40x40" alt="HTML Academy"/>
+        </a>
+      </div>
+    </footer>
+
+    <div class="overlay" hidden>
+      <form class="size-form  modal" action="https://echo.htmlacademy.ru/" method="post">
+        <p class="size-form__title">Добавить в корзину</p>
+        <p class="size-form__text">Выберите размер:</p>
+        <label class="size-form__label">
+          <span>S</span>
+          <input class="size-form__field" type="radio" name="size" value="S"/>
+        </label>
+        <label class="size-form__label">
+          <span>M</span>
+          <input class="size-form__field" type="radio" name="size" value="M"/>
+        </label>
+        <label class="size-form__label">
+          <span>L</span>
+          <input class="size-form__field" type="radio" name="size" value="L"/>
+        </label>
+
+        <button class="btn  btn--green" type="submit" title="Добавить">Добавить</button>
+      </form>
+    </div>
   </body>
 </html>
