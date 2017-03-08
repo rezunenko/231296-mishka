@@ -1,0 +1,30 @@
+.product {
+  padding: 0 30px;
+
+}
+
+.product__title {
+  font-size: $font-size-xx-large;
+  line-height: $line-height-large;
+  font-weight: normal;
+}
+
+.product__meta {
+  font-size: $font-size-large;
+  line-height: $line-height-small;
+  font-weight: bold;
+  color: $color-text-green;
+}
+
+.product__preview {
+  display: block;
+  margin: 0 auto;
+}
+
+.product__cost-wrapper {
+  margin: 29px 0;
+
+  font-size: $font-size-large;
+  font-weight: bold;
+  text-align: center;
+}

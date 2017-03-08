@@ -1,0 +1,23 @@
+.features {
+
+  @include clearfix;
+}
+
+.features__term {
+  display: block;
+  float: left;
+  width: 35%;
+  margin: 0;
+  padding: 0;
+
+  @include postfix(':');
+}
+
+.features__value {
+  display: block;
+  float: left;
+  width: 65%;
+  margin: 0;
+  padding: 0;
+}
+

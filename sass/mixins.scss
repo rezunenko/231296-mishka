@@ -13,6 +13,13 @@
   }
 }
 
+@mixin postfix($symbol) {
+  &:after {
+    content: $symbol;
+    display: inline-block;
+  }
+}
+
 @mixin link-icon-left($width, $height, $url, $left) {
   &::before {
     content: '';
