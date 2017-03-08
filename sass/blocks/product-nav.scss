@@ -1,0 +1,41 @@
+
+.product-nav__link {
+  position: relative;
+
+  $padding: 30px;
+  display: block;
+  max-height: 45px;
+  padding: $padding;
+
+  overflow: hidden;
+
+  &--left {
+    background-color: $left-green-btn;
+
+    @include link-icon-right(70px, 70px, './../../img/icon-interior.svg', 30px);
+  }
+
+  &--right {
+    background-color: $right-green-btn;
+
+    @include link-icon-right(70px, 70px, './../../img/icon-toy.svg', 30px);
+  }
+
+  &:hover, &:focus {
+    padding-bottom: ($padding + 5px);
+  }
+
+  &:active * {
+    opacity: 0.3;
+  }
+}
+
+.product-nav__link-text {
+  display: inline-block;
+  width: 120px;
+  vertical-align: top;
+
+  color: white;
+  font-size: $font-size-regular + 4;
+  font-weight: bold;
+}

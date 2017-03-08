@@ -6,21 +6,29 @@ $font-size-regular: 15px;
 $font-size-large: 17px;
 $font-size-x-large: 18px;
 $font-size-xx-large: 25px;
+$font-size-xxx-large: 27px;
 
 $line-height-small: 20px;
 $line-height-regular: 24px;
 $line-height-large: 30px;
 
 // COLORS
+$white: #fff;
 $black: #000;
 $grey: #ececec;
 $dark-grey: #666666;
 $light-grey: #b2b2b2;
+$light-green:#63d1bb;
+$green: #56c3b2;
+
 
 
 // COLOR USAGE
 $color-text: $black;
+$white-text: $white;
 $color-border: $grey;
 $hover-link: $dark-grey;
 $active-link: $light-grey;
+$left-green-btn: $light-green;
+$right-green-btn: $green;
 

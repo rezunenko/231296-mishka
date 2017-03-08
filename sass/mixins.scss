@@ -28,3 +28,19 @@
     background: url($url) no-repeat 50% 50%;
   }
 }
+
+@mixin link-icon-right($width, $height, $url, $right) {
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: $right;
+
+    display: block;
+    width: $width;
+    height: $height;
+    margin-top: -($height / 2);
+
+    background: url($url) no-repeat 50% 50%;
+  }
+}
