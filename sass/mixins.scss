@@ -34,8 +34,20 @@
     height: $height;
     margin-top: -($height / 2);
 
-    background-color: rgba($green-icon, 0.5);
+    background-color: rgba($light-grey, 0.7);
     mask: url($url) no-repeat 50% 50%;
+  }
+
+  &:hover, &:focus {
+    &::before {
+      background-color: $menu-icon-hover;
+    }
+  }
+
+  &:active {
+    &::before {
+      background-color: rgba($menu-icon-hover, 0.3);
+    }
   }
 }
 

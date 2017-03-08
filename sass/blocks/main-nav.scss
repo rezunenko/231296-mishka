@@ -1,0 +1,75 @@
+
+.main-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+
+  text-align: right;
+
+  background-color: white;
+
+  &--hidden {
+    height: 81px;
+    overflow: hidden;
+  }
+}
+
+.main-nav__toggle-btn {
+  display: inline-block;
+  vertical-align: top;
+  margin: 29px 30px 29px;
+
+  width: 22px;
+  height: 22px;
+
+  border: none;
+  background: transparent url('../../img/icon-menu-open.svg') no-repeat 50% 50%;
+
+  cursor: pointer;
+
+  &--open {
+    background-image: url('../../img/icon-menu-close.svg');
+  }
+}
+
+.main-nav__list {
+  @include clear-list;
+
+  text-align: left;
+
+  border-bottom: 1px solid $color-border;
+}
+
+.main-nav__link {
+  $padding: (80px - $line-height-regular)/2;
+
+  position: relative;
+
+  display: block;
+  padding: $padding 0 $padding 75px;
+
+  font-size: $font-size-large;
+  font-weight: bold;
+  color: $color-text;
+  text-decoration: none;
+
+  border-top: 1px solid $color-border;
+
+  &:hover, &:focus {
+    color: $hover-link;
+  }
+
+  &:active {
+    color: $active-link;
+  }
+
+  &--basket {
+    @include link-icon-left(20px, 20px, './../../img/icon-cart.svg', 30px, white);
+  }
+
+  &--search {
+    @include link-icon-left(20px, 20px, './../../img/icon-search.svg', 30px, white);
+  }
+}
