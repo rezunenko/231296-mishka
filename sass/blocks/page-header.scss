@@ -81,11 +81,11 @@
   }
 
   &--basket {
-    @include link-icon-left(20px, 20px, './../../img/icon-cart.svg', 30px);
+    @include link-icon-left(20px, 20px, './../../img/icon-cart.svg', 30px, black);
   }
 
   &--search {
-    @include link-icon-left(20px, 20px, './../../img/icon-search.svg', 30px);
+    @include link-icon-left(20px, 20px, './../../img/icon-search.svg', 30px, black);
   }
 }
 

@@ -20,7 +20,9 @@
   }
 }
 
-@mixin link-icon-left($width, $height, $url, $left) {
+@mixin link-icon-left($width, $height, $url, $left, $bg ) {
+  background-color: $bg;
+
   &::before {
     content: '';
     position: absolute;
@@ -32,11 +34,14 @@
     height: $height;
     margin-top: -($height / 2);
 
-    background: url($url) no-repeat 50% 50%;
+    background-color: rgba($green-icon, 0.5);
+    mask: url($url) no-repeat 50% 50%;
   }
 }
 
-@mixin link-icon-right($width, $height, $url, $right) {
+@mixin link-icon-right($width, $height, $url, $right, $bg) {
+  background-color: $bg;
+
   &::after {
     content: '';
     position: absolute;
@@ -48,6 +53,19 @@
     height: $height;
     margin-top: -($height / 2);
 
-    background: url($url) no-repeat 50% 50%;
+    background-color: rgba($green-icon, 0.5);
+    mask:url($url) no-repeat 50% 50%;
+  }
+
+  &:hover, &:focus {
+    &::after {
+      background-color: rgba($green-icon, 0.7);
+    }
+  }
+
+  &:active {
+    &::after {
+      background-color: rgba($green-icon, 0.3);
+    }
   }
 }

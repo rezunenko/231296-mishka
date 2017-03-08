@@ -1,8 +1,9 @@
 
 .product-nav__link {
+  $padding: 30px;
+
   position: relative;
 
-  $padding: 30px;
   display: block;
   max-height: 45px;
   padding: $padding;
@@ -10,15 +11,11 @@
   overflow: hidden;
 
   &--left {
-    background-color: $left-green-btn;
-
-    @include link-icon-right(70px, 70px, './../../img/icon-interior.svg', 30px);
+    @include link-icon-right(70px, 70px, './../../img/icon-interior.svg', 30px, $left-green-btn);
   }
 
   &--right {
-    background-color: $right-green-btn;
-
-    @include link-icon-right(70px, 70px, './../../img/icon-toy.svg', 30px);
+    @include link-icon-right(70px, 70px, './../../img/icon-toy.svg', 30px, $right-green-btn);
   }
 
   &:hover, &:focus {
