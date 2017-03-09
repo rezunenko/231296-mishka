@@ -1,0 +1,53 @@
+@import './map';
+
+.contacts__title {
+  margin:0 30px 35px 30px;
+  font-size: $font-size-x-large;
+  line-height: $line-height-large;
+}
+
+.contacts__list {
+  @include clear-list;
+
+  padding: 0 30px;
+}
+
+.contacts__item {
+  margin-bottom: 30px;
+
+  @include clearfix;
+}
+
+.contacts__item-title {
+  display: block;
+  float: left;
+  margin-right: 30px;
+}
+
+.contacts__value {
+  display: block;
+  float: right;
+}
+
+.contacts__link {
+  display: block;
+  padding-bottom: 2px;
+
+  border-bottom: 1px solid $color-link-border;
+
+  color: $color-text;
+  text-decoration: none;
+
+  &:hover, &:focus {
+    color: $color-link-border;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.contacts__feedback-btn {
+  width: auto;
+  margin: 30px;
+}
