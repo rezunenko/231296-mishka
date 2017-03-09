@@ -1,0 +1,34 @@
+.social-links {
+  @include clear-list;
+
+  font-size: 0;
+}
+
+.social-links__item {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.social-links__link {
+  position: relative;
+
+  display: block;
+  width: 30px;
+  height:30px;
+
+  &--inst {
+    margin-right: 20px;
+
+    @include link-icon(30px, 30px, './../../img/icon-insta.svg', 0, 0, transparent, $color-logo, $color-logo-hover, $color-logo-active)
+  }
+
+  &--fb {
+    margin-right: 20px;
+
+    @include link-icon(30px, 30px, './../../img/icon-fb.svg', 0, 0, transparent, $color-logo, $color-logo-hover, $color-logo-active)
+  }
+
+  &--tw {
+    @include link-icon(30px, 30px, './../../img/icon-twitter.svg', 0, 0, transparent, $color-logo, $color-logo-hover, $color-logo-active)
+  }
+}

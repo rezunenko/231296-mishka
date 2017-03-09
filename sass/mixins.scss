@@ -20,64 +20,73 @@
   }
 }
 
-@mixin link-icon-left($width, $height, $url, $left, $bg ) {
-  background-color: $bg;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: $left;
-
-    display: block;
-    width: $width;
-    height: $height;
-    margin-top: -($height / 2);
-
-    background-color: rgba($light-grey, 0.7);
+@mixin masked-link($url, $color, $hover, $active){
+  &::after {
+    background-color: $color;
     mask: url($url) no-repeat 50% 50%;
   }
 
   &:hover, &:focus {
-    &::before {
-      background-color: $menu-icon-hover;
+    &::after {
+      background-color: $hover;
     }
   }
 
   &:active {
-    &::before {
-      background-color: rgba($menu-icon-hover, 0.3);
+    &::after {
+      background-color: $active;
     }
   }
 }
 
-@mixin link-icon-right($width, $height, $url, $right, $bg) {
+@mixin link-icon($width, $height, $url, $left, $right, $bg, $color, $hover, $active) {
   background-color: $bg;
 
   &::after {
     content: '';
     position: absolute;
     top: 50%;
-    right: $right;
+    @if $left == 0 {
+      right: $right;
+    } @else {
+      left: $left;
+    }
 
     display: block;
     width: $width;
     height: $height;
     margin-top: -($height / 2);
-
-    background-color: rgba($green-icon, 0.5);
-    mask:url($url) no-repeat 50% 50%;
   }
 
+ @include masked-link($url, $color, $hover, $active);
+}
+
+@mixin link-icon-left($width, $height, $url, $left, $bg ) {
+  $color: rgba($menu-icon, 0.5);
+  $hover: rgba($menu-icon-hover, 0.7);
+  $active: rgba($menu-icon-hover, 0.3);
+
+  @include link-icon($width, $height, $url, $left, 0, $bg, $color, $hover, $active);
+}
+
+@mixin link-icon-right($width, $height, $url, $right, $bg) {
+  $color: rgba($green-icon, 0.5);
+  $hover: rgba($green-icon, 0.7);
+  $active: rgba($green-icon, 0.3);
+
+  @include link-icon($width, $height, $url, 0, $right, $bg, $color, $hover, $active);
+}
+
+@mixin select-text {
+  color: $color-text;
+
+  cursor: pointer;
+
   &:hover, &:focus {
-    &::after {
-      background-color: rgba($green-icon, 0.7);
-    }
+    color: $hover-link;
   }
 
   &:active {
-    &::after {
-      background-color: rgba($green-icon, 0.3);
-    }
+    color: $active-link;
   }
 }

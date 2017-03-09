@@ -1,0 +1,18 @@
+.copyright__text {
+  margin-right: 30px;
+  vertical-align: middle;
+
+  font-size: ($font-size-x-large + 1px);
+  font-weight: bold;
+
+  @include select-text;
+}
+
+.copyright__link {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.copyright__img {
+  display: block;
+}
