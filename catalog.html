@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="./css/style.css"/>
   </head>
   <body class="page">
-    <header class="page-header">
+    <header class="page-header  page-header--no-bg">
       <a href="index.html" title="Главная страница">
         <img class="page-header__logo" src="img/logo-mobile.svg" width="90" height="35" alt='Логотип магазина "Мишка"'/>
       </a>
@@ -33,59 +33,55 @@
         </ul>
       </nav>
       <h1 class="page-header__title">Каталог товаров</h1>
+
     </header>
 
     <main class="page-content">
       <section class="products">
         <article class="product">
-          <a href="#" title="Зайчик попрыгайчик">
-            <img src="http://placehold.it/250x200" alt="Зайчик попрыгайчик" class="product__preview"/>
-          </a>
-          <a href="#" title="Зайчик попрыгайчик">
+          <a class="product__link" href="#" title="Зайчик попрыгайчик">
+            <img class="product__preview" src="./img/photo-1-mobile@1x.jpg" width="253" height="200" alt="Зайчик попрыгайчик"/>
             <h2 class="product__title">Зайчик попрыгайчик</h2>
-          </a>
 
-          <dl class="features product__features">
-            <dt class="features__term">Рост</dt>
-            <dd class="features__value">30 см</dd>
-            <dt class="features__term">вес</dt>
-            <dd class="features__value">200 г</dd>
-          </dl>
-          <p class="product__cost-wrapper  product__cost-wrapper--wide"><span class="product__cost">1200 руб.</span></p>
+            <dl class="features product__features">
+              <dt class="features__term  features__term--inline">Рост</dt>
+              <dd class="features__value  features__value--inline">30 см</dd>
+              <dt class="features__term  features__term--inline">вес</dt>
+              <dd class="features__value  features__value--inline">200 г</dd>
+            </dl>
+            <p class="product__cost-wrapper  product__cost-wrapper--wide"><span class="product__cost">1200 руб.</span></p>
+          </a>
         </article>
 
         <article class="product">
-          <a href="#" title="Корзинка для белья">
-            <img src="http://placehold.it/250x200" alt="Корзинка для белья" class="product__preview"/>
-          </a>
-          <a href="#" title="Корзинка для белья">
+          <a class="product__link" href="#" title="Корзинка для белья">
+            <img class="product__preview" src="./img/photo-2-mobile@1x.jpg" width="253" height="200" alt="Корзинка для белья"/>
+
             <h2 class="product__title">Корзинка для белья</h2>
-          </a>
 
-          <dl class="features product__features">
-            <dt class="features__term">Диаметр</dt>
-            <dd class="features__value">15 см</dd>
-            <dt class="features__term">высота</dt>
-            <dd class="features__value">10 см</dd>
-          </dl>
-          <p class="product__cost-wrapper  product__cost-wrapper--wide"><span class="product__cost">690 руб.</span></p>
+            <dl class="features product__features">
+              <dt class="features__term  features__term--inline">Диаметр</dt>
+              <dd class="features__value  features__value--inline">15 см</dd>
+              <dt class="features__term  features__term--inline">высота</dt>
+              <dd class="features__value  features__value--inline">10 см</dd>
+            </dl>
+            <p class="product__cost-wrapper  product__cost-wrapper--wide"><span class="product__cost">690 руб.</span></p>
+          </a>
         </article>
 
         <article class="product">
-          <a href="#" title="Большая корзинка для игрушек">
-            <img src="http://placehold.it/250x200" alt="Большая корзинка для игрушек" class="product__preview"/>
-          </a>
-          <a href="#" title="Большая корзинка для игрушек">
+          <a class="product__link" href="#" title="Большая корзинка для игрушек">
+            <img class="product__preview" src="./img/photo-3-mobile@1x.jpg" width="253" height="200" alt="Большая корзинка для игрушек"/>
             <h2 class="product__title">Большая корзинка для игрушек</h2>
-          </a>
 
-          <dl class="features product__features">
-            <dt class="features__term">Диаметр</dt>
-            <dd class="features__value">30 см</dd>
-            <dt class="features__term">высота</dt>
-            <dd class="features__value">30 см</dd>
-          </dl>
-          <p class="product__cost-wrapper  product__cost-wrapper--wide"><span class="product__cost">1500 руб.</span></p>
+            <dl class="features product__features">
+              <dt class="features__term  features__term--inline">Диаметр</dt>
+              <dd class="features__value  features__value--inline">30 см</dd>
+              <dt class="features__term  features__term--inline">высота</dt>
+              <dd class="features__value  features__value--inline">30 см</dd>
+            </dl>
+            <p class="product__cost-wrapper  product__cost-wrapper--wide"><span class="product__cost">1500 руб.</span></p>
+          </a>
         </article>
       </section>
 

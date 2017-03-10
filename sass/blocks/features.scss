@@ -3,7 +3,7 @@
   @include clearfix;
 }
 
-.features__term {
+.features__term--table {
   display: block;
   float: left;
   width: 35%;
@@ -13,10 +13,32 @@
   @include postfix(':');
 }
 
-.features__value {
+.features__value--table {
   display: block;
   float: left;
   width: 65%;
+  margin: 0;
+  padding: 0;
+}
+
+.features__term--inline {
+  display: inline-block;
+  float: left;
+  width: auto;
+  margin-right: 5px;
+
+  &:not(:first-of-type) {
+    @include prefix(',');
+    &:before {
+      margin-right: 5px;
+    }
+  }
+}
+
+.features__value--inline {
+  display: inline-block;
+  float: left;
+  width: auto;
   margin: 0;
   padding: 0;
 }

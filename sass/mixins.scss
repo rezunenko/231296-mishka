@@ -19,6 +19,13 @@
   }
 }
 
+@mixin prefix($symbol) {
+  &:before {
+    content: $symbol;
+    display: inline-block;
+  }
+}
+
 @mixin masked-link($url, $color, $hover, $active){
   &::after {
     background-color: $color;
