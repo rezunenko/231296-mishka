@@ -1,0 +1,55 @@
+.size-form {
+  padding: 30px;
+
+  text-align: center;
+
+  background-color: white;
+  border: 1px solid $color-shadow;
+  box-shadow: 0 5px 10px $color-shadow;
+}
+
+.size-form__title {
+  max-width: 150px;
+  margin: 0 auto 30px auto;
+
+  font-size: $font-size-xx-large;
+  line-height: $line-height-large;
+  font-weight: bold;
+}
+
+.size-form__text {
+  margin-bottom: 30px;
+  font-size: $font-size-regular;
+  line-height: $line-height-large;
+}
+
+.size-form__field {
+  display: none;
+}
+
+.size-form__label {
+  display: inline-block;
+}
+
+.size-form__field-name {
+  $height: 52px;
+
+  display: block;
+  width: 80px;
+  height: $height;
+
+  box-sizing: border-box;
+  border: 2px solid $color-size-form;
+
+  font-size: $font-size-large;
+  line-height: $height;
+  font-weight: bold;
+}
+
+.size-form__field:checked ~ .size-form__field-name{
+  border-color: $color-size-form-active;
+}
+
+.size-form__add-btn {
+  margin-top: 30px;
+}

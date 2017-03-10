@@ -22,4 +22,15 @@
   &:active {
     color: rgba($color-text-white, 0.4);
   }
+
+  &--green {
+    background-color: $color-btn-blue;
+    border-color: $color-btn-blue;
+
+    color: $white;
+
+    &:hover, &:focus {
+      background-color: rgba($color-btn-blue,0.8);
+    }
+  }
 }
