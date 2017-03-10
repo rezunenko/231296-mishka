@@ -8,10 +8,10 @@
   <body class="page">
     <header class="page-header">
       <a href="index.html" title="Главная страница">
-        <img class="page-header__logo" src="http://placehold.it/100x50" alt='Логотип магазина "Мишка"'/>
+        <img class="page-header__logo" src="img/logo-mobile.svg" width="90" height="35" alt='Логотип магазина "Мишка"'/>
       </a>
 
-      <nav class="main-nav">
+      <nav class="main-nav  main-nav--hidden">
         <button class="main-nav__toggle-btn" type="button"></button>
 
         <ul class="main-nav__list">
@@ -22,10 +22,10 @@
             <a class="main-nav__link" title="Вязание на заказ">Вязание на заказ</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="#" title="Поиск по сайт">Поиск по сайту</a>
+            <a class="main-nav__link  main-nav__link--search" href="#" title="Поиск по сайт">Поиск по сайту</a>
           </li>
           <li class="main-nav__item">
-            <a class="basket  main-nav__link" href="#" title="Перейти к корзине">
+            <a class="basket  main-nav__link  main-nav__link--basket" href="#" title="Перейти к корзине">
               <span class="basket__title">Корзина</span>
               <span class="basket__content">пока пуста</span>
             </a>
@@ -100,9 +100,9 @@
       </ul>
 
       <div class="copyright  page-footer__copyright">
-        <p class="copyright__text">Разработано</p>
+        <span class="copyright__text">Разработано</span>
         <a class="copyright__link" href="#">
-          <img class="copyright__img" src="http://placehold.it/40x40" alt="HTML Academy"/>
+          <img class="copyright__img" src="./img/logo-htmlacademy.svg" width="40" height="40" alt="HTML Academy"/>
         </a>
       </div>
     </footer>

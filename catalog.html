@@ -8,10 +8,10 @@
   <body class="page">
     <header class="page-header">
       <a href="index.html" title="Главная страница">
-        <img class="page-header__logo" src="http://placehold.it/100x50" alt='Логотип магазина "Мишка"'/>
+        <img class="page-header__logo" src="img/logo-mobile.svg" width="90" height="35" alt='Логотип магазина "Мишка"'/>
       </a>
 
-      <nav class="main-nav">
+      <nav class="main-nav  main-nav--hidden">
         <button class="main-nav__toggle-btn" type="button"></button>
         <ul class="main-nav__list">
           <li class="main-nav__item">
@@ -21,11 +21,11 @@
             <a class="main-nav__link" href="form.html" title="Вязание на заказ">Вязание на заказ</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="#" title="Поиск по сайт">Поиск по сайту</a>
+            <a class="main-nav__link  main-nav__link--search" href="#" title="Поиск по сайт">Поиск по сайту</a>
           </li>
           <li class="main-nav__item">
 
-            <a class="basket  main-nav__link" href="#" title="Перейти к корзине">
+            <a class="basket  main-nav__link  main-nav__link--basket" href="#" title="Перейти к корзине">
               <span class="basket__title">Корзина</span>
               <span class="basket__content">пока пуста</span>
             </a>
@@ -113,31 +113,31 @@
       </ul>
 
       <div class="copyright  page-footer__copyright">
-        <p class="copyright__text">Разработано</p>
+        <span class="copyright__text">Разработано</span>
         <a class="copyright__link" href="#">
-          <img class="copyright__img" src="http://placehold.it/40x40" alt="HTML Academy"/>
+          <img class="copyright__img" src="./img/logo-htmlacademy.svg" width="40" height="40" alt="HTML Academy"/>
         </a>
       </div>
     </footer>
 
-    <div class="overlay">
+    <div class="overlay" hidden>
       <form class="size-form  modal" action="https://echo.htmlacademy.ru/" method="post">
         <p class="size-form__title">Добавить в корзину</p>
         <p class="size-form__text">Выберите размер:</p>
-        <label class="size-form__label">
-          <span>S</span>
-          <input class="size-form__field" type="radio" name="size" value="S"/>
+        <label class="size-form__label" for="sizeS">
+          <input id="sizeS" class="size-form__field" type="radio" name="size" value="S"/>
+          <span class="size-form__field-name">S</span>
         </label>
-        <label class="size-form__label">
-          <span>M</span>
-          <input class="size-form__field" type="radio" name="size" value="M"/>
+        <label class="size-form__label" for="sizeM">
+          <input id="sizeM" class="size-form__field" type="radio" name="size" value="M"/>
+          <span class="size-form__field-name">M</span>
         </label>
-        <label class="size-form__label">
-          <span>L</span>
-          <input class="size-form__field" type="radio" name="size" value="L"/>
+        <label class="size-form__label" for="sizeL">
+          <input id="sizeL" class="size-form__field" type="radio" name="size" value="L"/>
+          <span class="size-form__field-name">L</span>
         </label>
 
-        <button class="btn  btn--green" type="submit" title="Добавить">Добавить</button>
+        <button class="btn  btn--green  size-form__add-btn" type="submit" title="Добавить">Добавить</button>
       </form>
     </div>
   </body>
