@@ -5,7 +5,6 @@
 }
 
 @mixin clearfix {
-  display: inline-block;
   &:after {
     content: "";
     display: table ;

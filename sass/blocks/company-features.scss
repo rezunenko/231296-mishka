@@ -32,27 +32,27 @@
     background-color: $color-feature;
   }
 
-  &--1:before {
+  &--eco:before {
     mask: url('./../../img/icon-feature-1.svg') no-repeat 50% 10px;
   }
 
-  &--2:before {
+  &--price:before {
     mask: url('./../../img/icon-feature-2.svg') no-repeat 50% 10px;
   }
 
-  &--3:before {
+  &--popular:before {
     mask: url('./../../img/icon-feature-3.svg') no-repeat 50% 10px;
   }
 
-  &--4:before {
+  &--with-love:before {
     mask: url('./../../img/icon-feature-4.svg') no-repeat 50% 10px;
   }
 
-  &--5:before {
+  &--rus:before {
     mask: url('./../../img/icon-feature-5.svg') no-repeat 50% 10px;
   }
 
-  &--6:before {
+  &--packaging:before {
     mask: url('./../../img/icon-feature-6.svg') no-repeat 50% 10px;
   }
 }

@@ -16,6 +16,7 @@
   margin-bottom: 30px;
 
   @include clearfix;
+  display: block;
 }
 
 .contacts__item-title {
@@ -26,11 +27,11 @@
 
 .contacts__value {
   display: block;
-  float: right;
+  margin-left: 80px;
 }
 
 .contacts__link {
-  display: block;
+  display: inline-block;
   padding-bottom: 2px;
 
   border-bottom: 1px solid $color-link-border;
