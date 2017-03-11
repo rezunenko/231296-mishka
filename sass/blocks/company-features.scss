@@ -1,0 +1,58 @@
+.company-features {
+  padding: 0 30px 35px 30px;
+}
+
+.company-features__title {
+  font-size: $font-size-xx-large;
+  line-height: $line-height-large;
+}
+
+.company-features__list {
+  @include clear-list;
+}
+
+.company-features__item {
+  position: relative;
+  padding-top: 85px;
+
+  font-size: $font-size-large;
+  line-height: $line-height-small;
+  font-weight: bold;
+
+  &:before {
+    position: absolute;
+
+    display: block;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    margin-top: -40px;
+
+    content: '';
+    background-color: $color-feature;
+  }
+
+  &--eco:before {
+    mask: url('./../../img/icon-feature-1.svg') no-repeat 50% 10px;
+  }
+
+  &--price:before {
+    mask: url('./../../img/icon-feature-2.svg') no-repeat 50% 10px;
+  }
+
+  &--popular:before {
+    mask: url('./../../img/icon-feature-3.svg') no-repeat 50% 10px;
+  }
+
+  &--with-love:before {
+    mask: url('./../../img/icon-feature-4.svg') no-repeat 50% 10px;
+  }
+
+  &--rus:before {
+    mask: url('./../../img/icon-feature-5.svg') no-repeat 50% 10px;
+  }
+
+  &--packaging:before {
+    mask: url('./../../img/icon-feature-6.svg') no-repeat 50% 10px;
+  }
+}

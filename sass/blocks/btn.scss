@@ -1,0 +1,36 @@
+.btn {
+  display: block;
+  width:100%;
+  padding: (52px - $line-height-small)/2 10px;
+  box-sizing: border-box;
+
+  border: 2px solid $color-btn;
+
+  font-size: $font-size-large;
+  line-height: $line-height-small;
+  font-weight: bold;
+  color: $color-btn;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &:hover, &:focus {
+    background-color: $color-btn;
+    color: $color-text-white;
+  }
+
+  &:active {
+    color: rgba($color-text-white, 0.4);
+  }
+
+  &--green {
+    background-color: $color-btn-blue;
+    border-color: $color-btn-blue;
+
+    color: $white;
+
+    &:hover, &:focus {
+      background-color: rgba($color-btn-blue,0.8);
+    }
+  }
+}

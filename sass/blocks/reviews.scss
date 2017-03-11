@@ -1,0 +1,21 @@
+.reviews {
+  padding: 0 30px 35px 30px;
+}
+
+.reviews__title {
+  margin-bottom: 30px;
+
+  font-size: $font-size-xx-large;
+  line-height: $line-height-large;
+  font-weight: bold;
+}
+
+.review__text {
+  margin-bottom: 35px;
+
+  line-height: $line-height-large;
+}
+
+.reviews__add-btn {
+  margin-bottom: 50px;
+}

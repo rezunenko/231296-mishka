@@ -3,12 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <link rel="stylesheet" href="./css/style.css"/>
   </head>
-  <body>
+  <body class="page">
     <header class="page-header">
-      <img class="page-header__logo" src="http://placehold.it/100x50" alt='Логотип магазина "Мишка"'/>
+      <img class="page-header__logo" src="img/logo-mobile.svg" width="90" height="35" alt='Логотип магазина "Мишка"'/>
 
-      <nav class="main-nav">
+      <nav class="main-nav  main-nav--hidden">
         <button class="main-nav__toggle-btn" type="button"></button>
         <ul class="main-nav__list">
           <li class="main-nav__item">
@@ -18,40 +19,40 @@
             <a class="main-nav__link" href="form.html" title="Вязание на заказ">Вязание на заказ</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="#" title="Поиск по сайт">Поиск по сайту</a>
+            <a class="main-nav__link  main-nav__link--search" href="#" title="Поиск по сайт">Поиск по сайту</a>
           </li>
           <li class="main-nav__item">
 
-            <a class="basket  main-nav__link" href="#" title="Перейти к корзине">
+            <a class="basket  main-nav__link  main-nav__link--basket" href="#" title="Перейти к корзине">
               <span class="basket__title">Корзина</span>
               <span class="basket__content">пока пуста</span>
             </a>
           </li>
         </ul>
       </nav>
-      <h1 class="page-header__title">Милые штуки ручной работы для дома</h1>
+      <h1 class="page-header__title">Милые штуки ручной<br/> работы для дома</h1>
 
       <nav class="product-nav">
-        <a class="product-nav__link" href="catalog.html" title="Предметы интерьера">Предметы интерьера</a>
-        <a class="product-nav__link" href="catalog.html" title="Детские игрушки">Детские игрушки</a>
+        <a class="product-nav__link  product-nav__link--interior" href="catalog.html" title="Предметы интерьера"><span class="product-nav__link-text">Предметы интерьера</span></a>
+        <a class="product-nav__link  product-nav__link--toy" href="catalog.html" title="Детские игрушки"><span class="product-nav__link-text">Детские игрушки</span></a>
       </nav>
     </header>
 
     <main class="page-content">
       <article class="product">
-        <h2 class="product__title">Вязаные корзинки</h2>
+        <h2 class="product__title  product__title--top">Вязаные корзинки</h2>
         <p class="product__meta">Товар недели</p>
         <p class="product__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
 
-        <dl class="features product__features">
-          <dt class="features__term">Цвет</dt>
+        <dl class="features product__features  product__features--full-width">
+          <dt class="features__term  features__term--table">Цвет</dt>
           <dd class="features__value">«Тиффани»/серый</dd>
-          <dt class="features__term">Диаметр</dt>
+          <dt class="features__term  features__term--table">Диаметр</dt>
           <dd class="features__value">25 см</dd>
-          <dt class="features__term">Высота</dt>
+          <dt class="features__term  features__term--table">Высота</dt>
           <dd class="features__value">15 см</dd>
         </dl>
-        <img class="product__preview" src="http://placehold.it/250x300" alt="Вязаные корзинки"/>
+        <img class="product__preview" src="./img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаные корзинки"/>
         <p class="product__cost-wrapper">Цена: <span class="product__cost">990 руб.</span></p>
 
         <a class="btn" href="#">Заказать</a>
@@ -60,12 +61,12 @@
       <section class="company-features">
         <h2 class="company-features__title">Коротко о нас</h2>
         <ul class="company-features__list">
-          <li class="company-features__item">Экологически чистые материалы</li>
-          <li class="company-features__item">Скандинавский стиль по российской цене</li>
-          <li class="company-features__item">Увеличивает лайки на фотографиях</li>
-          <li class="company-features__item">Связано вручную с любовью и умилением</li>
-          <li class="company-features__item">Поддержка отечественного производителя</li>
-          <li class="company-features__item">Поставляется в подарочной упаковке</li>
+          <li class="company-features__item  company-features__item--eco">Экологически чистые материалы</li>
+          <li class="company-features__item  company-features__item--price">Скандинавский стиль по российской цене</li>
+          <li class="company-features__item  company-features__item--popular">Увеличивает лайки на фотографиях</li>
+          <li class="company-features__item  company-features__item--with-love">Связано вручную с любовью и умилением</li>
+          <li class="company-features__item  company-features__item--rus">Поддержка отечественного производителя</li>
+          <li class="company-features__item  company-features__item--packaging">Поставляется в подарочной упаковке</li>
         </ul>
       </section>
 
@@ -85,10 +86,10 @@
 
         <ul class="pagination  reviews__pagination">
           <li class="pagination__item  pagination__item--prev">
-            <button class="pagination__link" type="button" title="Предыдущий отзыв">Предыдущий</button>
+            <button class="pagination__link  pagination__link--prev" type="button" title="Предыдущий отзыв">Предыдущий</button>
           </li>
           <li class="pagination__item  pagination__item--next">
-            <button class="pagination__link" type="button" title="Следующий отзыв">Следующий</button>
+            <button class="pagination__link  pagination__link--next" type="button" title="Следующий отзыв">Следующий</button>
           </li>
         </ul>
 
@@ -99,14 +100,14 @@
         <h2 class="contacts__title">Контакты</h2>
         <ul class="contacts__list">
           <li class="contacts__item">
-            <span class="contacts__title">e-mail:</span>
+            <span class="contacts__item-title">e-mail:</span>
             <span class="contacts__value">
               <a class="contacts__link" href="mailto:info@mimimishkashop.ru" title="Написать e-mail">info@mimimishkashop.ru</a>
             </span>
           </li>
           <li class="contacts__item">
-            <span class="contacts__title">адрес:</span>
-            <span class="contacts__value">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</span>
+            <span class="contacts__item-title">адрес:</span>
+            <span class="contacts__value">г. Санкт-Петербург,<br/> ул. Большая<br/> Конюшенная,<br/>д. 19/8, офис 101</span>
           </li>
         </ul>
 
@@ -130,9 +131,9 @@
       </ul>
 
       <div class="copyright  page-footer__copyright">
-        <p class="copyright__text">Разработано</p>
+        <span class="copyright__text">Разработано</span>
         <a class="copyright__link" href="#">
-          <img class="copyright__img" src="http://placehold.it/40x40" alt="HTML Academy"/>
+          <img class="copyright__img" src="./img/logo-htmlacademy.svg" width="40" height="40" alt="HTML Academy"/>
         </a>
       </div>
     </footer>
@@ -141,20 +142,20 @@
       <form class="size-form  modal" action="https://echo.htmlacademy.ru/" method="post">
         <p class="size-form__title">Добавить в корзину</p>
         <p class="size-form__text">Выберите размер:</p>
-        <label class="size-form__label">
-          <span>S</span>
-          <input class="size-form__field" type="radio" name="size" value="S"/>
+        <label class="size-form__label" for="sizeS">
+          <input id="sizeS" class="size-form__field" type="radio" name="size" value="S"/>
+          <span class="size-form__field-name">S</span>
         </label>
-        <label class="size-form__label">
-          <span>M</span>
-          <input class="size-form__field" type="radio" name="size" value="M"/>
+        <label class="size-form__label" for="sizeM">
+          <input id="sizeM" class="size-form__field" type="radio" name="size" value="M"/>
+          <span class="size-form__field-name">M</span>
         </label>
-        <label class="size-form__label">
-          <span>L</span>
-          <input class="size-form__field" type="radio" name="size" value="L"/>
+        <label class="size-form__label" for="sizeL">
+          <input id="sizeL" class="size-form__field" type="radio" name="size" value="L"/>
+          <span class="size-form__field-name">L</span>
         </label>
 
-        <button class="btn  btn--green" type="submit" title="Добавить">Добавить</button>
+        <button class="btn  btn--green  size-form__add-btn" type="submit" title="Добавить">Добавить</button>
       </form>
     </div>
   </body>

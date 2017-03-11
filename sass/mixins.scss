@@ -1,0 +1,98 @@
+@mixin clear-list {
+  list-style: none;
+  margin: 0;
+  padding:0;
+}
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table ;
+    clear: both;
+  }
+}
+
+@mixin postfix($symbol) {
+  &:after {
+    content: $symbol;
+    display: inline-block;
+  }
+}
+
+@mixin prefix($symbol) {
+  &:before {
+    content: $symbol;
+    display: inline-block;
+  }
+}
+
+@mixin masked-link($url, $color, $hover, $active){
+  &::after {
+    background-color: $color;
+    mask: url($url) no-repeat 50% 50%;
+  }
+
+  &:hover, &:focus {
+    &::after {
+      background-color: $hover;
+    }
+  }
+
+  &:active {
+    &::after {
+      background-color: $active;
+    }
+  }
+}
+
+@mixin link-icon($width, $height, $url, $left, $right, $bg, $color, $hover, $active) {
+  background-color: $bg;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    @if $left == 0 {
+      right: $right;
+    } @else {
+      left: $left;
+    }
+
+    display: block;
+    width: $width;
+    height: $height;
+    margin-top: -($height / 2);
+  }
+
+  @include masked-link($url, $color, $hover, $active);
+}
+
+@mixin link-icon-left($width, $height, $url, $left, $bg ) {
+  $color: rgba($menu-icon, 0.5);
+  $hover: rgba($menu-icon-hover, 0.7);
+  $active: rgba($menu-icon-hover, 0.3);
+
+  @include link-icon($width, $height, $url, $left, 0, $bg, $color, $hover, $active);
+}
+
+@mixin link-icon-right($width, $height, $url, $right, $bg) {
+  $color: rgba($green-icon, 0.5);
+  $hover: rgba($green-icon, 0.7);
+  $active: rgba($green-icon, 0.3);
+
+  @include link-icon($width, $height, $url, 0, $right, $bg, $color, $hover, $active);
+}
+
+@mixin select-text {
+  color: $color-text;
+
+  cursor: pointer;
+
+  &:hover, &:focus {
+    color: $hover-link;
+  }
+
+  &:active {
+    color: $active-link;
+  }
+}

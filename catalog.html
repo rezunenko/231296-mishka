@@ -3,14 +3,15 @@
   <head>
     <meta charset="UTF-8">
     <title>Каталог товаров</title>
+    <link rel="stylesheet" href="./css/style.css"/>
   </head>
-  <body>
-    <header class="page-header">
+  <body class="page">
+    <header class="page-header  page-header--no-bg">
       <a href="index.html" title="Главная страница">
-        <img class="page-header__logo" src="http://placehold.it/100x50" alt='Логотип магазина "Мишка"'/>
+        <img class="page-header__logo" src="img/logo-mobile.svg" width="90" height="35" alt='Логотип магазина "Мишка"'/>
       </a>
 
-      <nav class="main-nav">
+      <nav class="main-nav  main-nav--hidden">
         <button class="main-nav__toggle-btn" type="button"></button>
         <ul class="main-nav__list">
           <li class="main-nav__item">
@@ -20,11 +21,11 @@
             <a class="main-nav__link" href="form.html" title="Вязание на заказ">Вязание на заказ</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="#" title="Поиск по сайт">Поиск по сайту</a>
+            <a class="main-nav__link  main-nav__link--search" href="#" title="Поиск по сайт">Поиск по сайту</a>
           </li>
           <li class="main-nav__item">
 
-            <a class="basket  main-nav__link" href="#" title="Перейти к корзине">
+            <a class="basket  main-nav__link  main-nav__link--basket" href="#" title="Перейти к корзине">
               <span class="basket__title">Корзина</span>
               <span class="basket__content">пока пуста</span>
             </a>
@@ -32,69 +33,65 @@
         </ul>
       </nav>
       <h1 class="page-header__title">Каталог товаров</h1>
+
     </header>
 
     <main class="page-content">
       <section class="products">
         <article class="product">
-          <a href="#" title="Зайчик попрыгайчик">
-            <img src="http://placehold.it/250x200" alt="Зайчик попрыгайчик" class="product__preview"/>
-          </a>
-          <a href="#" title="Зайчик попрыгайчик">
+          <a class="product__link" href="#" title="Зайчик попрыгайчик">
+            <img class="product__preview" src="./img/photo-1-mobile@1x.jpg" width="253" height="200" alt="Зайчик попрыгайчик"/>
             <h2 class="product__title">Зайчик попрыгайчик</h2>
-          </a>
 
-          <dl class="features product__features">
-            <dt class="features__term">Рост</dt>
-            <dd class="features__value">30 см</dd>
-            <dt class="features__term">вес</dt>
-            <dd class="features__value">200 г</dd>
-          </dl>
-          <p class="product__cost-wrapper  product__cost-wrapper--wide"><span class="product__cost">1200 руб.</span></p>
+            <dl class="features product__features">
+              <dt class="features__term  features__term--inline">Рост</dt>
+              <dd class="features__value  features__value--inline">30 см</dd>
+              <dt class="features__term  features__term--inline">вес</dt>
+              <dd class="features__value  features__value--inline">200 г</dd>
+            </dl>
+            <p class="product__cost-wrapper  product__cost-wrapper--wide"><span class="product__cost">1200 руб.</span></p>
+          </a>
         </article>
 
         <article class="product">
-          <a href="#" title="Корзинка для белья">
-            <img src="http://placehold.it/250x200" alt="Корзинка для белья" class="product__preview"/>
-          </a>
-          <a href="#" title="Корзинка для белья">
+          <a class="product__link" href="#" title="Корзинка для белья">
+            <img class="product__preview" src="./img/photo-2-mobile@1x.jpg" width="253" height="200" alt="Корзинка для белья"/>
+
             <h2 class="product__title">Корзинка для белья</h2>
-          </a>
 
-          <dl class="features product__features">
-            <dt class="features__term">Диаметр</dt>
-            <dd class="features__value">15 см</dd>
-            <dt class="features__term">высота</dt>
-            <dd class="features__value">10 см</dd>
-          </dl>
-          <p class="product__cost-wrapper  product__cost-wrapper--wide"><span class="product__cost">690 руб.</span></p>
+            <dl class="features product__features">
+              <dt class="features__term  features__term--inline">Диаметр</dt>
+              <dd class="features__value  features__value--inline">15 см</dd>
+              <dt class="features__term  features__term--inline">высота</dt>
+              <dd class="features__value  features__value--inline">10 см</dd>
+            </dl>
+            <p class="product__cost-wrapper  product__cost-wrapper--wide"><span class="product__cost">690 руб.</span></p>
+          </a>
         </article>
 
         <article class="product">
-          <a href="#" title="Большая корзинка для игрушек">
-            <img src="http://placehold.it/250x200" alt="Большая корзинка для игрушек" class="product__preview"/>
-          </a>
-          <a href="#" title="Большая корзинка для игрушек">
+          <a class="product__link" href="#" title="Большая корзинка для игрушек">
+            <img class="product__preview" src="./img/photo-3-mobile@1x.jpg" width="253" height="200" alt="Большая корзинка для игрушек"/>
             <h2 class="product__title">Большая корзинка для игрушек</h2>
-          </a>
 
-          <dl class="features product__features">
-            <dt class="features__term">Диаметр</dt>
-            <dd class="features__value">30 см</dd>
-            <dt class="features__term">высота</dt>
-            <dd class="features__value">30 см</dd>
-          </dl>
-          <p class="product__cost-wrapper  product__cost-wrapper--wide"><span class="product__cost">1500 руб.</span></p>
+            <dl class="features product__features">
+              <dt class="features__term  features__term--inline">Диаметр</dt>
+              <dd class="features__value  features__value--inline">30 см</dd>
+              <dt class="features__term  features__term--inline">высота</dt>
+              <dd class="features__value  features__value--inline">30 см</dd>
+            </dl>
+            <p class="product__cost-wrapper  product__cost-wrapper--wide"><span class="product__cost">1500 руб.</span></p>
+          </a>
         </article>
       </section>
 
       <article class="video-review">
         <h2 class="video-review__title">Процесс производства</h2>
-        <video class="video-review__video" src="#" preload="metadata" poster="http://placehold.it/250x200"></video>
+        <video class="video-review__video" src="#" preload="metadata" poster="./img/video-mobile@1x.jpg"></video>
         <p class="video-review__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как
           появляются наши товары.</p>
 
-        <a class="btn" href="#">Сделать заказ</a>
+        <a class="btn  video-review__btn" href="#">Сделать заказ</a>
       </article>
     </main>
 
@@ -112,31 +109,31 @@
       </ul>
 
       <div class="copyright  page-footer__copyright">
-        <p class="copyright__text">Разработано</p>
+        <span class="copyright__text">Разработано</span>
         <a class="copyright__link" href="#">
-          <img class="copyright__img" src="http://placehold.it/40x40" alt="HTML Academy"/>
+          <img class="copyright__img" src="./img/logo-htmlacademy.svg" width="40" height="40" alt="HTML Academy"/>
         </a>
       </div>
     </footer>
 
-    <div class="overlay">
+    <div class="overlay" hidden>
       <form class="size-form  modal" action="https://echo.htmlacademy.ru/" method="post">
         <p class="size-form__title">Добавить в корзину</p>
         <p class="size-form__text">Выберите размер:</p>
-        <label class="size-form__label">
-          <span>S</span>
-          <input class="size-form__field" type="radio" name="size" value="S"/>
+        <label class="size-form__label" for="sizeS">
+          <input id="sizeS" class="size-form__field" type="radio" name="size" value="S"/>
+          <span class="size-form__field-name">S</span>
         </label>
-        <label class="size-form__label">
-          <span>M</span>
-          <input class="size-form__field" type="radio" name="size" value="M"/>
+        <label class="size-form__label" for="sizeM">
+          <input id="sizeM" class="size-form__field" type="radio" name="size" value="M"/>
+          <span class="size-form__field-name">M</span>
         </label>
-        <label class="size-form__label">
-          <span>L</span>
-          <input class="size-form__field" type="radio" name="size" value="L"/>
+        <label class="size-form__label" for="sizeL">
+          <input id="sizeL" class="size-form__field" type="radio" name="size" value="L"/>
+          <span class="size-form__field-name">L</span>
         </label>
 
-        <button class="btn  btn--green" type="submit" title="Добавить">Добавить</button>
+        <button class="btn  btn--green  size-form__add-btn" type="submit" title="Добавить">Добавить</button>
       </form>
     </div>
   </body>

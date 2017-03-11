@@ -1,0 +1,28 @@
+.page-header {
+  position: relative;
+  padding-top: 80px;
+
+  background: url('./../../img/hero-mobile@1x.jpg') no-repeat 50% 80px;
+
+  &--no-bg {
+    background: $color-header;
+  }
+}
+
+.page-header__logo {
+  position: absolute;
+  top: 22px;
+  left: 50%;
+  z-index: 3;
+
+  margin-left: -45px;
+}
+
+.page-header__title {
+  display: block;
+  padding: 86px 20px 110px 20px;
+
+  font-size: $font-size-xxx-large;
+  line-height: $line-height-large;
+  text-align: center;
+}

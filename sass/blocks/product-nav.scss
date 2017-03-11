@@ -1,0 +1,38 @@
+
+.product-nav__link {
+  $padding: 30px;
+
+  position: relative;
+
+  display: block;
+  max-height: 45px;
+  padding: $padding;
+
+  overflow: hidden;
+
+  &--interior {
+    @include link-icon-right(70px, 70px, './../../img/icon-interior.svg', 30px, $left-green-btn);
+  }
+
+  &--toy {
+    @include link-icon-right(70px, 70px, './../../img/icon-toy.svg', 30px, $right-green-btn);
+  }
+
+  &:hover, &:focus {
+    padding-bottom: ($padding + 5px);
+  }
+
+  &:active * {
+    opacity: 0.3;
+  }
+}
+
+.product-nav__link-text {
+  display: inline-block;
+  width: 120px;
+  vertical-align: top;
+
+  color: $color-text-white;
+  font-size: $font-size-regular + 4;
+  font-weight: bold;
+}
