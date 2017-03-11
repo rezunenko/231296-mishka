@@ -11,20 +11,38 @@
 }
 
 .order-form__fieldset {
+  border: none;
   border-top: 1px solid $color-fieldset;
-  border-left: none;
-  border-bottom: none;
-  border-right: none;
 
   padding: 10px 0 10px 0;
+
+  &--hide {
+    border-top: none;
+  }
 }
 
 .order-form__legend {
-  padding-right: 30px;
+  display: flex;
+  flex-direction: row;
 
   color: $color-fieldset;
   font-size: $font-size-large;
   text-transform: uppercase;
+
+  &--label {
+    &::after {
+      position: relative;
+      top: -12px;
+
+      display: block;
+      margin-left: 20px;
+      flex:1;
+
+      content: '';
+
+      border-bottom: 1px solid $color-fieldset;
+    }
+  }
 }
 
 .order-form__label {
@@ -53,11 +71,6 @@
     content: '';
     display: none;
     position: absolute;
-    width: $width;
-    height: 16px;
-    left: 12px;
-    top: 50%;
-    margin-top: -8px;
   }
 
   &:hover, &:focus {
@@ -84,6 +97,12 @@
     }
 
     &::after {
+      width: $width;
+      height: 16px;
+      left: 12px;
+      top: 50%;
+      margin-top: -8px;
+
       border-radius: 50%;
       background-color: $color-fieldset;
     }
@@ -100,15 +119,15 @@
     }
 
     &::after {
-      border: 2px solid black;
-      border-top: none;
-      border-left: none;
-      width: $width / 2;
-      margin-top: -10px;
-      left: 16px;
+      top: 17px;
+      left: 7px;
+      width: 25px;
+      height: 25px;
 
-      transform: rotate(45deg);
+      background: url('./../../img/icon-tick.svg') no-repeat 0 0;
+      background-size: 25px 25px;
     }
+
   }
 }
 
@@ -126,9 +145,7 @@
   height: 50px;
   margin-bottom: 20px;
 
-  border-top: none;
-  border-left: none;
-  border-right: none;
+  border: none;
   border-bottom: 2px solid $color-field;
   outline: none;
 
@@ -168,9 +185,11 @@
 .order-form__textarea {
   width: 100%;
   box-sizing: border-box;
+  margin-top: 20px;
   padding: 15px;
 
   border: 2px solid $color-field;
+  outline: none;
 
   font-size: $font-size-large;
 }
