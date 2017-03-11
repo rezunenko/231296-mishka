@@ -3,6 +3,8 @@
 }
 
 .video-review__title {
+  max-width: 150px;
+  margin:0 auto;
   display: block;
   position: relative;
   max-height: 200px;
@@ -20,4 +22,9 @@
 
 .video-review__btn {
   margin-bottom: 60px;
+}
+
+.video-review__video {
+  display: block;
+  margin: 0 auto;
 }
