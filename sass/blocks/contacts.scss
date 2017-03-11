@@ -2,8 +2,10 @@
 
 .contacts__title {
   margin:0 30px 35px 30px;
+
   font-size: $font-size-x-large;
   line-height: $line-height-large;
+  font-weight: bold;
 }
 
 .contacts__list {
@@ -51,4 +53,9 @@
 .contacts__feedback-btn {
   width: auto;
   margin: 30px;
+}
+
+.contacts__info {
+  padding: 0;
+  border: none;
 }
