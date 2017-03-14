@@ -6,20 +6,22 @@
   right: 0;
   z-index: 1;
 
+  height: 80px;
+  overflow: hidden;
+
   text-align: right;
 
   background-color: white;
 
-  &--hidden {
-    height: 81px;
-    overflow: hidden;
+  &--open {
+    height: auto;
   }
 }
 
 .main-nav__toggle-btn {
   display: inline-block;
   vertical-align: top;
-  margin: 29px 30px 29px;
+  margin: 29px 0;
 
   width: 22px;
   height: 22px;
@@ -32,6 +34,14 @@
   &--open {
     background-image: url('../../img/icon-menu-close.svg');
   }
+}
+
+.main-nav__item {
+  border-top: 1px solid $color-border;
+}
+
+.main-nav__link *{
+  line-height: 24px;
 }
 
 .main-nav__list {
@@ -48,21 +58,76 @@
   position: relative;
 
   display: block;
-  padding: $padding 0 $padding 75px;
+  padding: $padding 30px;
+  box-sizing: border-box;
+  vertical-align: middle;
 
   font-size: $font-size-large;
   font-weight: bold;
   text-decoration: none;
 
-  border-top: 1px solid $color-border;
 
   @include select-text;
 
   &--basket {
-    @include link-icon-left(20px, 20px, './../../img/icon-cart.svg', 30px, white);
+    @include link-inline-icon-left(24px, 24px, './../../img/icon-cart.svg', 0, white);
   }
 
   &--search {
-    @include link-icon-left(20px, 20px, './../../img/icon-search.svg', 30px, white);
+    @include link-inline-icon-left(24px, 24px, './../../img/icon-search.svg', 0, white);
   }
+}
+
+@media (min-width: 768px) {
+  .main-nav {
+    display: flex;
+    height: 170px;
+    justify-content: space-between;
+    background-color: transparent;
+  }
+
+  .main-nav__toggle-btn {
+    display: none;
+  }
+
+  .main-nav__list--links {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    flex-basis: 50%;
+    max-width: 440px;
+  }
+
+  .main-nav__list--links .main-nav__item {
+    flex-basis: 50%;
+  }
+
+  .main-nav__link {
+    display: inline-block;
+    padding: 0;
+    vertical-align: top;
+
+    font-size: $font-size-large;
+  }
+
+  .main-nav__list--controls {
+    display: flex;
+    flex-basis: 50%;
+    max-width: 350px;
+    margin-top: 30px;
+  }
+
+  .main-nav__link--search {
+    font-size: 0;
+  }
+
+  .main-nav__list--controls .main-nav__item {
+    flex-grow: 1;
+    text-align: right;
+  }
+
+}
+
+@media (min-width: 1024px) {
+
 }

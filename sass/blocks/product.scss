@@ -1,31 +1,38 @@
 .product {
-  max-width: 254px;
   margin: 0 auto;
-  padding: 0 30px 35px 30px;
+  padding-bottom: 48px;
 }
 
 .product__title {
   max-width: 200px;
-  margin: 30px auto 10px auto;
+  margin: 30px auto 5px auto;
 
   font-size: $font-size-large;
   line-height: $line-height-regular;
   font-weight: bold;
 
   &--top {
+
     max-width: 100%;
 
     font-size: $font-size-xx-large;
     line-height: $line-height-large;
-    font-weight: normal;
+    font-weight: bold;
   }
 }
 
 .product__meta {
+  margin: 0;
+
   font-size: $font-size-large;
-  line-height: $line-height-small;
   font-weight: bold;
+  line-height: $line-height-small;
+  text-transform: uppercase;
   color: $color-text-green;
+}
+
+.product__description {
+  margin:22px 0 17px;
 }
 
 .product__preview {
@@ -34,7 +41,7 @@
 }
 
 .product__cost-wrapper {
-  margin: 29px 0;
+  margin: 25px 0;
 
   font-size: $font-size-large;
   font-weight: bold;

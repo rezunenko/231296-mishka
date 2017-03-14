@@ -1,9 +1,9 @@
 .reviews {
-  padding: 0 30px 35px 30px;
+  padding-bottom:35px;
 }
 
 .reviews__title {
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 
   font-size: $font-size-xx-large;
   line-height: $line-height-large;
@@ -11,11 +11,12 @@
 }
 
 .review__text {
-  margin-bottom: 35px;
+  margin-bottom: 25px;
 
   line-height: $line-height-large;
 }
 
 .reviews__add-btn {
+  margin-top: 35px;
   margin-bottom: 50px;
 }

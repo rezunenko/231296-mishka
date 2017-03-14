@@ -1,24 +1,21 @@
 .features {
-
-  @include clearfix;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
-.features__term--table {
-  display: block;
-  float: left;
-  width: 35%;
+.features__term {
+  flex-basis: 38%;
   margin: 0;
-  padding: 0;
+  padding: 8px 0;
 
   @include postfix(':');
 }
 
-.features__value--table {
-  display: block;
-  float: left;
-  width: 65%;
+.features__value {
+  flex-basis: 62%;
   margin: 0;
-  padding: 0;
+  padding: 8px 0;
 }
 
 .features__term--inline {

@@ -1,8 +1,14 @@
 .page {
+  min-width: $screen-size-small;
   margin: 0;
-  padding: 0;
+  padding: 0 30px;
 
   font-family: $font-family-text;
   font-size: $font-size-regular;
   line-height: $line-height-regular;
+}
+
+
+@media (min-width: 768px) {
+  padding: 0 50px;
 }
