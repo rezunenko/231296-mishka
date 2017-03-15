@@ -4,12 +4,13 @@
   position: relative;
 
   display: block;
-  max-height: 103px;
+  max-height: 110px;
+  margin-left: -30px;
+  margin-right: -30px;
   padding: $padding;
   box-sizing: border-box;
 
   overflow: hidden;
-  @include ignore-page-padding;
 
   &--interior {
     @include link-icon-right(70px, 70px, './../../img/icon-interior.svg', 25px, $left-green-btn);
@@ -40,23 +41,17 @@
 
 @media (min-width: 768px) {
   .product-nav {
-    position: absolute;
-    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     width: 100%;
-    padding: 0 50px;
+    padding: 0 20px;
+
     box-sizing: border-box;
   }
 
-  .product-nav__inner {
-    position: relative;
-    width: 100%;
-
-    @include clearfix;
-  }
-
   .product-nav__link {
-    width: 50%;
-    max-height: 103px;
-    float: left;
+      flex-basis: 50%;
+      margin: 0;
   }
 }

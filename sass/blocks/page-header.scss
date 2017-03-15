@@ -37,15 +37,15 @@
 
 .page-header__meta {
   position: absolute;
-  right: 0;
-  top: 100px;
+  right: 20px;
+  top: 90px;
 
   display: none;
 }
 
 @media (min-width: 768px) {
   .page-header {
-    height: 770px;
+    height: 730px;
     padding-top: 90px;
 
     background-position: 50% 90px;
@@ -53,13 +53,18 @@
   }
 
   .page-header__title {
+    margin-bottom: 250px;
+    padding-top: 155px;
 
     font-size: 43px;
     line-height: 50px;
-    padding-top: 165px;
   }
 
   .page-header__meta {
     display: block;
+  }
+
+  .page-header__logo {
+    left: 75px;
   }
 }
