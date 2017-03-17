@@ -26,7 +26,7 @@
 
 .page-header__title {
   display: block;
-  padding: 70px 0px 120px 0px;
+  padding: 70px 0px 122px 0px;
   margin: 0;
   box-sizing: border-box;
 
@@ -58,6 +58,24 @@
 
     font-size: 43px;
     line-height: 50px;
+  }
+
+  .page-header__meta {
+    display: block;
+  }
+
+  .page-header__logo {
+    left: 75px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .page-header__title {
+    margin-bottom: 240px;
+    padding-top: 155px;
+
+    font-size: 53px;
+    line-height: 55px;
   }
 
   .page-header__meta {
