@@ -1,12 +1,18 @@
 .author__name {
-  margin-bottom: 10px;
-
+  margin: 0;
   font-size: $font-size-x-large;
   font-weight: bold;
+  letter-spacing: 0.1px;
 }
 
 .author__username {
-  margin-top: 10px;
+  margin-top: 8px;
   margin-bottom: 30px;
   font-size: $font-size-large;
+}
+
+@media (min-width: 768px) {
+  .author__name {
+    letter-spacing: -0.5px;
+  }
 }
