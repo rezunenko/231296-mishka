@@ -29,7 +29,6 @@
   padding-top: 70px;
   padding-bottom: 75px;
   margin: 0;
-  @include ignore-page-padding;
   box-sizing: border-box;
 
   font-size: $font-size-xxx-large;
@@ -37,6 +36,8 @@
   text-align: center;
 
   &--bg {
+    @include ignore-page-padding;
+
     background: #f1f1f1;
   }
 }

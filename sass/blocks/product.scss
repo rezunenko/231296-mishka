@@ -1,11 +1,16 @@
 .product {
   margin: 0 auto;
-  padding-bottom: 48px;
+  margin-bottom: 70px;
+
+  &--card {
+    margin-bottom: 30px;
+    border: 1px solid $color-border;
+  }
 }
 
 .product__title {
   max-width: 200px;
-  margin: 30px auto 5px auto;
+  margin: 28px auto 5px auto;
 
   font-size: $font-size-large;
   line-height: $line-height-regular;
@@ -41,7 +46,7 @@
 }
 
 .product__cost-wrapper {
-  margin: 25px 0;
+  margin: 40px 0 25px;
 
   font-size: $font-size-large;
   font-weight: bold;
@@ -50,8 +55,11 @@
   &--wide {
     position: relative;
     max-width: 200px;
-    margin: 0 auto 30px auto;
+    padding: 22px 0 28px;
+    margin: 0 auto;
     text-align: left;
+
+    font-size: $font-size-regular;
 
     @include link-icon-right(20px, 20px, './../../img/icon-cart.svg', 0px, transparent);
   }
@@ -59,7 +67,8 @@
 
 .product__features {
   max-width: 200px;
-  margin: 0 auto 30px auto;
+  margin: 0 auto;
+  padding-bottom: 16px;
 
   &--full-width {
     max-width: 100%;
@@ -72,8 +81,6 @@
 
   text-decoration: none;
   color:black;
-
-  border: 1px solid transparent;
 
   &:hover, &focus {
     border-color: $color-border;

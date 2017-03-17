@@ -20,7 +20,7 @@
 }
 
 @mixin prefix($symbol) {
-  &:after {
+  &:before {
     content: $symbol;
     display: inline-block;
   }

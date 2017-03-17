@@ -1,5 +1,6 @@
 .video-review {
-  padding: 30px;
+  margin-bottom: 80px;
+  padding:22px 35px 30px;
 }
 
 .video-review__title {
@@ -8,23 +9,26 @@
   display: block;
   position: relative;
   max-height: 200px;
-  padding:30px 30px 20px 90px;
+  padding-left: 58px;
+  margin-bottom: 25px;
 
   font-size: $font-size-large;
   line-height: $line-height-regular;
 
-  @include link-icon-left(45px, 40px, './../../img/icon-video.svg', 30px, transparent);
+  @include link-icon-left(45px, 40px, './../../img/icon-video.svg', -5px, transparent);
 }
 
 .video-review__text {
-  padding: 30px;
+  padding: 15px 0 10px 0;
+
+  font-size: $font-size-small;
 }
 
 .video-review__btn {
-  margin-bottom: 60px;
+  margin-bottom: 0px;
 }
 
 .video-review__video {
   display: block;
-  margin: 0 auto;
+  margin: 0 -35px;
 }
