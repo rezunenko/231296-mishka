@@ -5,17 +5,18 @@
 }
 
 .features__term {
-  flex-basis: 37%;
-  margin: 0;
+  flex-basis: 95px;
   padding: 8px 0;
+  flex-shrink: 0;
 
   @include postfix(':');
 }
 
 .features__value {
-  flex-basis: 63%;
-  margin: 0;
-  padding: 8px 0;
+  flex-basis: 100%;
+  margin: 0 0 0 -95px;
+  padding: 8px 0 0 95px;
+  box-sizing: border-box;
 }
 
 .features__term--inline {

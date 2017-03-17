@@ -57,3 +57,54 @@
     mask: url('./../../img/icon-feature-6.svg') no-repeat 50% 10px;
   }
 }
+
+@media (min-width: 768px) {
+  .company-features {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 25px;
+    padding-bottom: 50px;
+  }
+
+  .company-features__title {
+    font-size: 43px;
+  }
+
+  .company-features__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .company-features__item {
+    flex-basis: 50%;
+    margin-top: 10px;
+    margin-bottom: 35px;
+
+    font-size: 22px;
+    line-height: 22px;
+    letter-spacing: -1px;
+
+    &--price {
+      order: 1;
+    }
+
+    &--rus {
+      order: 2;
+    }
+
+    &--popular {
+      order: 3;
+    }
+
+    &--packaging {
+      order: 4;
+    }
+  }
+}
+
+@media (min-width: 1150px) {
+  .company-features__title {
+    font-size: 53px;
+  }
+}
