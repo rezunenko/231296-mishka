@@ -1,6 +1,6 @@
 
 .page-footer {
-  padding: 35px 0;
+  padding: 5px 0;
   background-color: $color-footer;
   text-align: center;
 
@@ -9,4 +9,30 @@
 
 .page-footer__copyright {
   margin-top: 45px;
+}
+
+@media (min-width: 768px) {
+  .page-footer {
+    display: flex;
+    height: 145px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+
+    box-sizing: border-box;
+  }
+
+  .page-footer__copyright {
+    margin-top: 0;
+  }
+
+  .page-footer__social-links {
+    padding-left: 75px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .page-footer {
+    margin-top: 104px;
+  }
 }
