@@ -5,6 +5,36 @@
     <title>Каталог товаров</title>
     <link rel="stylesheet" href="./css/normolize.css"/>
     <link rel="stylesheet" href="./css/style.css"/>
+    <style>
+      HTML {
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        /* По умолчанию мобильный макет */
+        background-image: url("img/mishka-catalog-mobile.jpg");
+      }
+
+      /* Планшет */
+      @media ( min-width: 768px ) {
+        HTML {
+          /* Планшетный макет */
+          background-image: url("img/mishka-catalog-tablet.jpg");
+        }
+      }
+
+      /* Десктоп */
+      @media ( min-width: 1050px ) {
+        HTML {
+          /* Десктопный макет */
+          background-image: url("img/mishka-catalog-desktop.jpg");
+        }
+      }
+
+      BODY {
+        opacity: .5;
+      }
+    </style>
+    <link rel="stylesheet" href="../node_modules/pixel-glass/styles.css">
+    <script src="../node_modules/pixel-glass/script.js"></script>
   </head>
   <body class="page">
     <header class="page-header  page-header--no-bg">
@@ -33,7 +63,7 @@
           </li>
         </ul>
       </nav>
-      <h1 class="page-header__title">Каталог товаров</h1>
+      <h1 class="page-header__title  page-header__title--bg">Каталог товаров</h1>
 
     </header>
 

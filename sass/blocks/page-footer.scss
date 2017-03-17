@@ -11,6 +11,10 @@
   margin-top: 45px;
 }
 
+.page-footer__logo {
+  display: none;
+}
+
 @media (min-width: 768px) {
   .page-footer {
     display: flex;
@@ -28,6 +32,10 @@
 
   .page-footer__social-links {
     padding-left: 75px;
+  }
+
+  .page-footer__logo {
+    display: block;
   }
 }
 

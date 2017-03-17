@@ -6,7 +6,7 @@
 
 
   &--no-bg {
-    background: $color-header;
+    background: none;
   }
 
   * {
@@ -26,13 +26,19 @@
 
 .page-header__title {
   display: block;
-  padding: 70px 0px 122px 0px;
+  padding-top: 70px;
+  padding-bottom: 75px;
   margin: 0;
+  @include ignore-page-padding;
   box-sizing: border-box;
 
   font-size: $font-size-xxx-large;
   line-height: $line-height-large;
   text-align: center;
+
+  &--bg {
+    background: #f1f1f1;
+  }
 }
 
 .page-header__meta {
@@ -53,7 +59,6 @@
   }
 
   .page-header__title {
-    margin-bottom: 250px;
     padding-top: 155px;
 
     font-size: 43px;
@@ -71,9 +76,6 @@
 
 @media (min-width: 1150px) {
   .page-header__title {
-    margin-bottom: 240px;
-    padding-top: 155px;
-
     font-size: 53px;
     line-height: 55px;
   }
