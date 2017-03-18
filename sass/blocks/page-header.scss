@@ -57,6 +57,10 @@
 
     background-position: 50% 90px;
     background-size: cover;
+
+    &--no-bg {
+      height: 270px;
+    }
   }
 
   .page-header__title {
@@ -64,6 +68,10 @@
 
     font-size: 43px;
     line-height: 50px;
+
+    &--bg {
+      padding-top: 94px;
+    }
   }
 
   .page-header__meta {

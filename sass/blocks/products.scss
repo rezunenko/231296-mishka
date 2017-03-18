@@ -1,3 +1,10 @@
 .products {
-  padding-top: 30px;
+  padding-top: 32px;
+}
+
+@media (min-width: 1150px) {
+  .products {
+    display: flex;
+    justify-content: space-between;
+  }
 }
