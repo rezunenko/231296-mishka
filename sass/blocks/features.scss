@@ -31,7 +31,15 @@
       @include prefix(',');
     }
   }
+
+  @media (min-width: 768px) {
+    &--inline{
+      font-size: 15px;
+    }
+  }
 }
+
+
 
 .features__value {
   flex-basis: 100%;
@@ -47,5 +55,11 @@
 
     font-size: $font-size-small;
     line-height: $line-height-large;
+  }
+
+  @media (min-width: 768px) {
+    &--inline {
+      font-size: 15px;
+    }
   }
 }
