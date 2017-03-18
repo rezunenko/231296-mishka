@@ -1,15 +1,74 @@
+.contacts {
+  @media (min-width: 768px) {
+    & {
+      position: relative;
+      padding-top: 60px;
+    }
+  }
+}
+
 .contacts__title {
   margin-bottom: 26px;
 
   font-size: $font-size-x-large;
   line-height: $line-height-large;
   font-weight: bold;
+
+  @media (min-width: 768px) {
+    & {
+      position: relative;
+      z-index: 5;
+
+      display: block;
+      width: 100%;
+      margin-top: 137px;
+      margin-bottom: 48px;
+
+      font-size: 43px;
+      line-height: 50px;
+    }
+
+    &::after {
+      position: absolute;
+      top: -18px;
+      right: 0;
+
+      display: block;
+      width: 60px;
+      height: 90px;
+
+      background: url('./../../img/icon-flag.svg') no-repeat 10px 3px;
+
+      content: '';
+    }
+  }
+
+  @media (min-width: 1150px) {
+    & {
+      margin-bottom: 51px;
+
+      font-size: 53px;
+    }
+
+    &::after {
+      top: -15px;
+      left: -117px;
+    }
+  }
 }
 
 .contacts__list {
   display: flex;
   flex-direction: column;
   @include clear-list;
+
+  @media (min-width: 768px) {
+    & {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
 }
 
 .contacts__item {
@@ -17,12 +76,36 @@
   align-items: flex-start;
   margin-bottom: 30px;
   line-height: $line-height-large;
+
+  @media (min-width: 768px) {
+    & {
+      flex-basis: 50%;
+      font-size: $font-size-large;
+    }
+  }
+
+  @media (min-width: 1150px) {
+    & {
+      flex-basis: 100%;
+    }
+  }
 }
 
 
 .contacts__value {
   display: block;
   margin-left: 30px;
+
+  @media (min-width: 768px) {
+    & {
+      max-width: 200px;
+      margin-left: 24px;
+
+      br {
+        display: none;
+      }
+    }
+  }
 }
 
 .contacts__link {
@@ -47,131 +130,53 @@
   margin: 0 0 5px;
   padding: 0;
   border: none;
+
+  @media (min-width: 768px) {
+    & {
+      position: relative;
+
+      margin-bottom: 25px;
+    }
+  }
+
+  @media (min-width: 1150px) {
+    & {
+      max-width: 300px;
+      margin-left: auto;
+      margin-top: 81px;
+      padding-right: 577px;
+    }
+  }
 }
 
 .contacts__feedback-btn {
   max-width: 260px;
   margin: 36px auto 60px auto;
-}
 
-@media (min-width: 768px) {
-  .contacts {
-    position: relative;
-    padding-top: 60px;
+  @media (min-width: 768px) {
+    & {
+      margin-top: 50px;
+      max-width: 230px;
+    }
   }
 
-  .contacts__title {
-    margin-bottom: 48px;
+  @media (min-width: 1150px) {
+    & {
+      margin-top: 50px;
+      margin-right: 647px;
+    }
+  }
+}
 
-    font-size: 43px;
-    line-height: 50px;
-
-    &::after {
+.contacts__map {
+  @media (min-width: 1150px) {
+    & {
       position: absolute;
-      top: 40px;
-      right: 0;
+      top: 67px;
+      right: 50px;
 
-      display: block;
-      width: 60px;
-      height: 90px;
-
-      background: url('./../../img/icon-flag.svg') no-repeat 10px 3px;
-
-      content: '';
+      width: 525px;
+      height: 455px;
     }
-  }
-
-  .contacts__info {
-    margin-bottom: 25px;
-  }
-
-  .contacts__list {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  .contacts__item {
-    flex-basis: 50%;
-    font-size: $font-size-large;
-  }
-
-  .contacts__value {
-    max-width: 200px;
-    margin-left: 24px;
-
-    br {
-      display: none;
-    }
-  }
-}
-
-@media (min-width: 768px) {
-  .contacts__title {
-    position: relative;
-    z-index: 5;
-
-    margin-top: 137px;
-  }
-
-  .contacts__info {
-    position: relative;
-  }
-
-  .contacts__title {
-    display: block;
-    width:100%;
-    font-size: 43px;
-
-    &::after {
-      position: absolute;
-      top: -18px;
-      right: 0;
-
-      content: '';
-    }
-  }
-
-  .contacts__feedback-btn {
-    margin-top: 53px;
-    max-width: 230px;
-  }
-}
-
-@media (min-width: 1150px) {
-  .contacts__info {
-    max-width: 300px;
-    margin-left: auto;
-    margin-top: 81px;
-    padding-right: 577px;
-  }
-
-  .contacts__title {
-    margin-bottom: 51px;
-
-    font-size: 53px;
-
-    &::after {
-      top: -15px;
-      left: -117px;
-    }
-  }
-
-  .contacts__item {
-    flex-basis: 100%;
-  }
-
-  .contacts__map {
-    position: absolute;
-    top: 67px;
-    right: 50px;
-
-    width: 525px;
-    height: 455px;
-  }
-
-  .contacts__feedback-btn {
-    margin-top: 50px;
-    margin-right: 647px;
   }
 }
