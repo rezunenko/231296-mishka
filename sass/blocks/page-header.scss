@@ -16,7 +16,7 @@
     background-size: cover;
 
     &--no-bg {
-      height: 270px;
+      height: 320px;
     }
   }
 }
@@ -28,7 +28,7 @@
   transform: translateX(-50%);
   z-index: 3;
 
-  @media (min-width: $screen-tablet) {
+  @media (min-width: $screen-tablet) and (max-width: 1149px) {
     left: 75px;
   }
 }
@@ -57,7 +57,7 @@
     line-height: $line-height-tablet;
 
     &--bg {
-      padding-top: 94px;
+      padding-top: 25px;
     }
   }
 

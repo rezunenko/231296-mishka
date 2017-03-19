@@ -42,22 +42,32 @@
         <img class="page-header__logo" src="img/logo-mobile.svg" width="90" height="35" alt='Логотип магазина "Мишка"'/>
       </a>
 
-      <nav class="main-nav  main-nav--hidden">
+      <nav class="main-nav">
         <button class="main-nav__toggle-btn" type="button"></button>
-        <ul class="main-nav__list">
+        <ul class="main-nav__list  main-nav__list--links">
           <li class="main-nav__item">
-            <a class="main-nav__link" title="Каталог товаров">Каталог товаров</a>
+            <a class="main-nav__link" href="catalog.html" title="Каталог товаров">Каталог товаров</a>
           </li>
           <li class="main-nav__item">
             <a class="main-nav__link" href="form.html" title="Вязание на заказ">Вязание на заказ</a>
           </li>
+        </ul>
+        <ul class="main-nav__list  main-nav__list--promotions">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="catalog.html" title="Новые поступления">Новые поступления</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="catalog.html" title="Распродажа">Распродажа</a>
+          </li>
+        </ul>
+        <ul class="main-nav__list  main-nav__list--controls">
           <li class="main-nav__item">
             <a class="main-nav__link  main-nav__link--search" href="#" title="Поиск по сайт">Поиск по сайту</a>
           </li>
           <li class="main-nav__item">
 
             <a class="basket  main-nav__link  main-nav__link--basket" href="#" title="Перейти к корзине">
-              <span class="basket__title">Корзина</span>
+              <span class="basket__title">Корзина:</span>
               <span class="basket__content">пока пуста</span>
             </a>
           </li>
