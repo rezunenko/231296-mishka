@@ -3,38 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title>Вязание на заказ</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./css/style.css"/>
-    <style>
-      HTML {
-        background-repeat: no-repeat;
-        background-position: 50% 0;
-        /* По умолчанию мобильный макет */
-        background-image: url("img/dev/mishka-form-mobile.jpg");
-      }
-
-      /* Планшет */
-      @media ( min-width: 768px ) {
-        HTML {
-          /* Планшетный макет */
-          background-image: url("img/dev/mishka-form-tablet.jpg");
-        }
-      }
-
-      /* Десктоп */
-      @media ( min-width: 1050px ) {
-        HTML {
-          /* Десктопный макет */
-          background-image: url("img/dev/mishka-form-desktop.jpg");
-        }
-      }
-
-      BODY {
-        opacity: .5;
-      }
-    </style>
-    <link rel="stylesheet" href="../node_modules/pixel-glass/styles.css">
-    <script src="../node_modules/pixel-glass/script.js"></script>
   </head>
   <body class="page">
     <header class="page-header  page-header--no-bg">
@@ -42,32 +11,22 @@
         <img class="page-header__logo" src="img/logo-mobile.svg" width="90" height="35" alt='Логотип магазина "Мишка"'/>
       </a>
 
-      <nav class="main-nav">
+      <nav class="main-nav  main-nav--hidden">
         <button class="main-nav__toggle-btn" type="button"></button>
-        <ul class="main-nav__list  main-nav__list--links">
+
+        <ul class="main-nav__list">
           <li class="main-nav__item">
             <a class="main-nav__link" href="catalog.html" title="Каталог товаров">Каталог товаров</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="form.html" title="Вязание на заказ">Вязание на заказ</a>
+            <a class="main-nav__link" title="Вязание на заказ">Вязание на заказ</a>
           </li>
-        </ul>
-        <ul class="main-nav__list  main-nav__list--promotions">
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="catalog.html" title="Новые поступления">Новые поступления</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="catalog.html" title="Распродажа">Распродажа</a>
-          </li>
-        </ul>
-        <ul class="main-nav__list  main-nav__list--controls">
           <li class="main-nav__item">
             <a class="main-nav__link  main-nav__link--search" href="#" title="Поиск по сайт">Поиск по сайту</a>
           </li>
           <li class="main-nav__item">
-
             <a class="basket  main-nav__link  main-nav__link--basket" href="#" title="Перейти к корзине">
-              <span class="basket__title">Корзина:</span>
+              <span class="basket__title">Корзина</span>
               <span class="basket__content">пока пуста</span>
             </a>
           </li>
@@ -112,19 +71,19 @@
           <label class="order-form__label" for="tb-middlename">Отчество:</label>
           <input class="order-form__field" id="tb-middlename" type="text" name="middlename" placeholder="Отчество, если желаете"/>
         </fieldset>
-        <fieldset class="order-form__fieldset  order-form__fieldset--no-border">
+        <fieldset class="order-form__fieldset  order-form__fieldset--hide">
           <label class="order-form__legend  order-form__legend--label" for="tb-phone"><span>Тел</span></label>
           <div class="order-form__field-wrapper  order-form__field-wrapper--tel">
             <input class="order-form__field" id="tb-phone" type="tel" name="tel" placeholder="+ 7 XXX XX XX*" required/>
           </div>
         </fieldset>
-        <fieldset class="order-form__fieldset  order-form__fieldset--no-border">
+        <fieldset class="order-form__fieldset  order-form__fieldset--hide">
           <label class="order-form__legend  order-form__legend--label" for="tb-email"><span>E-mail</span></label>
           <div class="order-form__field-wrapper  order-form__field-wrapper--email">
             <input class="order-form__field" id="tb-email" type="email" name="email" placeholder="Ваш Email*"/>
           </div>
         </fieldset>
-        <fieldset class="order-form__fieldset  order-form__fieldset--no-border">
+        <fieldset class="order-form__fieldset  order-form__fieldset--hide">
           <label class="order-form__legend  order-form__legend--label" for="tb-comment"><span>Доп</span></label>
           <textarea class="order-form__textarea" id="tb-comment" name="comment" cols="30" rows="10" placeholder="Опишите все ваши пожелания к заказу"></textarea>
         </fieldset>

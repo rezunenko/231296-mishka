@@ -1,7 +1,6 @@
 @import 'variables';
 @import 'mixins';
 
-@import 'global/normalize';
 @import 'global/fonts';
 @import 'global/layout';
 
@@ -9,17 +8,16 @@
 @import 'blocks/page-header';
 @import 'blocks/main-nav';
 @import 'blocks/product-nav';
-@import 'blocks/features';
 @import 'blocks/product';
+@import 'blocks/features';
 @import 'blocks/btn';
 @import 'blocks/company-features';
 @import 'blocks/author';
 @import 'blocks/pagination';
 @import 'blocks/reviews';
-@import 'blocks/map';
 @import 'blocks/contacts';
-@import 'blocks/social-links';
 @import 'blocks/page-footer';
+@import 'blocks/social-links';
 @import 'blocks/copyright';
 @import 'blocks/overlay';
 @import 'blocks/modal';

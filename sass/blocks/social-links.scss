@@ -17,13 +17,13 @@
   height:30px;
 
   &--inst {
-    margin-right: 29px;
+    margin-right: 20px;
 
     @include link-icon(30px, 30px, './../../img/icon-insta.svg', 0, 0, transparent, $color-logo, $color-logo-hover, $color-logo-active)
   }
 
   &--fb {
-    margin-right: 29px;
+    margin-right: 20px;
 
     @include link-icon(30px, 30px, './../../img/icon-fb.svg', 0, 0, transparent, $color-logo, $color-logo-hover, $color-logo-active)
   }
