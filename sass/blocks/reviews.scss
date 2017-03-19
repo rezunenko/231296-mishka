@@ -2,7 +2,7 @@
   position: relative;
   padding-bottom: 35px;
 
-  @media (min-width: $screen-size-normal) {
+  @media (min-width: $screen-tablet) {
     max-width: 875px;
     margin-left: -50px;
     padding: 43px 0 105px 50px;
@@ -10,7 +10,7 @@
     background-size: 380px 457px;
   }
 
-  @media (min-width: $screen-size-large) {
+  @media (min-width: $screen-desktop) {
     margin-left: auto;
     padding-top: 31px;
     padding-bottom: 160px;
@@ -24,7 +24,7 @@
   line-height: $line-height-large;
   font-weight: bold;
 
-  @media (min-width: $screen-size-normal) {
+  @media (min-width: $screen-tablet) {
     max-width: 875px;
     margin-bottom: 48px;
     margin-left: auto;
@@ -33,7 +33,7 @@
     line-height: $line-height-tablet;
   }
 
-  @media (min-width: $screen-size-large) {
+  @media (min-width: $screen-desktop) {
     font-size: $font-size-desktop;
     margin-bottom: 51px;
   }
@@ -44,13 +44,13 @@
 
   line-height: $line-height-large;
 
-  @media (min-width: $screen-size-normal) {
+  @media (min-width: $screen-tablet) {
     margin-bottom: 57px;
 
     letter-spacing: 1.07px;
   }
 
-  @media (min-width: $screen-size-large) {
+  @media (min-width: $screen-desktop) {
     margin-bottom: 40px;
   }
 }
@@ -58,7 +58,7 @@
 .review__text br {
   display: none;
 
-  @media (min-width: $screen-size-large) {
+  @media (min-width: $screen-desktop) {
     display: block;
   }
 }
@@ -67,7 +67,7 @@
   margin-top: 35px;
   margin-bottom: 50px;
 
-  @media (min-width: $screen-size-normal) {
+  @media (min-width: $screen-tablet) {
     position: absolute;
     top: 50px;
     right: 0;
@@ -78,7 +78,7 @@
 .reviews__pagination {
   margin-bottom: 38px;
 
-  @media (min-width: $screen-size-normal) {
+  @media (min-width: $screen-tablet) {
     position: absolute;
     bottom: 135px;
     right: 0;
@@ -86,7 +86,7 @@
     margin-bottom: 0;
   }
 
-  @media (min-width: $screen-size-large) {
+  @media (min-width: $screen-desktop) {
     bottom: 190px;
   }
 }

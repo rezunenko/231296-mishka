@@ -8,6 +8,7 @@
 css/*.css
 node_modules/
 Thumbs.db
+img/dev/
 img/mishka-catalog-desktop.jpg
 img/mishka-catalog-tablet.jpg
 img/mishka-catalog-mobile.jpg

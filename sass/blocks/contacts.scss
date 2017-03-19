@@ -1,19 +1,18 @@
 .contacts {
-  @media (min-width: $screen-size-normal) {
+  @media (min-width: $screen-tablet) {
     position: relative;
     padding-top: 60px;
   }
 }
 
 .contacts__title {
-  margin: 0;
-  margin-bottom: 26px;
+  margin: 0 0 26px;
 
   font-size: $font-size-x-large;
   line-height: $line-height-large;
   font-weight: bold;
 
-  @media (min-width: $screen-size-normal) {
+  @media (min-width: $screen-tablet) {
     position: relative;
     z-index: 5;
 
@@ -39,7 +38,7 @@
     }
   }
 
-  @media (min-width: $screen-size-large) {
+  @media (min-width: $screen-desktop) {
     margin-bottom: 51px;
 
     font-size: $font-size-desktop;
@@ -56,7 +55,7 @@
   flex-direction: column;
   @include clear-list;
 
-  @media (min-width: $screen-size-normal) {
+  @media (min-width: $screen-tablet) {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -69,12 +68,12 @@
   margin-bottom: 30px;
   line-height: $line-height-large;
 
-  @media (min-width: $screen-size-normal) {
+  @media (min-width: $screen-tablet) {
     flex-basis: 50%;
     font-size: $font-size-large;
   }
 
-  @media (min-width: $screen-size-large) {
+  @media (min-width: $screen-desktop) {
     flex-basis: 100%;
   }
 }
@@ -84,7 +83,7 @@
   display: block;
   margin-left: 30px;
 
-  @media (min-width: $screen-size-normal) {
+  @media (min-width: $screen-tablet) {
     max-width: 200px;
     margin-left: 24px;
 
@@ -117,13 +116,13 @@
   padding: 0;
   border: none;
 
-  @media (min-width: $screen-size-normal) {
+  @media (min-width: $screen-tablet) {
     position: relative;
 
     margin-bottom: 25px;
   }
 
-  @media (min-width: $screen-size-large) {
+  @media (min-width: $screen-desktop) {
     max-width: 300px;
     margin-left: auto;
     margin-top: 81px;
@@ -133,22 +132,22 @@
 
 .contacts__feedback-btn {
   max-width: 260px;
-  margin: 36px auto 40px auto;
+  margin: 36px auto 40px;
 
-  @media (min-width: $screen-size-normal) {
+  @media (min-width: $screen-tablet) {
     margin-top: 50px;
     margin-bottom: 60px;
     max-width: 230px;
   }
 
-  @media (min-width: $screen-size-large) {
+  @media (min-width: $screen-desktop) {
     margin-top: 50px;
     margin-right: 647px;
   }
 }
 
 .contacts__map {
-  @media (min-width: $screen-size-large) {
+  @media (min-width: $screen-desktop) {
     position: absolute;
     top: 67px;
     right: 50px;

@@ -27,19 +27,19 @@
 }
 
 @mixin masked-link($url, $color, $hover, $active){
-  &::before {
+  &:before {
     background-color: $color;
     mask: url($url) no-repeat 50% 50%;
   }
 
   &:hover, &:focus {
-    &::before {
+    &:before {
       background-color: $hover;
     }
   }
 
   &:active {
-    &::before {
+    &:before {
       background-color: $active;
     }
   }
@@ -48,7 +48,7 @@
 @mixin link-icon($width, $height, $url, $left, $right, $bg, $color, $hover, $active) {
   background-color: $bg;
 
-  &::before {
+  &:before {
     content: '';
     position: absolute;
     top: 50%;
@@ -100,7 +100,7 @@
 @mixin link-inline-icon($width, $height, $url, $left, $right, $bg, $color, $hover, $active) {
   background-color: $bg;
 
-  &::before {
+  &:before {
     content: '';
     @if $left == 0 {
       margin-right: 30px;
@@ -131,7 +131,7 @@
   margin-left: -30px;
   margin-right: -30px;
 
-  @media (min-width: $screen-size-normal) {
+  @media (min-width: $screen-tablet) {
     margin-left: -50px;
     margin-right: -50px;
   }

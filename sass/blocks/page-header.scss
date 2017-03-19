@@ -44,7 +44,7 @@
   display: none;
 }
 
-@media (min-width: $screen-size-normal) {
+@media (min-width: $screen-tablet) {
   .page-header {
     height: 730px;
     padding-top: 90px;
@@ -77,7 +77,7 @@
   }
 }
 
-@media (min-width: $screen-size-large) {
+@media (min-width: $screen-desktop) {
   .page-header__title {
     font-size: $font-size-desktop;
     line-height: 55px;

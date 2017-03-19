@@ -3,8 +3,38 @@
   <head>
     <meta charset="UTF-8">
     <title>Вязание на заказ</title>
-    <link rel="stylesheet" href="./css/normolize.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./css/style.css"/>
+    <style>
+      HTML {
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        /* По умолчанию мобильный макет */
+        background-image: url("img/dev/mishka-form-mobile.jpg");
+      }
+
+      /* Планшет */
+      @media ( min-width: 768px ) {
+        HTML {
+          /* Планшетный макет */
+          background-image: url("img/dev/mishka-form-tablet.jpg");
+        }
+      }
+
+      /* Десктоп */
+      @media ( min-width: 1050px ) {
+        HTML {
+          /* Десктопный макет */
+          background-image: url("img/dev/mishka-form-desktop.jpg");
+        }
+      }
+
+      BODY {
+        opacity: .5;
+      }
+    </style>
+    <link rel="stylesheet" href="../node_modules/pixel-glass/styles.css">
+    <script src="../node_modules/pixel-glass/script.js"></script>
   </head>
   <body class="page">
     <header class="page-header  page-header--no-bg">

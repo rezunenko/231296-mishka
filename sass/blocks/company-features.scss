@@ -1,7 +1,7 @@
 .company-features {
   padding-bottom: 15px;
 
-  @media (min-width: $screen-size-normal) {
+  @media (min-width: $screen-tablet) {
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
@@ -9,7 +9,7 @@
     padding-bottom: 78px;
   }
 
-  @media (min-width: $screen-size-large) {
+  @media (min-width: $screen-desktop) {
     padding-bottom: 71px;
   }
 }
@@ -18,12 +18,12 @@
   font-size: $font-size-xx-large;
   line-height: $line-height-large;
 
-  @media (min-width: $screen-size-normal) {
+  @media (min-width: $screen-tablet) {
     font-size: $font-size-tablet;
     margin-bottom: 5px;
   }
 
-  @media (min-width: $screen-size-large) {
+  @media (min-width: $screen-desktop) {
     font-size: $font-size-desktop;
     line-height: $line-height-desktop;
   }
@@ -32,7 +32,7 @@
 .company-features__list {
   @include clear-list;
 
-  @media (min-width: $screen-size-normal) {
+  @media (min-width: $screen-tablet) {
     display: flex;
     flex-wrap: wrap;
   }
@@ -84,7 +84,7 @@
     mask: url('./../../img/icon-feature-6.svg') no-repeat 50% 10px;
   }
 
-  @media (min-width: $screen-size-normal) {
+  @media (min-width: $screen-tablet) {
     flex-basis: 50%;
     margin-top: 41px;
     margin-bottom: 5px;
@@ -110,7 +110,7 @@
     }
   }
 
-  @media (min-width: $screen-size-large) {
+  @media (min-width: $screen-desktop) {
     margin-top: 26px;
     margin-bottom: 20px;
   }

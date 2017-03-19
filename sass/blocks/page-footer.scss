@@ -6,7 +6,7 @@
 
   @include ignore-page-padding;
 
-  @media (min-width: $screen-size-normal) {
+  @media (min-width: $screen-tablet) {
     display: flex;
     height: 145px;
     justify-content: space-between;
@@ -16,7 +16,7 @@
     box-sizing: border-box;
   }
 
-  @media (min-width: $screen-size-large) {
+  @media (min-width: $screen-desktop) {
     margin-top: 104px;
   }
 }
@@ -24,7 +24,7 @@
 .page-footer__copyright {
   margin-top: 45px;
 
-  @media (min-width: $screen-size-normal) {
+  @media (min-width: $screen-tablet) {
     margin-top: 0;
   }
 }
@@ -32,13 +32,13 @@
 .page-footer__logo {
   display: none;
 
-  @media (min-width: $screen-size-normal) {
+  @media (min-width: $screen-tablet) {
     display: block;
   }
 }
 
 .page-footer__social-links {
-  @media (min-width: $screen-size-normal) {
+  @media (min-width: $screen-tablet) {
     padding-left: 75px;
   }
 }
