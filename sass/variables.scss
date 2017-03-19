@@ -1,8 +1,3 @@
-// SCREEN
-$screen-mobile: 320px;
-$screen-tablet: 768px;
-$screen-desktop: 1150px;
-
 // TYPOGRAPHY
 $font-family-text: 'Open Sans', "Tahoma", sans-serif;
 
@@ -12,52 +7,51 @@ $font-size-large: 17px;
 $font-size-x-large: 18px;
 $font-size-xx-large: 25px;
 $font-size-xxx-large: 27px;
-$font-size-tablet: 43px;
-$font-size-desktop: 53px;
 
 $line-height-small: 20px;
 $line-height-regular: 24px;
 $line-height-large: 30px;
-$line-height-tablet: 50px;
-$line-height-desktop: 56px;
 
 // COLORS
 $white: #fff;
-$pearl: #f1f1f1;
+$black: #000;
 $grey: #ececec;
-$lightest-grey: #c6c6c6;
-$light-grey: #b2b2b2;
-$dark-grey: #666666;
 $asphalt: #444444;
-$aquamarin: #46c1ae;
+$dark-grey: #666666;
+$light-grey: #b2b2b2;
+$lightest-grey: #c6c6c6;
+$light-green:#63d1bb;
 $green: #56c3b2;
 $dark-green: #149080;
-$black: #000;
+$light-blue: #63d1bb;
+$aquamarin: #62d1ba;
+$light-aquamarin: #46c1ae;
+$pearl: #f1f1f1;
 
 // COLOR USAGE
 $color-text: $black;
-$color-text-green: $green;
+$color-text-green: $light-green;
 $color-text-white: $white;
 $color-border: $grey;
-$color-link-border: $green;
+$color-link-border: $aquamarin;
 $hover-link: $dark-grey;
 $active-link: $light-grey;
-$left-green-btn: $green;
+$left-green-btn: $light-green;
 $right-green-btn: $green;
 $green-icon: $dark-green;
 $color-btn: $asphalt;
-$color-feature: $grey;
+$color-feature: $light-blue;
 $menu-icon: $light-grey;
-$menu-icon-hover: $grey;
+$menu-icon-hover: $light-blue;
 $color-header: $pearl;
 $color-footer: $pearl;
 $color-logo: $color-text;
-$color-logo-hover: $aquamarin;
+$color-logo-hover: $light-aquamarin;
 $color-logo-active: rgba($color-logo-hover, 0.3);
 $color-size-form: $grey;
-$color-size-form-active: $grey;
+$color-size-form-active: $light-blue;
 $color-shadow: $lightest-grey;
-$color-btn-blue: $grey;
-$color-fieldset: $green;
+$color-btn-blue: $light-blue;
+$color-fieldset: $aquamarin;
 $color-fieldset-active: #c7c7c7;
 $color-field: $black;
