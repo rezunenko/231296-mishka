@@ -43,7 +43,7 @@
   font-weight: bold;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $screen-size-normal) {
   .product-nav {
     display: flex;
     flex-direction: row;
@@ -62,7 +62,7 @@
   }
 }
 
-@media (min-width: 1150px) {
+@media (min-width: $screen-size-large) {
   .product-nav {
     margin-top: 285px;
   }

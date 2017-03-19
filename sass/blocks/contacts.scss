@@ -1,32 +1,28 @@
 .contacts {
-  @media (min-width: 768px) {
-    & {
-      position: relative;
-      padding-top: 60px;
-    }
+  @media (min-width: $screen-size-normal) {
+    position: relative;
+    padding-top: 60px;
   }
 }
 
 .contacts__title {
+  margin: 0;
   margin-bottom: 26px;
 
   font-size: $font-size-x-large;
   line-height: $line-height-large;
   font-weight: bold;
 
-  @media (min-width: 768px) {
-    & {
-      position: relative;
-      z-index: 5;
+  @media (min-width: $screen-size-normal) {
+    position: relative;
+    z-index: 5;
 
-      display: block;
-      width: 100%;
-      margin-top: 137px;
-      margin-bottom: 48px;
+    display: block;
+    width: 100%;
+    margin-bottom: 48px;
 
-      font-size: 43px;
-      line-height: 50px;
-    }
+    font-size: $font-size-tablet;
+    line-height: 50px;
 
     &::after {
       position: absolute;
@@ -43,12 +39,10 @@
     }
   }
 
-  @media (min-width: 1150px) {
-    & {
-      margin-bottom: 51px;
+  @media (min-width: $screen-size-large) {
+    margin-bottom: 51px;
 
-      font-size: 53px;
-    }
+    font-size: $font-size-desktop;
 
     &::after {
       top: -15px;
@@ -62,12 +56,10 @@
   flex-direction: column;
   @include clear-list;
 
-  @media (min-width: 768px) {
-    & {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-    }
+  @media (min-width: $screen-size-normal) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 
@@ -77,17 +69,13 @@
   margin-bottom: 30px;
   line-height: $line-height-large;
 
-  @media (min-width: 768px) {
-    & {
-      flex-basis: 50%;
-      font-size: $font-size-large;
-    }
+  @media (min-width: $screen-size-normal) {
+    flex-basis: 50%;
+    font-size: $font-size-large;
   }
 
-  @media (min-width: 1150px) {
-    & {
-      flex-basis: 100%;
-    }
+  @media (min-width: $screen-size-large) {
+    flex-basis: 100%;
   }
 }
 
@@ -96,14 +84,12 @@
   display: block;
   margin-left: 30px;
 
-  @media (min-width: 768px) {
-    & {
-      max-width: 200px;
-      margin-left: 24px;
+  @media (min-width: $screen-size-normal) {
+    max-width: 200px;
+    margin-left: 24px;
 
-      br {
-        display: none;
-      }
+    br {
+      display: none;
     }
   }
 }
@@ -131,21 +117,17 @@
   padding: 0;
   border: none;
 
-  @media (min-width: 768px) {
-    & {
-      position: relative;
+  @media (min-width: $screen-size-normal) {
+    position: relative;
 
-      margin-bottom: 25px;
-    }
+    margin-bottom: 25px;
   }
 
-  @media (min-width: 1150px) {
-    & {
-      max-width: 300px;
-      margin-left: auto;
-      margin-top: 81px;
-      padding-right: 577px;
-    }
+  @media (min-width: $screen-size-large) {
+    max-width: 300px;
+    margin-left: auto;
+    margin-top: 81px;
+    padding-right: 577px;
   }
 }
 
@@ -153,31 +135,25 @@
   max-width: 260px;
   margin: 36px auto 40px auto;
 
-  @media (min-width: 768px) {
-    & {
-      margin-top: 50px;
-      margin-bottom: 60px;
-      max-width: 230px;
-    }
+  @media (min-width: $screen-size-normal) {
+    margin-top: 50px;
+    margin-bottom: 60px;
+    max-width: 230px;
   }
 
-  @media (min-width: 1150px) {
-    & {
-      margin-top: 50px;
-      margin-right: 647px;
-    }
+  @media (min-width: $screen-size-large) {
+    margin-top: 50px;
+    margin-right: 647px;
   }
 }
 
 .contacts__map {
-  @media (min-width: 1150px) {
-    & {
-      position: absolute;
-      top: 67px;
-      right: 50px;
+  @media (min-width: $screen-size-large) {
+    position: absolute;
+    top: 67px;
+    right: 50px;
 
-      width: 525px;
-      height: 455px;
-    }
+    width: 525px;
+    height: 455px;
   }
 }

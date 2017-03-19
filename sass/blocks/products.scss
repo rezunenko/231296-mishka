@@ -1,9 +1,7 @@
 .products {
   padding-top: 32px;
-}
 
-@media (min-width: 1150px) {
-  .products {
+  @media (min-width: $screen-size-large) {
     display: flex;
     justify-content: space-between;
     padding-top: 110px;

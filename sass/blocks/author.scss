@@ -3,16 +3,14 @@
   font-size: $font-size-x-large;
   font-weight: bold;
   letter-spacing: 0.1px;
+
+  @media (min-width: $screen-size-normal) {
+    letter-spacing: -0.5px;
+  }
 }
 
 .author__username {
   margin-top: 8px;
   margin-bottom: 30px;
   font-size: $font-size-large;
-}
-
-@media (min-width: 768px) {
-  .author__name {
-    letter-spacing: -0.5px;
-  }
 }

@@ -9,13 +9,13 @@
 
   border: 1px solid $color-border;
 
-  @media (min-width: 768px) {
+  @media (min-width: $screen-size-normal) {
     height: 693px;
     padding: 0;
     margin-bottom: 105px;
   }
 
-  @media (min-width: 1150px) {
+  @media (min-width: $screen-size-large) {
     height: 455px;
     padding-left: 705px;
   }
@@ -37,7 +37,7 @@
 
   @include link-icon-left(45px, 40px, './../../img/icon-video.svg', -5px, transparent);
 
-  @media (min-width: 768px) {
+  @media (min-width: $screen-size-normal) {
     max-width: 100%;
     margin: 0;
     padding-left: 105px;
@@ -50,7 +50,7 @@
     }
   }
 
-  @media (min-width: 1150px) {
+  @media (min-width: $screen-size-large) {
     margin-top: 45px;
     padding: 0 100px 0 55px;
 
@@ -64,7 +64,7 @@
 .video-review__text {
   font-size: $font-size-small;
 
-  @media (min-width: 768px) {
+  @media (min-width: $screen-size-normal) {
     margin: 0;
     padding: 0 40px;
     order: 1;
@@ -73,7 +73,7 @@
     line-height: $line-height-large;
   }
 
-  @media (min-width: 1150px) {
+  @media (min-width: $screen-size-large) {
     padding: 0 55px;
   }
 }
@@ -81,7 +81,7 @@
 .video-review__btn {
   margin-bottom: 0px;
 
-  @media (min-width: 768px) {
+  @media (min-width: $screen-size-normal) {
     width: auto;
     box-sizing: border-box;
     margin: 0 40px;
@@ -89,7 +89,7 @@
 
   }
 
-  @media (min-width: 1150px) {
+  @media (min-width: $screen-size-large) {
     margin: 15px 57px 60px 57px;
   }
 }
@@ -98,14 +98,14 @@
   display: block;
   margin: 0 -35px;
 
-  @media (min-width: 768px) {
+  @media (min-width: $screen-size-normal) {
     width: 100%;
     height: 450px;
     margin: 0;
     order: 0;
   }
 
-  @media (min-width: 1150px) {
+  @media (min-width: $screen-size-large) {
     position: absolute;
     top: 0;
     bottom: 0;

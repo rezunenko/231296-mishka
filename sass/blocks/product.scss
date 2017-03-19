@@ -7,17 +7,15 @@
     margin-bottom: 30px;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: $screen-size-normal) {
     &--card {
       margin-bottom: 55px;
     }
   }
 
-  @media (min-width: 1150px) {
-    & {
-      margin: 0;
-      padding-bottom: 95px;
-    }
+  @media (min-width: $screen-size-large) {
+    margin: 0;
+    padding-bottom: 95px;
 
     &--card {
       width: 30%;
@@ -46,44 +44,38 @@
     display: none;
   }
 
-  @media (min-width: 768px) and (max-width: 1149px) {
-    & {
-      margin-left: 110px;
+  @media (min-width: $screen-size-normal) and (max-width: 1149px) {
+    margin-left: 110px;
+  }
+
+  @media (min-width: $screen-size-normal) {
+    max-width: 100%;
+    font-size: $font-size-x-large+2;
+
+    &--top {
+      font-size: $font-size-tablet;
+      margin: 0;
+      padding-left: 0;
+    }
+
+    br {
+      display: block;
     }
   }
 
-  @media (min-width: 768px) {
-    & {
-      max-width: 100%;
-      font-size: $font-size-x-large+2;
+  @media (min-width: $screen-size-large) {
+    margin-left: 25px;
+    margin-right: 25px;
 
-      &--top {
-        font-size: 43px;
-        margin: 0;
-        padding-left: 0;
-      }
-
-      br {
-        display: block;
-      }
-    }
-  }
-
-  @media (min-width: 1150px) {
-    & {
-      margin-left: 25px;
-      margin-right: 25px;
-
-      padding-top: 463px;
-    }
+    padding-top: 463px;
 
     &--top {
       order: 2;
       margin-right: 342px;
       padding-top: 0;
 
-      font-size: 53px;
-      line-height: 56px;
+      font-size: $font-size-desktop;
+      line-height: $line-height-desktop;
     }
   }
 }
@@ -97,41 +89,33 @@
   text-transform: uppercase;
   color: $color-text-green;
 
-  @media (min-width: 768px) {
-    & {
-      width: 100px;
-      padding-top: 5px;
+  @media (min-width: $screen-size-normal) {
+    width: 100px;
+    padding-top: 5px;
 
-      text-align: center;
-      line-height: 18px;
-    }
+    text-align: center;
+    line-height: 18px;
   }
 
-  @media (min-width: 1150px) {
-    & {
-      padding-top: 9px;
-      margin-right: 7px;
-    }
+  @media (min-width: $screen-size-large) {
+    padding-top: 9px;
+    margin-right: 7px;
   }
 }
 
 .product__description {
-  margin:22px 0 17px;
+  margin: 22px 0 17px;
 
-  @media (min-width: 768px) {
-    & {
-      margin-top: 0;
-      margin-bottom: 37px;
+  @media (min-width: $screen-size-normal) {
+    margin-top: 0;
+    margin-bottom: 37px;
 
-      font-size: $font-size-large;
-      line-height: $line-height-large;
-    }
+    font-size: $font-size-large;
+    line-height: $line-height-large;
   }
 
-  @media (min-width: 1150px) {
-    & {
-      margin-bottom: 46px;
-    }
+  @media (min-width: $screen-size-large) {
+    margin-bottom: 46px;
   }
 }
 
@@ -139,11 +123,9 @@
   display: block;
   margin: 0 auto;
 
-  @media (min-width: 768px){
-    & {
-      width: 335px;
-      height: 405px;
-    }
+  @media (min-width: $screen-size-normal){
+    width: 335px;
+    height: 405px;
 
     &--card {
       position: absolute;
@@ -157,7 +139,7 @@
   }
 
 
-  @media (min-width: 768px) {
+  @media (min-width: $screen-size-normal) {
     &--big {
       position: absolute;
       top: 10px;
@@ -165,7 +147,7 @@
     }
   }
 
-  @media (min-width: 1150px) {
+  @media (min-width: $screen-size-large) {
     &--big {
       top: -160px;
 
@@ -181,25 +163,21 @@
 }
 
 .product__header {
-  @media (min-width: 768px) {
-    & {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      align-content: center;
-      margin-top: 65px;
-      padding-right: 12px;
-    }
+  @media (min-width: $screen-size-normal) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    margin-top: 65px;
+    padding-right: 12px;
   }
 
-  @media (min-width: 1150px) {
-    & {
-      position: relative;
-      justify-content: flex-end;
-      z-index: 5;
+  @media (min-width: $screen-size-large) {
+    position: relative;
+    justify-content: flex-end;
+    z-index: 5;
 
-      margin-top: 137px;
-    }
+    margin-top: 137px;
   }
 }
 
@@ -222,12 +200,10 @@
     @include link-icon-right(20px, 20px, './../../img/icon-cart.svg', 0px, transparent);
   }
 
-  @media (min-width: 768px) {
-    & {
-      margin-top: 56px;
-      margin-bottom: 35px;
-      font-size: $font-size-x-large + 2;
-    }
+  @media (min-width: $screen-size-normal) {
+    margin-top: 56px;
+    margin-bottom: 35px;
+    font-size: $font-size-x-large + 2;
 
     &--wide {
       max-width: 100%;
@@ -243,17 +219,15 @@
     }
   }
 
-  @media (min-width: 1150px) {
-    & {
-      margin-top: 110px;
-      margin-left: 8px;
-    }
+  @media (min-width: $screen-size-large) {
+    margin-top: 110px;
+    margin-left: 8px;
 
     &--wide {
       margin: auto 25px 0 25px;
 
       &::before {
-        right:5px;
+        right: 5px;
       }
     }
   }
@@ -268,29 +242,23 @@
     max-width: 100%;
   }
 
-  @media (min-width: 768px) {
-    & {
-      max-width: 100%;
-      padding-bottom: 0;
-    }
+  @media (min-width: $screen-size-normal) {
+    max-width: 100%;
+    padding-bottom: 0;
   }
 
-  @media (min-width: 768px) and (max-width: 1149px) {
-    & {
-      margin-right: 0;
-      margin-left: 110px;
-    }
+  @media (min-width: $screen-size-normal) and (max-width: 1149px) {
+    margin-right: 0;
+    margin-left: 110px;
 
     &--full-width {
       margin-left: 0;
     }
   }
 
-  @media (min-width: 1150px) {
-    & {
-      margin-left: 25px;
-      margin-right: 25px;
-    }
+  @media (min-width: $screen-size-large) {
+    margin-left: 25px;
+    margin-right: 25px;
 
     &--full-width {
       margin-left: 0;
@@ -305,7 +273,7 @@
   border: 1px solid $color-border;
 
   text-decoration: none;
-  color:black;
+  color: black;
 
   &:hover, &focus {
     border-color: $color-border;
@@ -316,37 +284,29 @@
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
   }
 
-  @media (min-width: 768px) {
-    & {
-      display: flex;
-      height: 334px;
-      flex-direction: column;
-      padding-left: 252px;
-    }
+  @media (min-width: $screen-size-normal) {
+    display: flex;
+    height: 334px;
+    flex-direction: column;
+    padding-left: 252px;
   }
 
-  @media (min-width: 1150px) {
-    & {
-      height: 660px;
-      padding-left: 0;
-    }
+  @media (min-width: $screen-size-large) {
+    height: 660px;
+    padding-left: 0;
   }
 }
 
 .product__content {
-  @media (min-width: 768px) {
-    & {
+  @media (min-width: $screen-size-normal) {
       position: relative;
       max-width: 290px;
       margin-top: 50px;
       margin-left: auto;
       padding-right: 378px;
-    }
   }
 
-  @media (min-width: 1150px) {
-    &{
+  @media (min-width: $screen-size-large) {
       padding-right: 585px;
-    }
   }
 }

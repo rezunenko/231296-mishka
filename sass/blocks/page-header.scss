@@ -8,20 +8,14 @@
   &--no-bg {
     background: none;
   }
-
-  * {
-    outline: 1px solid green;
-  }
 }
 
 .page-header__logo {
   position: absolute;
   top: 22px;
   left: 50%;
-  box-sizing: border-box;
+  transform: translateX(-50%);
   z-index: 3;
-
-  margin-left: -45px;
 }
 
 .page-header__title {
@@ -50,7 +44,7 @@
   display: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $screen-size-normal) {
   .page-header {
     height: 730px;
     padding-top: 90px;
@@ -66,8 +60,8 @@
   .page-header__title {
     padding-top: 155px;
 
-    font-size: 43px;
-    line-height: 50px;
+    font-size: $font-size-tablet;
+    line-height: $line-height-tablet;
 
     &--bg {
       padding-top: 94px;
@@ -83,9 +77,9 @@
   }
 }
 
-@media (min-width: 1150px) {
+@media (min-width: $screen-size-large) {
   .page-header__title {
-    font-size: 53px;
+    font-size: $font-size-desktop;
     line-height: 55px;
   }
 
