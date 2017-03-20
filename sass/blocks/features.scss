@@ -1,44 +1,65 @@
 .features {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 
-  @include clearfix;
+  &--inline {
+    display: block;
+  }
 }
 
-.features__term--table {
-  display: block;
-  float: left;
-  width: 35%;
-  margin: 0;
-  padding: 0;
+.features__term {
+  flex-basis: 95px;
+  padding: 8px 0;
+  flex-shrink: 0;
 
   @include postfix(':');
-}
 
-.features__value--table {
-  display: block;
-  float: left;
-  width: 65%;
-  margin: 0;
-  padding: 0;
-}
+  &--inline {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0;
 
-.features__term--inline {
-  display: inline-block;
-  float: left;
-  width: auto;
-  margin-right: 5px;
+    font-size: $font-size-small;
+    line-height: $line-height-large;
 
-  &:not(:first-of-type) {
-    @include prefix(',');
-    &:before {
-      margin-right: 5px;
+    &::after {
+      display: none;
+    }
+
+    &:not(:first-of-type) {
+      @include prefix(',');
+    }
+  }
+
+  @media (min-width: $screen-tablet) {
+    &--inline{
+      font-size: 15px;
     }
   }
 }
 
-.features__value--inline {
-  display: inline-block;
-  float: left;
-  width: auto;
-  margin: 0;
-  padding: 0;
+
+
+.features__value {
+  flex-basis: 100%;
+  margin: 0 0 0 -95px;
+  padding: 8px 0 0 95px;
+  box-sizing: border-box;
+
+  &--inline {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+    padding: 0;
+
+    font-size: $font-size-small;
+    line-height: $line-height-large;
+  }
+
+  @media (min-width: $screen-tablet) {
+    &--inline {
+      font-size: 15px;
+    }
+  }
 }

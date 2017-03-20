@@ -1,30 +1,116 @@
 .video-review {
-  padding: 30px;
+  position: relative;
+  display: flex;
+  height: 460px;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 60px;
+  padding: 12px 35px 30px;
+
+  border: 1px solid $color-border;
+
+  @media (min-width: $screen-tablet) {
+    height: 693px;
+    padding: 0;
+    margin-bottom: 105px;
+  }
+
+  @media (min-width: $screen-desktop) {
+    height: 455px;
+    padding-left: 705px;
+  }
 }
 
 .video-review__title {
-  max-width: 150px;
-  margin:0 auto;
-  display: block;
   position: relative;
+
+  display: block;
+  max-width: 150px;
   max-height: 200px;
-  padding:30px 30px 20px 90px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 58px;
+
 
   font-size: $font-size-large;
   line-height: $line-height-regular;
 
-  @include link-icon-left(45px, 40px, './../../img/icon-video.svg', 30px, transparent);
+  @include link-icon-left(45px, 40px, './../../img/icon-video.svg', -5px, transparent);
+
+  @media (min-width: $screen-tablet) {
+    max-width: 100%;
+    margin: 0;
+    padding-left: 105px;
+    order: 1;
+
+    font-size: $font-size-large+3;
+
+    &::before {
+      left: -35px;
+    }
+  }
+
+  @media (min-width: $screen-desktop) {
+    margin-top: 45px;
+    padding: 0 100px 0 55px;
+
+    &::before {
+      position: static;
+      padding-bottom: 30px;
+    }
+  }
 }
 
 .video-review__text {
-  padding: 30px;
+  font-size: $font-size-small;
+
+  @media (min-width: $screen-tablet) {
+    margin: 0;
+    padding: 0 40px;
+    order: 1;
+
+    font-size: $font-size-regular;
+    line-height: $line-height-large;
+  }
+
+  @media (min-width: $screen-desktop) {
+    padding: 0 55px;
+  }
 }
 
 .video-review__btn {
-  margin-bottom: 60px;
+  margin-bottom: 0px;
+
+  @media (min-width: $screen-tablet) {
+    width: auto;
+    box-sizing: border-box;
+    margin: 0 40px;
+    order: 1;
+
+  }
+
+  @media (min-width: $screen-desktop) {
+    margin: 15px 57px 60px 57px;
+  }
 }
 
 .video-review__video {
   display: block;
-  margin: 0 auto;
+  margin: 0 -35px;
+
+  @media (min-width: $screen-tablet) {
+    width: 100%;
+    height: 450px;
+    margin: 0;
+    order: 0;
+  }
+
+  @media (min-width: $screen-desktop) {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 680px;
+  }
 }

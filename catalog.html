@@ -3,7 +3,38 @@
   <head>
     <meta charset="UTF-8">
     <title>Каталог товаров</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./css/style.css"/>
+    <style>
+      HTML {
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        /* По умолчанию мобильный макет */
+        background-image: url("img/dev/mishka-catalog-mobile.jpg");
+      }
+
+      /* Планшет */
+      @media ( min-width: 768px ) {
+        HTML {
+          /* Планшетный макет */
+          background-image: url("img/dev/mishka-catalog-tablet.jpg");
+        }
+      }
+
+      /* Десктоп */
+      @media ( min-width: 1050px ) {
+        HTML {
+          /* Десктопный макет */
+          background-image: url("img/dev/mishka-catalog-desktop.jpg");
+        }
+      }
+
+      BODY {
+        opacity: .5;
+      }
+    </style>
+    <link rel="stylesheet" href="../node_modules/pixel-glass/styles.css">
+    <script src="../node_modules/pixel-glass/script.js"></script>
   </head>
   <body class="page">
     <header class="page-header  page-header--no-bg">
@@ -11,39 +42,49 @@
         <img class="page-header__logo" src="img/logo-mobile.svg" width="90" height="35" alt='Логотип магазина "Мишка"'/>
       </a>
 
-      <nav class="main-nav  main-nav--hidden">
+      <nav class="main-nav">
         <button class="main-nav__toggle-btn" type="button"></button>
-        <ul class="main-nav__list">
+        <ul class="main-nav__list  main-nav__list--links">
           <li class="main-nav__item">
-            <a class="main-nav__link" title="Каталог товаров">Каталог товаров</a>
+            <a class="main-nav__link" href="catalog.html" title="Каталог товаров">Каталог товаров</a>
           </li>
           <li class="main-nav__item">
             <a class="main-nav__link" href="form.html" title="Вязание на заказ">Вязание на заказ</a>
           </li>
+        </ul>
+        <ul class="main-nav__list  main-nav__list--promotions">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="catalog.html" title="Новые поступления">Новые поступления</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="catalog.html" title="Распродажа">Распродажа</a>
+          </li>
+        </ul>
+        <ul class="main-nav__list  main-nav__list--controls">
           <li class="main-nav__item">
             <a class="main-nav__link  main-nav__link--search" href="#" title="Поиск по сайт">Поиск по сайту</a>
           </li>
           <li class="main-nav__item">
 
             <a class="basket  main-nav__link  main-nav__link--basket" href="#" title="Перейти к корзине">
-              <span class="basket__title">Корзина</span>
+              <span class="basket__title">Корзина:</span>
               <span class="basket__content">пока пуста</span>
             </a>
           </li>
         </ul>
       </nav>
-      <h1 class="page-header__title">Каталог товаров</h1>
+      <h1 class="page-header__title  page-header__title--bg">Каталог товаров</h1>
 
     </header>
 
     <main class="page-content">
       <section class="products">
-        <article class="product">
+        <article class="product  product--card">
           <a class="product__link" href="#" title="Зайчик попрыгайчик">
-            <img class="product__preview" src="./img/photo-1-mobile@1x.jpg" width="253" height="200" alt="Зайчик попрыгайчик"/>
+            <img class="product__preview  product__preview--card" src="./img/photo-1-mobile@1x.jpg" width="260" height="195" alt="Зайчик попрыгайчик"/>
             <h2 class="product__title">Зайчик попрыгайчик</h2>
 
-            <dl class="features product__features">
+            <dl class="features  features--inline  product__features">
               <dt class="features__term  features__term--inline">Рост</dt>
               <dd class="features__value  features__value--inline">30 см</dd>
               <dt class="features__term  features__term--inline">вес</dt>
@@ -53,13 +94,13 @@
           </a>
         </article>
 
-        <article class="product">
+        <article class="product  product--card">
           <a class="product__link" href="#" title="Корзинка для белья">
-            <img class="product__preview" src="./img/photo-2-mobile@1x.jpg" width="253" height="200" alt="Корзинка для белья"/>
+            <img class="product__preview  product__preview--card" src="./img/photo-2-mobile@1x.jpg" width="260" height="195" alt="Корзинка для белья"/>
 
             <h2 class="product__title">Корзинка для белья</h2>
 
-            <dl class="features product__features">
+            <dl class="features  features--inline  product__features">
               <dt class="features__term  features__term--inline">Диаметр</dt>
               <dd class="features__value  features__value--inline">15 см</dd>
               <dt class="features__term  features__term--inline">высота</dt>
@@ -69,12 +110,12 @@
           </a>
         </article>
 
-        <article class="product">
+        <article class="product  product--card">
           <a class="product__link" href="#" title="Большая корзинка для игрушек">
-            <img class="product__preview" src="./img/photo-3-mobile@1x.jpg" width="253" height="200" alt="Большая корзинка для игрушек"/>
-            <h2 class="product__title">Большая корзинка для игрушек</h2>
+            <img class="product__preview  product__preview--card" src="./img/photo-3-mobile@1x.jpg" width="260" height="195" alt="Большая корзинка для игрушек"/>
+            <h2 class="product__title">Большая корзинка<br/> для игрушек</h2>
 
-            <dl class="features product__features">
+            <dl class="features  features--inline  product__features">
               <dt class="features__term  features__term--inline">Диаметр</dt>
               <dd class="features__value  features__value--inline">30 см</dd>
               <dt class="features__term  features__term--inline">высота</dt>
@@ -96,6 +137,8 @@
     </main>
 
     <footer class="page-footer">
+      <img class="page-footer__logo" src="img/logo-mobile.svg" width="105" height="45" alt='Логотип магазина "Мишка"'/>
+
       <ul class="social-links  page-footer__social-links">
         <li class="social-links__item">
           <a class="social-links__link  social-links__link--inst" href="#">Instagram</a>
