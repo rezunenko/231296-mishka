@@ -4,17 +4,41 @@
 
 .main-nav {
   display: flex;
-  flex-direction: column;
-  z-index: 1;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 80px;
   @include ignore-page-padding;
 
   overflow: hidden;
 
   text-align: right;
 
-  background-color: white;
-
   &--open {
+    height: auto;
+
+    .main-nav__list--links,
+    .main-nav__list--promotions,
+    .main-nav__list--controls {
+      position: absolute;
+      left: -30px;
+      right: -30px;
+      z-index: 2;
+    }
+
+    .main-nav__list--links {
+       top: 80px;
+    }
+
+    .main-nav__list--promotions {
+      top: 500px;
+    }
+
+    .main-nav__list--controls {
+      top: 240px;
+    }
+  }
+
+  &--no-js {
     height: auto;
   }
 
@@ -34,7 +58,16 @@
   }
 }
 
+.main-nav__logo {
+  margin: auto;
+
+  transform: translateX(30px);
+}
+
 .main-nav__list {
+  position: relative;
+  flex-basis: 100%;
+  z-index: 1;
   @include clear-list;
 
   font-size: $font-size-large;
@@ -110,6 +143,7 @@
   vertical-align: top;
 
   text-decoration: none;
+  background-color: white;
 
   @include select-text;
 
@@ -160,10 +194,12 @@
 .main-nav__toggle-btn {
   display: inline-block;
   vertical-align: top;
-  margin: 29px 0 29px auto;
 
-  width: 22px;
-  height: 22px;
+  width: 36px;
+  height: 36px;
+  margin-right: 24px;
+  margin-top: 22px;
+  margin-bottom: 22px;
 
   border: none;
   background: transparent url('../../img/icon-menu-open.svg') no-repeat 50% 50%;

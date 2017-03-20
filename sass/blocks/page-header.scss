@@ -12,7 +12,7 @@
     height: 820px;
     //padding-top: 90px;
 
-    background-position: 50% 90px;
+    background-position: 50% 70px;
     background-size: cover;
 
     &--no-bg {
@@ -21,16 +21,8 @@
   }
 }
 
-.page-header__logo {
-  position: absolute;
-  top: 22px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 3;
-
-  @media (min-width: $screen-tablet) and (max-width: 1149px) {
-    left: 75px;
-  }
+.page-header--no-js {
+  background-position: 50% 320px;
 }
 
 .page-header__title {

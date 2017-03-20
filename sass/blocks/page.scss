@@ -1,6 +1,7 @@
 .page {
+  max-width: 1280px;
   min-width: 260px;
-  margin: 0;
+  margin: 0 auto;
   padding: 0 30px;
 
   font-family: $font-family-text;
