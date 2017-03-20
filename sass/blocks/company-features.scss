@@ -1,19 +1,47 @@
 .company-features {
-  padding: 0 30px 35px 30px;
+  padding-bottom: 15px;
+
+  @media (min-width: $screen-tablet) {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 25px;
+    padding-bottom: 78px;
+  }
+
+  @media (min-width: $screen-desktop) {
+    padding-bottom: 71px;
+  }
 }
 
 .company-features__title {
   font-size: $font-size-xx-large;
   line-height: $line-height-large;
+
+  @media (min-width: $screen-tablet) {
+    font-size: $font-size-tablet;
+    margin-bottom: 5px;
+  }
+
+  @media (min-width: $screen-desktop) {
+    font-size: $font-size-desktop;
+    line-height: $line-height-desktop;
+  }
 }
 
 .company-features__list {
   @include clear-list;
+
+  @media (min-width: $screen-tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .company-features__item {
   position: relative;
-  padding-top: 85px;
+  padding-top: 65px;
+  margin-bottom: 18px;
 
   font-size: $font-size-large;
   line-height: $line-height-small;
@@ -23,10 +51,10 @@
     position: absolute;
 
     display: block;
-    top: 50%;
+    top: 3px;
+    left: -3px;
     width: 50px;
     height: 50px;
-    margin-top: -40px;
 
     content: '';
     background-color: $color-feature;
@@ -37,22 +65,53 @@
   }
 
   &--price:before {
-    mask: url('./../../img/icon-feature-2.svg') no-repeat 50% 10px;
-  }
-
-  &--popular:before {
     mask: url('./../../img/icon-feature-3.svg') no-repeat 50% 10px;
   }
 
+  &--popular:before {
+    mask: url('./../../img/icon-feature-5.svg') no-repeat 50% 10px;
+  }
+
   &--with-love:before {
-    mask: url('./../../img/icon-feature-4.svg') no-repeat 50% 10px;
+    mask: url('./../../img/icon-feature-2.svg') no-repeat 50% 10px;
   }
 
   &--rus:before {
-    mask: url('./../../img/icon-feature-5.svg') no-repeat 50% 10px;
+    mask: url('./../../img/icon-feature-4.svg') no-repeat 50% 10px;
   }
 
   &--packaging:before {
     mask: url('./../../img/icon-feature-6.svg') no-repeat 50% 10px;
+  }
+
+  @media (min-width: $screen-tablet) {
+    flex-basis: 50%;
+    margin-top: 41px;
+    margin-bottom: 5px;
+
+    font-size: 22px;
+    line-height: 22px;
+    letter-spacing: -1px;
+
+    &--price {
+      order: 1;
+    }
+
+    &--rus {
+      order: 2;
+    }
+
+    &--popular {
+      order: 3;
+    }
+
+    &--packaging {
+      order: 4;
+    }
+  }
+
+  @media (min-width: $screen-desktop) {
+    margin-top: 26px;
+    margin-bottom: 20px;
   }
 }
