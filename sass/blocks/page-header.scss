@@ -1,11 +1,11 @@
 .page-header {
   position: relative;
-
   background: url('./../../img/hero-mobile@1x.jpg') no-repeat 50% 80px;
+
   @include ignore-page-padding;
 
   &--no-bg {
-    background: none;
+    background: linear-gradient(to bottom, transparent 0px, transparent 80px, $color-header 80px, $color-header 100%);
   }
 
   @media (min-width: $screen-tablet) {
@@ -16,6 +16,8 @@
 
     &--no-bg {
       height: 320px;
+      background: linear-gradient(to bottom, transparent 0px, transparent 90px, $color-header 90px, $color-header 100%);
+      background-position: 50% 0;
     }
   }
 }
@@ -36,12 +38,6 @@
   line-height: $line-height-large;
   text-align: center;
 
-  &--bg {
-    @include ignore-page-padding;
-
-    background: #f1f1f1;
-  }
-
   @media (min-width: $screen-tablet) {
     padding-top: 97px;
 
@@ -49,7 +45,7 @@
     line-height: $line-height-tablet;
 
     &--bg {
-      padding-top: 25px;
+      padding-top: 40px;
     }
   }
 
