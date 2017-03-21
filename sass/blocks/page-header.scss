@@ -1,8 +1,8 @@
 .page-header {
   position: relative;
 
-  background: url('./../../img/hero-mobile@1x.jpg') no-repeat 50% 60px;
-
+  background: url('./../../img/hero-mobile@1x.jpg') no-repeat 50% 80px;
+  @include ignore-page-padding;
 
   &--no-bg {
     background: none;
@@ -10,9 +10,8 @@
 
   @media (min-width: $screen-tablet) {
     height: 820px;
-    //padding-top: 90px;
 
-    background-position: 50% 70px;
+    background-position: 50% 90px;
     background-size: cover;
 
     &--no-bg {
@@ -27,6 +26,7 @@
 
 .page-header__title {
   display: block;
+  @include basic-padding;
   padding-top: 70px;
   padding-bottom: 75px;
   margin: 0;
@@ -43,7 +43,7 @@
   }
 
   @media (min-width: $screen-tablet) {
-    padding-top: 85px;
+    padding-top: 97px;
 
     font-size: $font-size-tablet;
     line-height: $line-height-tablet;
@@ -67,6 +67,14 @@
   display: none;
 
   @media (min-width: $screen-tablet) {
+    position: static;
+
     display: block;
+    order: 3;
+    flex-grow: 1;
+    margin: 0;
+    padding: 14px 0;
+
+    border-top: 1px solid $color-border;
   }
 }

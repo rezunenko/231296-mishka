@@ -1,5 +1,7 @@
 .product-nav {
   margin-top: 47px;
+
+  @include basic-padding;
 }
 
 .product-nav__link {

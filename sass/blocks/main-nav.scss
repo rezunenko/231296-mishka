@@ -1,13 +1,12 @@
-.main-nav * {
-  outline: 1px solid green;
-}
+//.main-nav * {
+//  outline: 1px solid green;
+//}
 
 .main-nav {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  height: 80px;
-  @include ignore-page-padding;
+  height: 81px;
 
   overflow: hidden;
 
@@ -20,8 +19,8 @@
     .main-nav__list--promotions,
     .main-nav__list--controls {
       position: absolute;
-      left: -30px;
-      right: -30px;
+      left: 0;
+      right: 0;
       z-index: 2;
     }
 
@@ -43,9 +42,10 @@
   }
 
   @media (min-width: $screen-tablet) {
-    height: 158px;
+    height: 145px;
     justify-content: space-around;
     margin: 0;
+    @include basic-padding;
 
     background-color: transparent;
   }
@@ -85,19 +85,34 @@
   }
 
   @media (min-width: $screen-tablet) {
+    border-bottom: none;
+    overflow: hidden;
+
     &--links {
-      width: 50%;
+      flex-basis: 348px;
       display: flex;
       order: 1;
+      border-top: 1px solid $color-border;
 
       font-size: $font-size-regular;
+
+      .main-nav__link {
+        padding-top: 14px;
+        padding-bottom: 14px;
+      }
     }
 
     &--controls {
       display: flex;
+      max-height: 90px;
       justify-content: flex-end;
       margin-left: auto;
-      flex-basis: 60%;
+      flex-basis: 348px;
+
+      .main-nav__link {
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
     }
   }
 
@@ -121,13 +136,18 @@
 .main-nav__item {
   border-top: 1px solid $color-border;
   order: 1;
+
+  @media (min-width: $screen-tablet) {
+    border: none;
+  }
 }
 
 .main-nav__list--links,
 .main-nav__list--promotions {
   @media (min-width: $screen-tablet) {
     .main-nav__item {
-      width: 200px;
+      width: 168px;
+      overflow: hidden;
     }
   }
 
@@ -162,12 +182,12 @@
   }
 
   @media (min-width: $screen-tablet) {
-    display: inline-block;
     padding-left: 0;
     padding-right: 0;
+    background: none;
 
     &--basket {
-      padding-left: 78px;
+      padding-left: 82px;
     }
 
     &--search {
