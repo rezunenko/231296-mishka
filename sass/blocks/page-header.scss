@@ -18,6 +18,10 @@
       height: 320px;
       background: linear-gradient(to bottom, transparent 0px, transparent 90px, $color-header 90px, $color-header 100%);
       background-position: 50% 0;
+
+      .page-header__title {
+        padding-top: 37px;
+      }
     }
   }
 }

@@ -1,58 +1,129 @@
 .order-form {
-  padding: 30px;
+  @include ignore-page-padding;
+  padding-top: 10px;
 }
 
 .order-form__text {
+  margin-bottom: 19px;
+  padding: 0 30px;
+
   font-size: $font-size-small;
 
   &--comment {
-    margin: 0;
+    margin: -8px 0 0;
+    letter-spacing: 0.6px;
+  }
+
+  @media (min-width: $screen-tablet) {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px 50px 0;
+
+    font-size: $font-size-large;
+    line-height: $line-height-large;
+  }
+
+  @media (min-width: $screen-desktop) {
+    padding-top: 117px;
   }
 }
 
 .order-form__fieldset {
   border: none;
-  border-top: 1px solid $color-fieldset;
-
-  padding: 10px 0 10px 0;
+  margin: 0 0 20px;
+  padding: 0 32px;
 
   &--no-border {
+    margin-top: -14px;
     border-top: none;
   }
+
+  @media (min-width: $screen-tablet) {
+    padding: 0 52px;
+  }
+
+}
+
+.order-form__fieldset-wrapper {
+  @media (min-width: $screen-tablet) {
+     display: flex;
+     padding-top: 47px;
+  }
+}
+
+.order-form__fieldset-inner {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+  margin-bottom: 0;
+
+  &--large {
+    .order-form__label {
+      min-height: 18px;
+    }
+  }
+
+  @media (min-width: $screen-tablet) {
+    flex-basis: 500px;
+    margin-top: 0;
+    margin-bottom: 16px;
+
+    &--column {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+
 }
 
 .order-form__legend {
   display: flex;
-  flex-direction: row;
+  margin: 0;
+  padding-right: 0;
 
   color: $color-fieldset;
   font-size: $font-size-large;
   text-transform: uppercase;
 
   &--label {
-    &::after {
-      position: relative;
-      top: -12px;
+    margin-top: 23px;
+  }
 
-      display: block;
-      margin-left: 20px;
-      flex:1;
+  &::after {
+    display: block;
+    flex-grow: 1;
+    margin: auto 0 auto 22px;
+    flex: 1;
 
-      content: '';
+    content: '';
 
-      border-bottom: 1px solid $color-fieldset;
+    border-bottom: 1px solid #56c3b2;
+  }
+
+  @media (min-width: $screen-tablet) {
+    margin-right: auto;
+
+    font-weight: bold;
+    line-height: $line-height-large;
+
+    &:after {
+      display: none;
     }
   }
 }
 
 .order-form__label {
   $width: 16px;
+  min-height: 36px;
 
   position: relative;
 
   display: block;
+  margin-top: 25px;
 
   font-size: $font-size-large;
+  line-height: $font-size-large+1;
   font-weight: bold;
 
   &::before {
@@ -63,7 +134,7 @@
     height: 36px;
     left: 0;
     top: 50%;
-    margin-top: -20px;
+    margin-top: -27px;
     border: 2px solid black;
   }
 
@@ -86,10 +157,7 @@
   }
 
   &--radio {
-    min-height: 40px;
-    margin-bottom: 10px;
-    padding-top: 15px;
-    padding-left: 50px;
+    padding-left: 62px;
 
     &::before {
       display: block;
@@ -101,7 +169,7 @@
       height: 16px;
       left: 12px;
       top: 50%;
-      margin-top: -8px;
+      margin-top: -15px;
 
       border-radius: 50%;
       background-color: $color-fieldset;
@@ -109,17 +177,14 @@
   }
 
   &--checkbox {
-    min-height: 40px;
-    margin-bottom: 10px;
-    padding-top: 15px;
-    padding-left: 50px;
+    padding-left: 60px;
 
     &::before {
       display: block;
     }
 
     &::after {
-      top: 17px;
+      top: -3px;
       left: 7px;
       width: 25px;
       height: 25px;
@@ -128,6 +193,34 @@
       background-size: 25px 25px;
     }
 
+  }
+
+  @media (min-width: $screen-tablet) {
+
+    &--radio {
+      padding-top:0;
+      padding-left: 82px;
+      margin-bottom: 35px;
+
+      &::before {
+        width: 50px;
+        height: 50px;
+
+        margin-top: -30px;
+      }
+
+      &::after {
+        width: 22px;
+        height: 22px;
+        top: 15px;
+        left: 16px;
+        margin-top: -9px;
+      }
+    }
+
+    &--checkbox {
+      flex-basis: 240px;
+    }
   }
 }
 
@@ -142,8 +235,8 @@
 .order-form__field {
   display: block;
   width: 100%;
-  height: 50px;
-  margin-bottom: 20px;
+  height: 44px;
+  margin-bottom: 1px;
 
   border: none;
   border-bottom: 2px solid $color-field;
@@ -163,8 +256,8 @@
     content: '';
     position: absolute;
     display: block;
-    bottom: 15px;
-    right: 20px;
+    bottom: 12px;
+    right: 3px;
     width: 30px;
     height: 30px;
   }
@@ -184,8 +277,9 @@
 
 .order-form__textarea {
   width: 100%;
+  height: 142px;
   box-sizing: border-box;
-  margin-top: 20px;
+  margin-top: 13px;
   padding: 15px;
 
   border: 2px solid $color-field;
@@ -195,6 +289,11 @@
 }
 
 .order-form__order-btn {
-  margin-top: 25px;
-  margin-bottom: 50px;
+  width: 260px;
+  margin: 30px auto 53px;
+  background: transparent;
+
+  @media (min-width: $screen-tablet) {
+    width: 230px;
+  }
 }
