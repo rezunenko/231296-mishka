@@ -144,3 +144,15 @@
     padding: 0 50px;
   }
 }
+
+@mixin vertical-align-text {
+  &:before {
+    position: static;
+
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+
+    content: '';
+  }
+}

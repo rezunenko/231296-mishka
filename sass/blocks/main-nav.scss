@@ -122,15 +122,14 @@
 
     &--controls {
       display: flex;
-      max-height: 90px;
+      min-height: 90px;
       justify-content: flex-end;
       margin-left: auto;
       flex-basis: 600px;
       padding-right: 50px;
 
       .main-nav__link {
-        margin-top: 5px;
-        margin-bottom: 5px;
+        padding: 0;
       }
 
       .main-nav__link:first-of-type {
@@ -140,7 +139,10 @@
   }
 
   @media (min-width: $screen-desktop) {
+    display: flex;
+
     &--links {
+      min-height: 90px;
       order: 0;
       flex-basis: 490px;
 
@@ -149,13 +151,14 @@
       font-size: $font-size-large;
 
       .main-nav__link {
-        padding-top: 28px;
-        padding-bottom: 28px;
+        @include vertical-align-text;
+
+        margin: 0 auto;
+        padding: 0;
       }
     }
 
     &--promotions {
-      display: flex;
       flex-basis: 490px;
       order: 2;
 
@@ -170,7 +173,6 @@
     }
 
     &--controls {
-      display: flex;
       order: 1;
       flex-basis: 400px;
 
@@ -188,6 +190,7 @@
   order: 1;
 
   @media (min-width: $screen-tablet) {
+    display: flex;
     border: none;
   }
 }
@@ -236,14 +239,27 @@
     padding-right: 0;
     background: none;
 
-    &--basket {
-      padding-left: 82px;
+    &--basket,
+    &--search {
+      @include vertical-align-text;
+
+      &:before {
+        width: 24px;
+        margin: 0 25px 0 30px;
+      }
     }
 
     &--search {
       font-size: 0;
-      padding-left:42px;
-      padding-right: 42px;
+    }
+  }
+
+  @media (min-width: $screen-desktop) {
+    &--basket,
+    &--search {
+      &:before {
+        margin-right: 27px;
+      }
     }
   }
 }

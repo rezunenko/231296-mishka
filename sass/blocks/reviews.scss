@@ -11,9 +11,10 @@
   }
 
   @media (min-width: $screen-desktop) {
+    max-width: 1000px;
     margin-left: auto;
-    padding-top: 31px;
-    padding-bottom: 160px;
+    margin-right: auto;
+    padding: 31px 0 160px 176px;
   }
 }
 
@@ -31,11 +32,12 @@
 
     font-size: $font-size-tablet;
     line-height: $line-height-tablet;
+    letter-spacing: -1px;
   }
 
   @media (min-width: $screen-desktop) {
-    font-size: $font-size-desktop;
     margin-bottom: 51px;
+    font-size: $font-size-desktop;
   }
 }
 
@@ -69,7 +71,7 @@
 
   @media (min-width: $screen-tablet) {
     position: absolute;
-    top: 50px;
+    top: 43px;
     right: 0;
     width: 175px;
   }

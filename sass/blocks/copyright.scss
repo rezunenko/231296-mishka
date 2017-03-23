@@ -6,6 +6,10 @@
   font-weight: bold;
 
   @include select-text;
+
+  @media (min-width: $screen-desktop) {
+    margin-right: 17px;
+  }
 }
 
 .copyright__link {

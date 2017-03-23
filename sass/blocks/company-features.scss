@@ -10,7 +10,7 @@
   }
 
   @media (min-width: $screen-desktop) {
-    padding-bottom: 71px;
+    padding-bottom: 75px;
   }
 }
 
@@ -19,11 +19,15 @@
   line-height: $line-height-large;
 
   @media (min-width: $screen-tablet) {
-    font-size: $font-size-tablet;
     margin-bottom: 5px;
+
+    font-size: $font-size-tablet;
+    letter-spacing: -1px;
   }
 
   @media (min-width: $screen-desktop) {
+    margin-top: 38px;
+    margin-bottom: 0px;
     font-size: $font-size-desktop;
     line-height: $line-height-desktop;
   }
@@ -111,7 +115,7 @@
   }
 
   @media (min-width: $screen-desktop) {
-    margin-top: 26px;
-    margin-bottom: 20px;
+    margin-top: 35px;
+    margin-bottom: 13px;
   }
 }
