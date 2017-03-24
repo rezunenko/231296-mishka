@@ -3,6 +3,8 @@
   var page_header = document.querySelector('.page-header--no-js');
   var main_nav = document.querySelector('.main-nav--no-js');
   var main_nav_button = document.querySelector('.main-nav__toggle-btn');
+  var btn_buy = document.querySelector('.btn--buy');
+  var overlay = document.querySelector('.overlay');
 
   page_header.classList.remove('page-header--no-js');
   main_nav.classList.remove('main-nav--no-js');
@@ -31,11 +33,40 @@
     myMap.geoObjects.add(myPlacemark);
   }
 
+  function toogleAttribute(elem, attrName) {
+    var _elem = elem;
+
+    if (_elem.hasAttribute(attrName)) {
+      _elem.removeAttribute(attrName);
+    }
+  else
+    {
+      _elem.setAttribute(attrName, 'true');
+    }
+  }
+
   document.addEventListener('DOMContentLoaded', function(){
     main_nav_button.addEventListener('click', function() {
       main_nav.classList.toggle('main-nav--open');
     });
 
-    ymaps.ready(init);
+    if(overlay) {
+      overlay.addEventListener('click', function(event) {
+        if (event.target == this) {
+          overlay.setAttribute('hidden', 'true');
+        }
+      });
+    }
+
+    if (btn_buy) {
+      btn_buy.addEventListener('click', function(event) {
+        toogleAttribute(overlay, 'hidden');
+        event.preventDefault();
+      });
+    }
+
+    if(myMap) {
+      ymaps.ready(init);
+    }
   });
 }());
