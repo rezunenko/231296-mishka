@@ -190,14 +190,14 @@
 
   &--wide {
     position: relative;
+    display: flex;
+    justify-content: space-between;
     max-width: 200px;
     padding: 25px 0 28px;
     margin: 0 auto;
     text-align: left;
 
     font-size: $font-size-regular;
-
-    @include link-icon-right(20px, 20px, './../../img/icon-cart.svg', 0px, transparent);
   }
 
   @media (min-width: $screen-tablet) {
@@ -231,6 +231,15 @@
       }
     }
   }
+}
+
+.product__btn-buy {
+  border: none;
+  background: transparent url('./../../img/icon-cart.svg') no-repeat;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  margin: 0 8px 0 0;
 }
 
 .product__features {
