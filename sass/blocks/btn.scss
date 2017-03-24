@@ -24,13 +24,13 @@
   }
 
   &--green {
-    background-color: $color-btn-blue;
-    border-color: $color-btn-blue;
+    background-color: $color-btn-green;
+    border-color: $color-btn-green;
 
     color: $white;
 
     &:hover, &:focus {
-      background-color: rgba($color-btn-blue,0.8);
+      background-color: rgba($color-btn-green,0.8);
     }
   }
 }

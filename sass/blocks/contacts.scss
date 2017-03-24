@@ -22,6 +22,7 @@
 
     font-size: $font-size-tablet;
     line-height: 50px;
+    letter-spacing: -1px;
 
     &::after {
       position: absolute;
@@ -143,6 +144,7 @@
   @media (min-width: $screen-desktop) {
     margin-top: 50px;
     margin-right: 647px;
+    margin-bottom: 103px;
   }
 }
 

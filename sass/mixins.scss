@@ -136,3 +136,21 @@
     margin-right: -50px;
   }
 }
+
+@mixin basic-padding {
+  padding: 0 30px;
+
+  @media (min-width: $screen-tablet) {
+    padding: 0 50px;
+  }
+}
+
+@mixin vertical-align-text {
+  &:before {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+
+    content: '';
+  }
+}

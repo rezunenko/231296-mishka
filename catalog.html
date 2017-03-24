@@ -37,16 +37,15 @@
     <script src="../node_modules/pixel-glass/script.js"></script>
   </head>
   <body class="page">
-    <header class="page-header  page-header--no-bg">
-      <a href="index.html" title="Главная страница">
-        <img class="page-header__logo" src="img/logo-mobile.svg" width="90" height="35" alt='Логотип магазина "Мишка"'/>
-      </a>
-
-      <nav class="main-nav">
+    <header class="page-header  page-header--no-bg  page-header--no-js">
+      <nav class="main-nav  main-nav--no-js">
+        <a class="main-nav__logo" href="index.html" title="Главная страница">
+          <img class="page-header__logo" src="img/logo-mobile.svg" width="90" height="35" alt='Логотип магазина "Мишка"'/>
+        </a>
         <button class="main-nav__toggle-btn" type="button"></button>
         <ul class="main-nav__list  main-nav__list--links">
           <li class="main-nav__item">
-            <a class="main-nav__link" href="catalog.html" title="Каталог товаров">Каталог товаров</a>
+            <a class="main-nav__link" title="Каталог товаров">Каталог товаров</a>
           </li>
           <li class="main-nav__item">
             <a class="main-nav__link" href="form.html" title="Вязание на заказ">Вязание на заказ</a>
@@ -72,6 +71,7 @@
             </a>
           </li>
         </ul>
+        <p class="page-header__meta">Бесплатная доставка по России</p>
       </nav>
       <h1 class="page-header__title  page-header__title--bg">Каталог товаров</h1>
 
@@ -90,7 +90,7 @@
               <dt class="features__term  features__term--inline">вес</dt>
               <dd class="features__value  features__value--inline">200 г</dd>
             </dl>
-            <p class="product__cost-wrapper  product__cost-wrapper--wide"><span class="product__cost">1200 руб.</span></p>
+            <p class="product__cost-wrapper  product__cost-wrapper--wide"><span class="product__cost">1200 руб.</span><button class="product__btn-buy"></button></p>
           </a>
         </article>
 
@@ -106,7 +106,7 @@
               <dt class="features__term  features__term--inline">высота</dt>
               <dd class="features__value  features__value--inline">10 см</dd>
             </dl>
-            <p class="product__cost-wrapper  product__cost-wrapper--wide"><span class="product__cost">690 руб.</span></p>
+            <p class="product__cost-wrapper  product__cost-wrapper--wide"><span class="product__cost">690 руб.</span><button class="product__btn-buy"></button></p>
           </a>
         </article>
 
@@ -121,7 +121,7 @@
               <dt class="features__term  features__term--inline">высота</dt>
               <dd class="features__value  features__value--inline">30 см</dd>
             </dl>
-            <p class="product__cost-wrapper  product__cost-wrapper--wide"><span class="product__cost">1500 руб.</span></p>
+            <p class="product__cost-wrapper  product__cost-wrapper--wide"><span class="product__cost">1500 руб.</span><button class="product__btn-buy"></button></p>
           </a>
         </article>
       </section>
@@ -168,7 +168,7 @@
           <span class="size-form__field-name">S</span>
         </label>
         <label class="size-form__label" for="sizeM">
-          <input id="sizeM" class="size-form__field" type="radio" name="size" value="M"/>
+          <input id="sizeM" class="size-form__field" type="radio" name="size" value="M" checked/>
           <span class="size-form__field-name">M</span>
         </label>
         <label class="size-form__label" for="sizeL">
@@ -179,5 +179,6 @@
         <button class="btn  btn--green  size-form__add-btn" type="submit" title="Добавить">Добавить</button>
       </form>
     </div>
+    <script type="text/javascript" src="js/app.js"></script>
   </body>
 </html>

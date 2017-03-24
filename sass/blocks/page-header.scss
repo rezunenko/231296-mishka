@@ -1,40 +1,38 @@
 .page-header {
   position: relative;
+  background: url('./../../img/hero-mobile@1x.jpg') no-repeat 50% 80px;
 
-  background: url('./../../img/hero-mobile@1x.jpg') no-repeat 50% 60px;
-
+  @include ignore-page-padding;
 
   &--no-bg {
-    background: none;
+    background: linear-gradient(to bottom, transparent 0px, transparent 80px, $color-header 80px, $color-header 100%);
   }
 
   @media (min-width: $screen-tablet) {
     height: 820px;
-    //padding-top: 90px;
 
     background-position: 50% 90px;
     background-size: cover;
 
     &--no-bg {
       height: 320px;
+      background: linear-gradient(to bottom, transparent 0px, transparent 90px, $color-header 90px, $color-header 100%);
+      background-position: 50% 0;
+
+      .page-header__title {
+        padding-top: 37px;
+      }
     }
   }
 }
 
-.page-header__logo {
-  position: absolute;
-  top: 22px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 3;
-
-  @media (min-width: $screen-tablet) and (max-width: 1149px) {
-    left: 75px;
-  }
+.page-header--no-js {
+  background-position: 50% 320px;
 }
 
 .page-header__title {
   display: block;
+  @include basic-padding;
   padding-top: 70px;
   padding-bottom: 75px;
   margin: 0;
@@ -44,20 +42,14 @@
   line-height: $line-height-large;
   text-align: center;
 
-  &--bg {
-    @include ignore-page-padding;
-
-    background: #f1f1f1;
-  }
-
   @media (min-width: $screen-tablet) {
-    padding-top: 85px;
+    padding-top: 97px;
 
     font-size: $font-size-tablet;
     line-height: $line-height-tablet;
 
     &--bg {
-      padding-top: 25px;
+      padding-top: 40px;
     }
   }
 
@@ -75,6 +67,14 @@
   display: none;
 
   @media (min-width: $screen-tablet) {
+    position: static;
+
     display: block;
+    order: 3;
+    flex-grow: 1;
+    margin: 0;
+    padding: 14px 50px 14px 0;
+
+    border-top: 1px solid $color-border;
   }
 }
