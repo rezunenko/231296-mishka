@@ -16,6 +16,10 @@
     margin-right: auto;
     padding: 31px 0 160px 176px;
   }
+
+  @media (min-width: $screen-tablet) and (min-resolution: 144dpi), (min-width: $screen-tablet) and (min-resolution: 1.5dppx) {
+    background-image: url('./../../img/review@2x.jpg');
+  }
 }
 
 .reviews__title {
