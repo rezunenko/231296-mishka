@@ -45,9 +45,12 @@
     height: 145px;
     justify-content: space-around;
     margin: 0;
-    //@include basic-padding;
 
     background-color: transparent;
+
+    &--open  .main-nav__list {
+      position: static;
+    }
   }
 
   @media (min-width: $screen-desktop) {
