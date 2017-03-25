@@ -5,6 +5,7 @@
   var main_nav_button = document.querySelector('.main-nav__toggle-btn');
   var overlay = document.querySelector('.overlay');
   var list_btn_buy = document.querySelectorAll('.product__show-popup');
+  var map = document.getElementById('map');
 
   page_header.classList.remove('page-header--no-js');
   main_nav.classList.remove('main-nav--no-js');
@@ -30,6 +31,7 @@
         iconImageOffset: [-40, -70]
       }
     );
+
     myMap.geoObjects.add(myPlacemark);
   }
 
@@ -65,8 +67,8 @@
       });
     });
 
-
-    ymaps.ready(init);
-
+    if(map) {
+      ymaps.ready(init);
+    }
   });
 }());
