@@ -18,6 +18,19 @@
     background-image: url('./../../img/hero-desktop@1x.jpg');
     background-position: 50% 90px;
     background-size: cover;
+
+    &:after {
+      position: absolute;
+      bottom: -30px;
+      left: 0;
+      right: 0;
+      z-index: 10;
+
+      height: 40px;
+      background: transparent url('./../../img/bg-zigzag-fill.svg') repeat-x bottom;
+      background-size: auto 23px;
+      content: '';
+    }
   }
 
   @media (min-width: $screen-tablet) and (min-resolution: 144dpi), (min-width: $screen-desktop) and (min-resolution: 1.5dppx) {
@@ -32,6 +45,23 @@
 
       .page-header__title {
         padding-top: 37px;
+      }
+
+      &:after {
+        bottom: -5px;
+      }
+    }
+  }
+
+  @media (min-width: $screen-desktop) {
+    &:after {
+      background-size: auto 34px;
+    }
+
+    &--no-bg {
+      height: 340px;
+      &:after {
+        bottom: -20px;
       }
     }
   }
