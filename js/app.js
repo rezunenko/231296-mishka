@@ -65,8 +65,8 @@
       });
     });
 
-    if(myMap) {
-      ymaps.ready(init);
-    }
+
+    ymaps.ready(init);
+
   });
 }());
