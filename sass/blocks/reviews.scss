@@ -1,11 +1,11 @@
 .reviews {
   position: relative;
-  padding-bottom: 35px;
+  padding-bottom: 8px;
 
   @media (min-width: $screen-tablet) {
     max-width: 875px;
     margin-left: -50px;
-    padding: 43px 0 105px 50px;
+    padding: 43px 0 37px 50px;
     background: url('./../../img/review@1x.jpg') no-repeat -30px 0;
     background-size: 380px 457px;
   }
@@ -71,7 +71,7 @@
 
 .reviews__add-btn {
   margin-top: 35px;
-  margin-bottom: 50px;
+
 
   @media (min-width: $screen-tablet) {
     position: absolute;
@@ -86,7 +86,7 @@
 
   @media (min-width: $screen-tablet) {
     position: absolute;
-    bottom: 135px;
+    bottom: 65px;
     right: 0;
     width: 175px;
     margin-bottom: 0;

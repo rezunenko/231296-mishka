@@ -1,6 +1,9 @@
 .contacts {
+  margin-top: 35px;
+
   @media (min-width: $screen-tablet) {
     position: relative;
+    margin-top: 0;
     padding-top: 60px;
   }
 }

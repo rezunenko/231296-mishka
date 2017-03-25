@@ -4,8 +4,6 @@
   background-color: $color-footer;
   text-align: center;
 
-  @include ignore-page-padding;
-
   @media (min-width: $screen-tablet) {
     display: flex;
     height: 145px;
