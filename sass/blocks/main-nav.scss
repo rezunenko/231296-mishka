@@ -62,17 +62,23 @@
 }
 
 .main-nav__logo {
+  width: 90px;
+  height: 35px;
   margin: auto;
 
   transform: translateX(30px);
 
   @media (min-width: $screen-tablet) {
+    width: 113px;
+    height: 47px;
     margin: auto 0;
     transform: translateX(50px);
   }
 
   @media (min-width: $screen-desktop) {
-    transform: translateX(0px);
+    width: 150px;
+    height: 75px;
+    transform: translateX(-28px);
     order: 1;
     margin: auto;
   }
