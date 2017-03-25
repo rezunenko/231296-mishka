@@ -94,7 +94,9 @@
   }
 }
 
-.video-review__video {
+.video-review__video-wrapper {
+  position: relative;
+
   display: block;
   margin: 0 -35px;
 
@@ -126,6 +128,7 @@
     left: 0;
 
     width: 680px;
+    height: 100%;
 
     background-image: url('./../../img/video-desktop@1x.jpg');
   }
@@ -134,4 +137,36 @@
   (min-width: $screen-desktop) AND (min-resolution: 1.5dppx) {
     background-image: url('./../../img/video-desktop@2x.jpg');
   }
+}
+
+.video-review__btn-play{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 100px;
+  height: 76px;
+  transform: translate(-50%, -50%);
+
+  border: none;
+  background:  url('./../../img/icon-play.svg') no-repeat 50% 50%;
+  background-size: cover;
+
+  &:hover,
+  &:focus {
+    width: 120px;
+    height: 91px;
+  }
+
+  &:active {
+    width: 80px;
+    height: 61px;
+  }
+}
+
+
+.video-review__video {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
