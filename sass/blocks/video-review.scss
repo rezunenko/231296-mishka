@@ -11,13 +11,14 @@
 
   @media (min-width: $screen-tablet) {
     height: 693px;
-    padding: 0;
-    margin-bottom: 105px;
+    padding: 0 0 45px;
+    margin-bottom: 62px;
   }
 
   @media (min-width: $screen-desktop) {
-    height: 455px;
+    height: 410px;
     padding-left: 705px;
+    margin-bottom: 105px;
   }
 }
 
@@ -35,12 +36,10 @@
   font-size: $font-size-large;
   line-height: $line-height-regular;
 
-  @include link-icon-left(45px, 40px, './../../img/icon-video.svg', -5px, transparent);
-
   @media (min-width: $screen-tablet) {
     max-width: 100%;
     margin: 0;
-    padding-left: 105px;
+    padding-left: 40px;
     order: 1;
 
     font-size: $font-size-large+3;
@@ -58,6 +57,24 @@
       position: static;
       padding-bottom: 30px;
     }
+  }
+}
+
+.video-review__icon {
+  display: inline-block;
+  vertical-align: bottom;
+  margin-right: 25px;
+  fill: $color-icon;
+
+  @media (max-width: 767px) {
+    position: absolute;
+    top: 3px;
+    left: -3px;
+  }
+
+  @media (min-width: $screen-desktop) {
+    display: block;
+    margin-bottom: 15px;
   }
 }
 
@@ -91,7 +108,7 @@
   }
 
   @media (min-width: $screen-desktop) {
-    margin: 15px 57px 60px 57px;
+    margin: 15px 57px 15px 57px;
   }
 }
 

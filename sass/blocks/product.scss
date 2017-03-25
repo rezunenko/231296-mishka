@@ -80,6 +80,22 @@
   }
 }
 
+.product__icon {
+  display: inline;
+  vertical-align: middle;
+  cursor: pointer;
+  fill: #b2b2b2;
+
+  &:hover,
+  &:focus {
+    fill: $color-logo-hover;
+  }
+
+  &:active {
+    fill: $color-logo-active;
+  }
+}
+
 .product__meta {
   margin: 0;
 
@@ -235,11 +251,15 @@
 
 .product__btn-buy {
   border: none;
-  background: transparent url('./../../img/icon-cart.svg') no-repeat;
-  width: 20px;
-  height: 20px;
+  background: none;
+  width: 24px;
+  height: 24px;
   padding: 0;
-  margin: 0 8px 0 0;
+
+  @media  (min-width: $screen-desktop) {
+    margin-top: -3px;
+    margin-right: 4px;
+  }
 }
 
 .product__features {
