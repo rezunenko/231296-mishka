@@ -340,6 +340,10 @@
   &:focus,
   &:hover {
     border-color: $color-fieldset;
+
+    & ~ .order-form__field-icon {
+      fill: $color-icon;
+    }
   }
 
   @media (min-width: $screen-tablet) {
@@ -380,37 +384,25 @@
 .order-form__field-wrapper {
   position: relative;
 
-  &:after {
-    content: '';
-    position: absolute;
-    display: block;
-    bottom: 12px;
-    right: 3px;
-    width: 30px;
-    height: 30px;
-  }
-
-  &--email:after {
-      background: url('./../../img/icon-mail.svg') no-repeat 50% 50%;
-  }
-
-  &--tel:after {
-      background: url('./../../img/icon-phone.svg') no-repeat 50% 50%;
-  }
-
   @media (min-width: $screen-tablet) {
     width: 100%;
+  }
+}
 
-    &:after {
-      right: 22px;
-    }
+.order-form__field-icon {
+  position: absolute;
+  display: block;
+  bottom: 13px;
+  right: 3px;
+
+  fill: $color-icon-grey;
+
+  @media (min-width: $screen-tablet) {
+    right: 22px;
   }
 
   @media (min-width: $screen-desktop) {
-
-    &:after {
-      right: 3px;
-    }
+    right: 3px;
   }
 }
 
