@@ -333,27 +333,37 @@
 
   font-size: $font-size-large;
 
-  &:focus {
-    border-bottom: 2px solid $color-fieldset;
+  &--content-exists {
+    border-color: $color-fieldset-active;
+  }
+
+  &:focus,
+  &:hover {
+    border-color: $color-fieldset;
   }
 
   @media (min-width: $screen-tablet) {
     width: auto;
+    box-sizing: border-box;
     flex-basis: 74%;
     height: 44px;
-    margin-top: -12px;
+    margin-top: -8px;
     margin-bottom: 40px;
+    padding-left: 16px;
+    padding-bottom: 9px;
+
     flex-grow: 1;
 
+    font-size: $font-size-large+2;
+
     &::-webkit-input-placeholder {
-      padding-left: 16px;
       font-size: $font-size-large+2;
     }
 
     &--full-size {
       width: 100%;
       background: $color-border;
-      margin-top: 11px;
+      margin-top: 16px;
       margin-bottom: 0;
     }
   }
@@ -415,6 +425,15 @@
   outline: none;
 
   font-size: $font-size-large;
+
+  &:focus,
+  &:hover {
+    border-color: $color-fieldset;
+  }
+
+  &--content-exists {
+    border-color: $color-fieldset-active;
+  }
 
   @media (min-width: $screen-tablet) {
     margin-top: 8px;

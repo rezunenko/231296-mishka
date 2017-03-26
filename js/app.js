@@ -6,9 +6,30 @@
   var overlay = document.querySelector('.overlay');
   var list_btn_buy = document.querySelectorAll('.product__show-popup');
   var map = document.getElementById('map');
+  var list__field = document.querySelectorAll('.order-form__field');
+  var list__textarea = document.querySelectorAll('.order-form__textarea');
 
   page_header.classList.remove('page-header--no-js');
   main_nav.classList.remove('main-nav--no-js');
+
+  function validateInput(event, el) {
+    event = event || window.event;
+    if (el) {
+      event.preventDefault();
+      if(el.classList.contains('order-form__field')) {
+        if (el.value)
+          el.classList.add('order-form__field--content-exists');
+        else
+          el.classList.remove('order-form__field--content-exists');
+      }
+      else if (el.classList.contains('order-form__textarea')) {
+        if (el.value)
+          el.classList.add('order-form__textarea--content-exists');
+        else
+          el.classList.remove('order-form__textarea--content-exists');
+      }
+    }
+  };
 
   var myMap;
   function init() {
@@ -64,6 +85,18 @@
       item.addEventListener('click', function() {
         toogleAttribute(overlay, 'hidden');
         event.preventDefault();
+      });
+    });
+
+    list__field.forEach(function(item) {
+      item.addEventListener('blur', function(event) {
+        validateInput(event, item)
+      });
+    });
+
+    list__textarea.forEach(function(item) {
+      item.addEventListener('blur', function(event) {
+        validateInput(event, item)
       });
     });
 
