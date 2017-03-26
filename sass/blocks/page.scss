@@ -1,14 +1,8 @@
 .page {
-  max-width: 1280px;
-  min-width: 260px;
+  max-width: 1150px;
   margin: 0 auto;
-  padding: 0 30px;
 
   font-family: $font-family-text;
   font-size: $font-size-regular;
   line-height: $line-height-regular;
-
-  @media (min-width: $screen-tablet) {
-    padding: 0 50px;
-  }
 }

@@ -1,6 +1,6 @@
 .copyright__text {
   margin-right: 20px;
-  vertical-align: middle;
+  vertical-align: top;
 
   font-size: ($font-size-x-large + 1px);
   font-weight: bold;
@@ -15,8 +15,19 @@
 .copyright__link {
   display: inline-block;
   vertical-align: middle;
+  text-decoration: none;
+
+  &:hover .copyright__img,
+  &:focus .copyright__img {
+    fill: $color-logo-hover;
+  }
+
+  &:active .copyright__img {
+    fill: $color-logo-active;
+  }
 }
 
 .copyright__img {
   display: block;
+  fill: $color-logo-academy;
 }

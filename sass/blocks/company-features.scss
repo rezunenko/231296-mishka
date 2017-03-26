@@ -51,41 +51,44 @@
   line-height: $line-height-small;
   font-weight: bold;
 
-  &:before {
+  .company-features__item-icon {
     position: absolute;
 
     display: block;
-    top: 3px;
-    left: -3px;
-    width: 50px;
-    height: 50px;
+    top: 10px;
+    left: 5px;
 
-    content: '';
-    background-color: $color-feature;
+    fill: $color-icon;
   }
 
-  &--eco:before {
-    mask: url('./../../img/icon-feature-1.svg') no-repeat 50% 10px;
+  &--eco .company-features__item-icon{
+    top: 10px;
+    left: 5px;
   }
 
-  &--price:before {
-    mask: url('./../../img/icon-feature-3.svg') no-repeat 50% 10px;
+  &--price .company-features__item-icon {
+    top: 7px;
+    left: 1px;
   }
 
-  &--popular:before {
-    mask: url('./../../img/icon-feature-5.svg') no-repeat 50% 10px;
+  &--popular .company-features__item-icon {
+    top: 15px;
+    left: 8px;
   }
 
-  &--with-love:before {
-    mask: url('./../../img/icon-feature-2.svg') no-repeat 50% 10px;
+  &--with-love .company-features__item-icon {
+    top: 15px;
+    left: 5px;
   }
 
-  &--rus:before {
-    mask: url('./../../img/icon-feature-4.svg') no-repeat 50% 10px;
+  &--rus .company-features__item-icon {
+    top: 8px;
+    left: 0px;
   }
 
-  &--packaging:before {
-    mask: url('./../../img/icon-feature-6.svg') no-repeat 50% 10px;
+  &--packaging .company-features__item-icon {
+    top: 12px;
+    left: 2px;
   }
 
   @media (min-width: $screen-tablet) {

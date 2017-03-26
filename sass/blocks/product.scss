@@ -1,10 +1,19 @@
 .product {
   position: relative;
-  margin: 0 auto 70px;
+  margin: 0 auto;
   overflow: hidden;
 
   &--card {
     margin-bottom: 30px;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    &:active {
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    }
   }
 
   @media (min-width: $screen-tablet) {
@@ -77,6 +86,22 @@
       font-size: $font-size-desktop;
       line-height: $line-height-desktop;
     }
+  }
+}
+
+.product__icon {
+  display: inline;
+  vertical-align: middle;
+  cursor: pointer;
+  fill: #b2b2b2;
+
+  &:hover,
+  &:focus {
+    fill: $color-logo-hover;
+  }
+
+  &:active {
+    fill: $color-logo-active;
   }
 }
 
@@ -235,11 +260,15 @@
 
 .product__btn-buy {
   border: none;
-  background: transparent url('./../../img/icon-cart.svg') no-repeat;
-  width: 20px;
-  height: 20px;
+  background: none;
+  width: 24px;
+  height: 24px;
   padding: 0;
-  margin: 0 8px 0 0;
+
+  @media  (min-width: $screen-desktop) {
+    margin-top: -3px;
+    margin-right: 4px;
+  }
 }
 
 .product__features {

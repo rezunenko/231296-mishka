@@ -4,8 +4,6 @@
   background-color: $color-footer;
   text-align: center;
 
-  @include ignore-page-padding;
-
   @media (min-width: $screen-tablet) {
     display: flex;
     height: 145px;
@@ -22,15 +20,27 @@
 }
 
 .page-footer__copyright {
-  margin-top: 45px;
+  margin-top: 55px;
 
   @media (min-width: $screen-tablet) {
-    margin-top: 0;
+    margin-top: 15px;
   }
 }
 
 .page-footer__logo {
   display: none;
+  cursor: pointer;
+
+  fill: $color-logo;
+
+  &:hover,
+  &:focus {
+    fill: $color-logo-hover;
+  }
+
+  &:active {
+    fill: $color-logo-active;
+  }
 
   @media (min-width: $screen-tablet) {
     display: block;

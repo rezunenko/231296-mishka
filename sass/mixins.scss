@@ -138,6 +138,7 @@
 }
 
 @mixin basic-padding {
+  margin: 0 auto;
   padding: 0 30px;
 
   @media (min-width: $screen-tablet) {
@@ -153,4 +154,11 @@
 
     content: '';
   }
+}
+
+@mixin container {
+  max-width: 1280px;
+  min-width: 260px;
+
+  @include basic-padding;
 }
