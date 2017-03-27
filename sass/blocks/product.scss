@@ -304,18 +304,15 @@
   }
 }
 
-.product__link {
+.product__inner {
   display: block;
   box-sizing: border-box;
 
   border: 1px solid $color-border;
 
-  text-decoration: none;
-  color: black;
-
   &:hover, &focus {
     border-color: $color-border;
-    box-shadow: 0 6px 10px rgba(0,0,0, 0.1);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
   }
 
   &:active {
@@ -333,6 +330,13 @@
     height: 660px;
     padding-left: 0;
   }
+}
+
+.product__link {
+  text-decoration: none;
+  color: black;
+
+  @include select-text;
 }
 
 .product__content {
