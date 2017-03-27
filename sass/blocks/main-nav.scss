@@ -110,6 +110,10 @@
     display: none;
   }
 
+  &--controls .main-nav__link {
+    padding-left: 0;
+  }
+
   @media (min-width: $screen-tablet) {
     border-bottom: none;
     overflow: hidden;

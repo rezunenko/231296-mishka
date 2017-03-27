@@ -1,6 +1,6 @@
 .page-header {
   position: relative;
-  background: url('./../../img/hero-mobile@1x.jpg') no-repeat 50% 80px;
+  background: transparent url('./../../img/hero-mobile@1x.jpg') no-repeat 50% 80px;
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     background-image: url('./../../img/hero-mobile@2x.jpg');

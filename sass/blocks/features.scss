@@ -14,10 +14,10 @@
   flex-shrink: 0;
 
   @include postfix(':');
+  vertical-align: top;
 
   &--inline {
     display: inline-block;
-    vertical-align: top;
     padding: 0;
 
     font-size: $font-size-small;
