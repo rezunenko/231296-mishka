@@ -19,11 +19,11 @@
   overflow: hidden;
 
   &--interior {
-    @include link-icon-right(70px, 70px, './../../img/icon-interior.svg', 22px, $left-green-btn);
+    @include link-icon-right(70px, 70px, './../../img/icons/icon-interior.svg', 22px, $left-green-btn);
   }
 
   &--toy {
-    @include link-icon-right(70px, 70px, './../../img/icon-toy.svg', 30px, $right-green-btn);
+    @include link-icon-right(70px, 70px, './../../img/icons/icon-toy.svg', 30px, $right-green-btn);
   }
 
   &:hover, &:focus {

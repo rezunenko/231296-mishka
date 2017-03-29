@@ -20,6 +20,7 @@
     "gulp-svgmin": "^1.2.3",
     "gulp-svgstore": "^6.1.0",
     "gulp-uglify": "^2.1.2",
+    "pixel-glass": "^1.0.13",
     "run-sequence": "^1.2.2"
   },
   "scripts": {
@@ -27,6 +28,7 @@
     "build": "gulp build",
     "dev": "gulp dev",
     "serve": "gulp serve",
+    "dev-start": "npm run dev && gulp serve",
     "start": "npm run build && gulp serve"
   },
   "editorconfig-cli": [
