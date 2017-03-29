@@ -6,15 +6,14 @@
 
 .social-links__item {
   display: inline-block;
-  vertical-align: top;
+  vertical-align: bottom;
 }
 
 .social-links__link {
   position: relative;
 
-  display: block;
-  width: 25px;
-  height: 25px;
+  display: flex;
+  justify-content: space-between;
 
   &--inst {
     margin-right: 34px;
