@@ -45,44 +45,6 @@
   }
 }
 
-@mixin link-icon($width, $height, $url, $left, $right, $bg, $color, $hover, $active) {
-  background-color: $bg;
-
-  &:before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    @if $left == 0 {
-      right: $right;
-    } @else {
-      left: $left;
-    }
-
-    display: block;
-    width: $width;
-    height: $height;
-    margin-top: -($height / 2);
-  }
-
-  @include masked-link($url, $color, $hover, $active);
-}
-
-@mixin link-icon-left($width, $height, $url, $left, $bg ) {
-  $color: rgba($menu-icon, 0.5);
-  $hover: rgba($menu-icon-hover, 0.7);
-  $active: rgba($menu-icon-hover, 0.3);
-
-  @include link-icon($width, $height, $url, $left, 0, $bg, $color, $hover, $active);
-}
-
-@mixin link-icon-right($width, $height, $url, $right, $bg) {
-  $color: rgba($green-icon, 0.5);
-  $hover: rgba($green-icon, 0.7);
-  $active: rgba($green-icon, 0.3);
-
-  @include link-icon($width, $height, $url, 0, $right, $bg, $color, $hover, $active);
-}
-
 @mixin select-text {
   color: $color-text;
 
