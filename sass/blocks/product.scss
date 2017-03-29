@@ -53,6 +53,14 @@
     display: none;
   }
 
+  @media (min-width: $screen-tablet) and (max-width: 1149px) {
+    margin-left: 110px;
+
+    &--top {
+      margin-left: 0;
+    }
+  }
+
   @media (min-width: $screen-tablet) {
     max-width: 100%;
     font-size: $font-size-x-large+2;
