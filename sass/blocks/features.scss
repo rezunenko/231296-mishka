@@ -1,17 +1,14 @@
 .features {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-
-  &--inline {
-    display: block;
-  }
+  font-size: 0;
 }
 
 .features__term {
-  flex-basis: 95px;
+  float: left;
   padding: 8px 0;
   flex-shrink: 0;
+
+  font-size: $font-size-regular;
+  line-height: $line-height-regular;
 
   @include postfix(':');
   vertical-align: top;
@@ -19,6 +16,8 @@
   &--inline {
     display: inline-block;
     padding: 0;
+
+    float: none;
 
     font-size: $font-size-small;
     line-height: $line-height-large;
@@ -29,28 +28,38 @@
 
     &:not(:first-of-type) {
       @include prefix(',');
+
+      &:before {
+        margin-right: 2px;
+      }
     }
   }
 
   @media (min-width: $screen-tablet) {
     &--inline{
       font-size: 15px;
+
+      &:not(:first-of-type):before {
+        margin-right: 5px;
+      }
     }
   }
 }
 
-
-
 .features__value {
-  flex-basis: 100%;
-  margin: 0 0 0 -95px;
-  padding: 8px 0 0 95px;
+  width: 100%;
+  margin: 0;
+  padding: 8px 0 8px 95px;
   box-sizing: border-box;
+
+  font-size: $font-size-regular;
+  line-height: $line-height-regular;
 
   &--inline {
     display: inline-block;
+    width: auto;
     vertical-align: top;
-    margin: 0;
+    margin: 0 0 0 3px;
     padding: 0;
 
     font-size: $font-size-small;
