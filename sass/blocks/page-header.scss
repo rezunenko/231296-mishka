@@ -6,16 +6,20 @@
   background-repeat: no-repeat;
   background-position: 0 0, 50% 60px;
 
-  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    background-image: linear-gradient(white 0px, white 80px, transparent 80px, transparent 100%),
-                      url('./../../img/hero-mobile@2x.jpg');
-  }
-
   &--no-bg {
     background: linear-gradient(to bottom, transparent 0px, transparent 80px, $color-header 80px, $color-header 100%);
 
     .page-header__title {
       padding-bottom: 75px;
+    }
+  }
+
+  @media (min-width: $screen-mobile) and (min-resolution: 144dpi), (min-width: $screen-mobile) and (min-resolution: 1.5dppx) {
+    background-image: linear-gradient(white 0px, white 80px, transparent 80px, transparent 100%),
+    url('./../../img/hero-mobile@2x.jpg');
+
+    &--no-bg {
+      background: linear-gradient(to bottom, transparent 0px, transparent 80px, $color-header 80px, $color-header 100%);
     }
   }
 
@@ -25,6 +29,10 @@
     background-image: linear-gradient(white 0px, white 92px, transparent 92px, transparent 100%),
                       url('./../../img/hero-desktop@1x.jpg');
     background-position: 0 0px, 50% 90px;
+
+    &--no-bg {
+      background: linear-gradient(to bottom, transparent 0px, transparent 92px, $color-header 92px, $color-header 100%);
+    }
 
     &:after {
       position: absolute;
@@ -40,9 +48,13 @@
     }
   }
 
-  @media (min-width: $screen-tablet) and (min-resolution: 144dpi), (min-width: $screen-desktop) and (min-resolution: 1.5dppx) {
+  @media (min-width: $screen-tablet) and (min-resolution: 144dpi), (min-width: $screen-tablet) and (min-resolution: 1.5dppx) {
     background-image: linear-gradient(white 0px, white 92px, transparent 92px, transparent 100%),
                       url('./../../img/hero-desktop@2x.jpg');
+
+    &--no-bg {
+      background-image: linear-gradient(to bottom, transparent 0px, transparent 92px, $color-header 92px, $color-header 100%);
+    }
   }
 
   @media (min-width: $screen-tablet) {
