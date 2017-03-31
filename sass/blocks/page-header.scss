@@ -1,10 +1,10 @@
 .page-header {
   position: relative;
-  background: url('./../../img/hero-mobile@1x.jpg') no-repeat 50% 80px;
-
-  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    background-image: url('./../../img/hero-mobile@2x.jpg');
-  }
+  background-color: $color-header;
+  background-image: linear-gradient(white 0px, white 80px, transparent 80px, transparent 100%),
+                    url('./../../img/hero-mobile@1x.jpg');
+  background-repeat: no-repeat;
+  background-position: 0 0, 50% 60px;
 
   &--no-bg {
     background: linear-gradient(to bottom, transparent 0px, transparent 80px, $color-header 80px, $color-header 100%);
@@ -14,12 +14,25 @@
     }
   }
 
+  @media (min-width: $screen-mobile) and (min-resolution: 144dpi), (min-width: $screen-mobile) and (min-resolution: 1.5dppx) {
+    background-image: linear-gradient(white 0px, white 80px, transparent 80px, transparent 100%),
+    url('./../../img/hero-mobile@2x.jpg');
+
+    &--no-bg {
+      background: linear-gradient(to bottom, transparent 0px, transparent 80px, $color-header 80px, $color-header 100%);
+    }
+  }
+
   @media (min-width: $screen-tablet) {
     height: 820px;
 
-    background-image: url('./../../img/hero-desktop@1x.jpg');
-    background-position: 50% 90px;
-    background-size: cover;
+    background-image: linear-gradient(white 0px, white 92px, transparent 92px, transparent 100%),
+                      url('./../../img/hero-desktop@1x.jpg');
+    background-position: 0 0px, 50% 90px;
+
+    &--no-bg {
+      background: linear-gradient(to bottom, transparent 0px, transparent 92px, $color-header 92px, $color-header 100%);
+    }
 
     &:after {
       position: absolute;
@@ -35,14 +48,19 @@
     }
   }
 
-  @media (min-width: $screen-tablet) and (min-resolution: 144dpi), (min-width: $screen-desktop) and (min-resolution: 1.5dppx) {
-    background-image: url('./../../img/hero-desktop@2x.jpg');
+  @media (min-width: $screen-tablet) and (min-resolution: 144dpi), (min-width: $screen-tablet) and (min-resolution: 1.5dppx) {
+    background-image: linear-gradient(white 0px, white 92px, transparent 92px, transparent 100%),
+                      url('./../../img/hero-desktop@2x.jpg');
+
+    &--no-bg {
+      background-image: linear-gradient(to bottom, transparent 0px, transparent 92px, $color-header 92px, $color-header 100%);
+    }
   }
 
   @media (min-width: $screen-tablet) {
     &--no-bg {
       height: 320px;
-      background: linear-gradient(to bottom, transparent 0px, transparent 90px, $color-header 90px, $color-header 100%);
+      background: linear-gradient(to bottom, white 0px, white 90px, $color-header 90px, $color-header 100%);
       background-position: 50% 0;
 
       .page-header__title {
@@ -108,6 +126,7 @@
   top: 90px;
 
   display: none;
+  box-sizing: border-box;
 
   @media (min-width: $screen-tablet) {
     position: static;
@@ -117,6 +136,7 @@
     flex-grow: 1;
     margin: 0;
     padding: 14px 50px 14px 0;
+    min-height: 90px;
 
     border-top: 1px solid $color-border;
   }

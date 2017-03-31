@@ -1,20 +1,19 @@
 .copyright__text {
-  margin-right: 20px;
-  vertical-align: top;
+  margin-right: 22px;
 
   font-size: ($font-size-x-large + 1px);
   font-weight: bold;
 
   @include select-text;
-
-  @media (min-width: $screen-desktop) {
-    margin-right: 17px;
-  }
 }
 
 .copyright__link {
-  display: inline-block;
-  vertical-align: middle;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 185px;
+  margin: 0 auto;
+
   text-decoration: none;
 
   &:hover .copyright__img,
@@ -29,5 +28,6 @@
 
 .copyright__img {
   display: block;
+  margin-right: -5px;
   fill: $color-logo-academy;
 }

@@ -2,7 +2,7 @@
   height: 460px;
   @include ignore-page-padding;
 
-  background: url('./../../img/map-mobile@1x.jpg');
+  background: #F4E9D2 url('./../../img/map-mobile@1x.jpg');
   background-size: cover;
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
