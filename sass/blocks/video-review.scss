@@ -130,7 +130,7 @@
   background: url('./../../img/video-mobile@1x.jpg') no-repeat;
   background-size: cover;
 
-  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  @media (min-width: $screen-mobile) AND (min-resolution: 144dpi), (min-width: $screen-mobile) AND (min-resolution: 1.5dppx) {
     background-image: url('./../../img/video-mobile@2x.jpg');
   }
 

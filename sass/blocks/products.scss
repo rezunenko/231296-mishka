@@ -7,9 +7,9 @@
 
   @media (min-width: $screen-desktop) {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding-top: 130px;
-    margin-bottom: 56px;
   }
 }
 

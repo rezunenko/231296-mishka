@@ -6,8 +6,8 @@
   var overlay = document.querySelector('.overlay');
   var list_btn_buy = document.querySelectorAll('.product__show-popup');
   var map = document.getElementById('map');
-  var list__field = document.querySelectorAll('.order-form__field');
-  var list__textarea = document.querySelectorAll('.order-form__textarea');
+  var list_field = document.querySelectorAll('.order-form__field');
+  var list_textarea = document.querySelectorAll('.order-form__textarea');
 
   page_header.classList.remove('page-header--no-js');
   main_nav.classList.remove('main-nav--no-js');
@@ -81,24 +81,24 @@
       });
     }
 
-    list_btn_buy.forEach(function(item){
-      item.addEventListener('click', function() {
+    for(var i=0; i< list_btn_buy.length; i++) {
+      list_btn_buy[i].addEventListener('click', function() {
         toogleAttribute(overlay, 'hidden');
         event.preventDefault();
-      });
-    });
+      })
+    }
 
-    list__field.forEach(function(item) {
-      item.addEventListener('blur', function(event) {
-        validateInput(event, item)
+    for (var i = 0; i < list_field.length; i++) {
+      list_field[i].addEventListener('blur', function(event) {
+        validateInput(event, list_field[i])
       });
-    });
+    }
 
-    list__textarea.forEach(function(item) {
-      item.addEventListener('blur', function(event) {
-        validateInput(event, item)
+    for (var i = 0; i < list_textarea.length; i++) {
+      list_textarea[i].addEventListener('blur', function(event) {
+        validateInput(event, list_textarea[i])
       });
-    });
+    }
 
     if(map) {
       ymaps.ready(init);
