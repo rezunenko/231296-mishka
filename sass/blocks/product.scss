@@ -23,7 +23,7 @@
   }
 
   @media (min-width: $screen-desktop) {
-    margin: 0;
+    margin: 0 0 56px;
     padding-bottom: 95px;
 
     &--card {
@@ -151,6 +151,7 @@
 .product__preview {
   display: block;
   margin: 0 auto;
+  max-width: 100%;
 
   @media (min-width: $screen-tablet){
     width: 335px;
