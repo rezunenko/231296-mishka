@@ -143,7 +143,7 @@
     }
 
     &--large {
-      padding-right: 175px;
+      flex-basis: 710px;
     }
   }
 }
@@ -164,7 +164,7 @@
   &::after {
     display: block;
     flex-grow: 1;
-    margin: auto 0 auto 22px;
+    margin: 0px 0 10px 25px;
     flex: 1;
 
     content: '';
@@ -185,10 +185,15 @@
   }
 
   @media (min-width: $screen-desktop) {
-    margin: 0 auto;
+    margin: 0 61px;
 
     &--label {
-      margin: 25px auto auto 63px;
+      flex-basis: 100px;
+      margin: 25px 0px auto 62px;
+    }
+
+    &--large {
+      margin-top: 0;
     }
   }
 }
@@ -349,11 +354,11 @@
   @media (min-width: $screen-tablet) {
     width: auto;
     box-sizing: border-box;
-    flex-basis: 74%;
+    flex-basis: 70%;
     height: 44px;
     margin-top: -8px;
     margin-bottom: 40px;
-    padding-left: 16px;
+    padding-left: 20px;
     padding-bottom: 9px;
 
     flex-grow: 1;
@@ -373,7 +378,7 @@
   }
 
   @media (min-width: $screen-desktop) {
-    flex-basis: 80%;
+    flex-basis: 78%;
 
     &::-webkit-input-placeholder {
       letter-spacing: 0.5px;
@@ -416,7 +421,7 @@
   border: 2px solid $color-field;
   outline: none;
 
-  font-size: $font-size-large;
+  font-size: $font-size-large+3;
 
   &:focus,
   &:hover {
@@ -443,7 +448,7 @@
     justify-content: space-between;
     max-width: 700px;
     margin: 0 auto;
-    padding: 40px 50px 50px;
+    padding: 40px 55px 50px 50px
   }
 
   @media (min-width: $screen-desktop) {
