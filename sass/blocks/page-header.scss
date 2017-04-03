@@ -5,6 +5,7 @@
                     url('./../../img/hero-mobile@1x.jpg');
   background-repeat: no-repeat;
   background-position: 0 0, 50% 60px;
+  background-size: 580px;
 
   &--no-bg {
     background: linear-gradient(to bottom, transparent 0px, transparent 80px, $color-header 80px, $color-header 100%);
@@ -58,6 +59,8 @@
   }
 
   @media (min-width: $screen-tablet) {
+    background-size: 1150px 740px;
+
     &--no-bg {
       height: 320px;
       background: linear-gradient(to bottom, white 0px, white 90px, $color-header 90px, $color-header 100%);
@@ -74,6 +77,8 @@
   }
 
   @media (min-width: $screen-desktop) {
+    background-size: contain;
+
     &:after {
       background-size: auto 34px;
     }
