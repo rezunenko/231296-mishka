@@ -34,13 +34,13 @@
   var myMap;
   function init() {
     myMap = new ymaps.Map('map', {
-      center: [59.936365, 30.321668],
+      center: [59.9367, 30.3215],
       zoom: 16,
       controls: []
     });
 
     myPlacemark = new ymaps.Placemark(
-      [59.936365, 30.321668],
+      [59.93652, 30.32172],
       {
         hintContent: 'Мишка',
         balloonContent: 'Интернет-магазин вязанных товаров'
@@ -48,8 +48,8 @@
       {
         iconLayout: 'default#image',
         iconImageHref: 'img/icon-map-pin.svg',
-        iconImageSize: [80, 80],
-        iconImageOffset: [-40, -70]
+        iconImageSize: [67, 100],
+        iconImageOffset: [-40, -80]
       }
     );
 
