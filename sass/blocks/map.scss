@@ -1,5 +1,5 @@
 .map {
-  height: 460px;
+  min-height: 460px;
   @include ignore-page-padding;
 
   background: #F4E9D2 url('./../../img/map-mobile@1x.jpg');
