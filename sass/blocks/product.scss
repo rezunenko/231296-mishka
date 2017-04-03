@@ -3,6 +3,8 @@
   margin: 0 auto;
   overflow: hidden;
 
+  @include container-without-padding;
+
   &--card {
     margin-bottom: 30px;
 
@@ -95,7 +97,7 @@
 
 .product__icon {
   display: inline;
-  vertical-align: middle;
+  vertical-align: top;
   cursor: pointer;
   fill: #b2b2b2;
 
@@ -221,11 +223,12 @@
   &--wide {
     position: relative;
     display: flex;
-    justify-content: space-between;
     max-width: 200px;
     padding: 25px 0 28px;
     margin: 0 auto;
     text-align: left;
+
+    border-top: 1px solid #ececec;
 
     font-size: $font-size-regular;
   }
@@ -239,7 +242,6 @@
       max-width: 100%;
       margin: auto 30px 0 115px;
       padding: 23px 0 25px;
-      border-top: 1px solid #ececec;
 
       font-size: $font-size-large;
     }
@@ -268,6 +270,8 @@
   background: none;
   width: 24px;
   height: 24px;
+  margin-right: -5px;
+  margin-left: auto;
   padding: 0;
 
   @media  (min-width: $screen-desktop) {
