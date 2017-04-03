@@ -195,7 +195,7 @@
     <main class="page-content">
 
       <div class="container  container--with-separator">
-        <article class="product">
+        <article class="product  container">
           <header class="product__header">
             <h2 class="product__title  product__title--top">Вязаные корзинки</h2>
             <p class="product__meta">Товар недели</p>
@@ -316,65 +316,68 @@
 
       <div class="container">
         <section class="contacts">
-        <div class="contacts__info">
-          <h2 class="contacts__title">Контакты</h2>
-          <ul class="contacts__list">
-            <li class="contacts__item">
-              <span class="contacts__item-title">e-mail:</span>
-              <span class="contacts__value">
-                <a class="contacts__link" href="mailto:info@mimimishkashop.ru" title="Написать e-mail">info@mimimishkashop.ru</a>
-              </span>
-            </li>
-            <li class="contacts__item">
-              <span class="contacts__item-title">адрес:</span>
-              <span class="contacts__value">г. Санкт-Петербург,<br/> ул. Большая Конюшенная,<br/> д. 19/8, офис 101</span>
-            </li>
-          </ul>
-        </div>
+          <div class="contacts__info">
+            <h2 class="contacts__title">Контакты</h2>
+            <ul class="contacts__list">
+              <li class="contacts__item">
+                <span class="contacts__item-title">e-mail:</span>
+                <span class="contacts__value">
+                  <a class="contacts__link" href="mailto:info@mimimishkashop.ru" title="Написать e-mail">info@mimimishkashop.ru</a>
+                </span>
+              </li>
+              <li class="contacts__item">
+                <span class="contacts__item-title">адрес:</span>
+                <span class="contacts__value">г. Санкт-Петербург,<br/> ул. Большая Конюшенная,<br/> д. 19/8, офис 101</span>
+              </li>
+            </ul>
+          </div>
 
-        <div id="map" class="contacts__map  map"></div>
+          <div id="map" class="contacts__map  map"></div>
 
-        <a class="contacts__feedback-btn  btn" href="#" title="Написать нам">Напишите нам</a>
-      </section>
+          <a class="contacts__feedback-btn  btn" href="#" title="Написать нам">Напишите нам</a>
+        </section>
       </div>
     </main>
 
     <footer class="page-footer">
-      <svg height="45px" width="105px" class="page-footer__logo">
-        <use xlink:href="#logo-footer"/>
-      </svg>
 
-      <ul class="social-links  page-footer__social-links">
-        <li class="social-links__item">
-          <a class="social-links__link  social-links__link--inst" href="#">Instagram
-            <svg height="22px" width="22px">
-              <use xlink:href="#icon-insta"/>
-            </svg>
-          </a>
-        </li>
-        <li class="social-links__item">
-          <a class="social-links__link  social-links__link--fb" href="#">Facebook
-            <svg height="28px" width="28px">
-              <use xlink:href="#icon-fb"/>
-            </svg>
-          </a>
-        </li>
-        <li class="social-links__item">
-          <a class="social-links__link  social-links__link--tw" href="#">Twitter
-            <svg height="22px" width="22px">
-              <use xlink:href="#icon-twitter"/>
-            </svg>
-          </a>
-        </li>
-      </ul>
+      <div class="container  page-footer__inner">
+        <svg height="45px" width="105px" class="page-footer__logo">
+          <use xlink:href="#logo-footer"/>
+        </svg>
 
-      <div class="copyright  page-footer__copyright">
-        <a class="copyright__link" href="#">
-          <span class="copyright__text">Разработано</span>
-          <svg height="40px" width="40px" class="copyright__img">
-            <use xlink:href="#htmlacademy"/>
-          </svg>
-        </a>
+        <ul class="social-links  page-footer__social-links">
+          <li class="social-links__item">
+            <a class="social-links__link  social-links__link--inst" href="#">Instagram
+              <svg height="22px" width="22px">
+                <use xlink:href="#icon-insta"/>
+              </svg>
+            </a>
+          </li>
+          <li class="social-links__item">
+            <a class="social-links__link  social-links__link--fb" href="#">Facebook
+              <svg height="28px" width="28px">
+                <use xlink:href="#icon-fb"/>
+              </svg>
+            </a>
+          </li>
+          <li class="social-links__item">
+            <a class="social-links__link  social-links__link--tw" href="#">Twitter
+              <svg height="22px" width="22px">
+                <use xlink:href="#icon-twitter"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+
+        <div class="copyright  page-footer__copyright">
+          <a class="copyright__link" href="#">
+            <span class="copyright__text">Разработано</span>
+            <svg height="40px" width="40px" class="copyright__img">
+              <use xlink:href="#htmlacademy"/>
+            </svg>
+          </a>
+        </div>
       </div>
     </footer>
 

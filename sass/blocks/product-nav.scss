@@ -1,8 +1,8 @@
 .product-nav {
   margin-top: 47px;
 
-  @include basic-padding;
-}
+  @include container;
+  }
 
 .product-nav__link {
   position: relative;

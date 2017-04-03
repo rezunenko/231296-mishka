@@ -2,6 +2,7 @@
   @include container;
 
   &--with-separator {
+    max-width: 100%;
     background: transparent url('./../../img/bg-zigzag-line.svg') repeat-x bottom;
     background-size: auto 6px;
     padding-bottom: 43px;

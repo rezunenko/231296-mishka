@@ -3,6 +3,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   height: 80px;
+  @include container-without-padding;
 
   overflow: hidden;
 
@@ -44,7 +45,6 @@
   @media (min-width: $screen-tablet) {
     height: 145px;
     justify-content: space-around;
-    margin: 0;
 
     background-color: transparent;
 
@@ -195,8 +195,6 @@
     &--promotions {
       flex-basis: 490px;
       order: 2;
-
-      border-top: 1px solid $color-border;
 
       font-size: $font-size-regular;
 

@@ -5,6 +5,37 @@
     <title>Каталог товаров</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css"/>
+    <style>
+      HTML {
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        /* По умолчанию мобильный макет */
+        background-image: url("img/dev/mishka-catalog-mobile.jpg");
+      }
+
+      /* Планшет */
+      @media ( min-width: 768px ) {
+        HTML {
+          /* Планшетный макет */
+          background-image: url("img/dev/mishka-catalog-tablet.jpg");
+        }
+      }
+
+      /* Десктоп */
+      @media ( min-width: 1050px ) {
+        HTML {
+          /* Десктопный макет */
+          background-image: url("img/dev/mishka-catalog-desktop.jpg");
+        }
+      }
+
+      BODY {
+        -opacity: .5;
+      }
+
+    </style>
+    <link rel="stylesheet" href="css/pixel-glass.css">
+    <script src="js/pixel-glass.js"></script>
   </head>
   <body class="page">
     <svg style="display: none">
@@ -279,43 +310,46 @@
     </main>
 
     <footer class="page-footer">
-      <a href="index.html" title="Переход на главную">
-        <svg height="45px" width="105px" class="page-footer__logo">
-          <use xlink:href="#logo-footer"/>
-        </svg>
-      </a>
 
-      <ul class="social-links  page-footer__social-links">
-        <li class="social-links__item">
-          <a class="social-links__link  social-links__link--inst" href="#">Instagram
-            <svg height="22px" width="22px">
-              <use xlink:href="#icon-insta"/>
-            </svg>
-          </a>
-        </li>
-        <li class="social-links__item">
-          <a class="social-links__link  social-links__link--fb" href="#">Facebook
-            <svg height="28px" width="28px">
-              <use xlink:href="#icon-fb"/>
-            </svg>
-          </a>
-        </li>
-        <li class="social-links__item">
-          <a class="social-links__link  social-links__link--tw" href="#">Twitter
-            <svg height="22px" width="22px">
-              <use xlink:href="#icon-twitter"/>
-            </svg>
-          </a>
-        </li>
-      </ul>
-
-      <div class="copyright  page-footer__copyright">
-        <a class="copyright__link" href="#">
-          <span class="copyright__text">Разработано</span>
-          <svg height="40px" width="40px" class="copyright__img">
-            <use xlink:href="#htmlacademy"/>
+      <div class="container  page-footer__inner">
+        <a href="index.html" title="Переход на главную">
+          <svg height="45px" width="105px" class="page-footer__logo">
+            <use xlink:href="#logo-footer"/>
           </svg>
         </a>
+
+        <ul class="social-links  page-footer__social-links">
+          <li class="social-links__item">
+            <a class="social-links__link  social-links__link--inst" href="#">Instagram
+              <svg height="22px" width="22px">
+                <use xlink:href="#icon-insta"/>
+              </svg>
+            </a>
+          </li>
+          <li class="social-links__item">
+            <a class="social-links__link  social-links__link--fb" href="#">Facebook
+              <svg height="28px" width="28px">
+                <use xlink:href="#icon-fb"/>
+              </svg>
+            </a>
+          </li>
+          <li class="social-links__item">
+            <a class="social-links__link  social-links__link--tw" href="#">Twitter
+              <svg height="22px" width="22px">
+                <use xlink:href="#icon-twitter"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+
+        <div class="copyright  page-footer__copyright">
+          <a class="copyright__link" href="#">
+            <span class="copyright__text">Разработано</span>
+            <svg height="40px" width="40px" class="copyright__img">
+              <use xlink:href="#htmlacademy"/>
+            </svg>
+          </a>
+        </div>
       </div>
     </footer>
 
