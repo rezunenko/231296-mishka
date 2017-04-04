@@ -10,6 +10,7 @@
   }
 
   @media (min-width: $screen-desktop) {
+    padding-top: 6px;
     padding-bottom: 75px;
   }
 }
@@ -26,7 +27,7 @@
   }
 
   @media (min-width: $screen-desktop) {
-    margin-top: 38px;
+    margin-top: 0;
     margin-bottom: 0px;
     font-size: $font-size-desktop;
     line-height: $line-height-desktop;

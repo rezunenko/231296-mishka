@@ -1,7 +1,10 @@
-
 .page-footer {
-  padding: 25px 0;
   background-color: $color-footer;
+}
+
+
+.page-footer__inner {
+  padding: 25px 0;
   text-align: center;
 
   @media (min-width: $screen-tablet) {

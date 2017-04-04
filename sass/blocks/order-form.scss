@@ -421,7 +421,7 @@
   border: 2px solid $color-field;
   outline: none;
 
-  font-size: $font-size-large+3;
+  font-size: $font-size-large;
 
   &:focus,
   &:hover {
@@ -433,6 +433,7 @@
   }
 
   @media (min-width: $screen-tablet) {
+    font-size: $font-size-large+3;
     margin-top: 8px;
 
     &::-webkit-input-placeholder {
@@ -452,6 +453,7 @@
   }
 
   @media (min-width: $screen-desktop) {
+    padding-top: 35px;
     padding-bottom: 0px;
   }
 }

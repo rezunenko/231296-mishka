@@ -1,5 +1,5 @@
 .map {
-  height: 460px;
+  min-height: 460px;
   @include ignore-page-padding;
 
   background: #F4E9D2 url('./../../img/map-mobile@1x.jpg');
@@ -24,5 +24,4 @@
   @media (min-width: $screen-desktop) and (min-resolution: 144dpi), (min-width: $screen-desktop) and (min-resolution: 1.5dppx) {
     background-image: url('./../../img/map-desktop@2x.jpg');
   }
-
 }

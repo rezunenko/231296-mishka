@@ -25,37 +25,19 @@
 
   font-size: 0;
 
-  &::after {
-    content: '';
 
-    display: block;
-    flex-basis: 100%;
-    height: 50px;
-
-    background: black;
-  }
-
-  &:hover, &:focus {
-    &::after {
-      background: $hover-link;
+  &:hover,
+  &:focus {
+    .pagination__link-icon {
+      fill: rgba(0, 0, 0, 0.6);
     }
   }
 
-  &:active {
-    &::after {
-      background: $active-link;
-    }
+  &:active .pagination__link-icon {
+    fill: rgba(0, 0, 0, 0.3);
   }
+}
 
-  &--prev {
-    &::after {
-      mask: url('./../../img/icon-left-arrow.svg') no-repeat 50% 50%;
-    }
-  }
-
-  &--next {
-    &::after {
-      mask: url('./../../img/icon-right-arrow.svg') no-repeat 50% 50%;
-    }
-  }
+.pagination__link-icon {
+  margin: auto;
 }
