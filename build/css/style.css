@@ -416,29 +416,31 @@ template {
 .container {
   max-width: 1280px;
   min-width: 260px;
+  margin-left: auto;
+  margin-right: auto;
   margin: 0 auto;
   padding: 0 30px; }
   .container--with-separator {
+    max-width: 100%;
     background: transparent url("./../../img/bg-zigzag-line.svg") repeat-x bottom;
     background-size: auto 6px;
     padding-bottom: 43px;
     margin-bottom: 28px; }
 
 .page {
-  max-width: 1150px;
-  margin: 0 auto;
   font-family: "Open Sans", "Tahoma", sans-serif;
   font-size: 15px;
   line-height: 24px; }
 
 .page-header {
   position: relative;
-  background-color: #f1f1f1;
-  background-image: linear-gradient(white 0px, white 80px, transparent 80px, transparent 100%), url("./../../img/hero-mobile@1x.jpg");
+  background-color: #fafafa;
+  background-image: linear-gradient(white 0px, white 79px, #ececec 79px, #ececec 80px, transparent 80px, transparent 100%), url("./../../img/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: 0 0, 50% 60px; }
+  background-position: 0 0, 50% 60px;
+  background-size: auto, 580px; }
   .page-header--no-bg {
-    background: linear-gradient(to bottom, transparent 0px, transparent 80px, #f1f1f1 80px, #f1f1f1 100%); }
+    background: linear-gradient(to bottom, transparent 0px, transparent 79px, #ececec 79px, #ececec 80px, #fafafa 80px, #fafafa 100%); }
     .page-header--no-bg .page-header__title {
       padding-bottom: 75px; }
 
@@ -474,7 +476,11 @@ template {
       flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  height: 81px;
+  height: 80px;
+  max-width: 1280px;
+  min-width: 260px;
+  margin-left: auto;
+  margin-right: auto;
   overflow: hidden;
   text-align: right; }
   .main-nav--open {
@@ -572,6 +578,10 @@ template {
 
 .product-nav {
   margin-top: 47px;
+  max-width: 1280px;
+  min-width: 260px;
+  margin-left: auto;
+  margin-right: auto;
   margin: 0 auto;
   padding: 0 30px; }
 
@@ -594,7 +604,7 @@ template {
     background-color: #56c3b2; }
   .product-nav__link:hover, .product-nav__link:focus {
     margin-top: -5px;
-    min-height: 107px; }
+    min-height: 108px; }
     .product-nav__link:hover .product-nav__icon, .product-nav__link:focus .product-nav__icon {
       fill: rgba(45, 79, 74, 0.7); }
   .product-nav__link:active .product-nav__link-text {
@@ -660,7 +670,11 @@ template {
 .product {
   position: relative;
   margin: 0 auto;
-  overflow: hidden; }
+  overflow: hidden;
+  max-width: 1280px;
+  min-width: 260px;
+  margin-left: auto;
+  margin-right: auto; }
   .product--card {
     margin-bottom: 30px; }
     .product--card:hover, .product--card:focus {
@@ -684,7 +698,7 @@ template {
 
 .product__icon {
   display: inline;
-  vertical-align: middle;
+  vertical-align: top;
   cursor: pointer;
   fill: #b2b2b2; }
   .product__icon:hover, .product__icon:focus {
@@ -717,12 +731,11 @@ template {
     position: relative;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: justify;
-        justify-content: space-between;
     max-width: 200px;
     padding: 25px 0 28px;
     margin: 0 auto;
     text-align: left;
+    border-top: 1px solid #ececec;
     font-size: 15px; }
 
 .product__btn-buy {
@@ -730,6 +743,8 @@ template {
   background: none;
   width: 24px;
   height: 24px;
+  margin-right: -5px;
+  margin-left: auto;
   padding: 0; }
 
 .product__features {
@@ -869,23 +884,13 @@ template {
   background: transparent;
   border: none;
   font-size: 0; }
-  .pagination__link::after {
-    content: '';
-    display: block;
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-    height: 50px;
-    background: black; }
-  .pagination__link:hover::after, .pagination__link:focus::after {
-    background: #666666; }
-  .pagination__link:active::after {
-    background: #b2b2b2; }
-  .pagination__link--prev::after {
-    -webkit-mask: url("./../../img/icon-left-arrow.svg") no-repeat 50% 50%;
-            mask: url("./../../img/icon-left-arrow.svg") no-repeat 50% 50%; }
-  .pagination__link--next::after {
-    -webkit-mask: url("./../../img/icon-right-arrow.svg") no-repeat 50% 50%;
-            mask: url("./../../img/icon-right-arrow.svg") no-repeat 50% 50%; }
+  .pagination__link:hover .pagination__link-icon, .pagination__link:focus .pagination__link-icon {
+    fill: rgba(0, 0, 0, 0.6); }
+  .pagination__link:active .pagination__link-icon {
+    fill: rgba(0, 0, 0, 0.3); }
+
+.pagination__link-icon {
+  margin: auto; }
 
 .reviews {
   position: relative;
@@ -911,7 +916,7 @@ template {
   margin-bottom: 38px; }
 
 .map {
-  height: 460px;
+  min-height: 460px;
   margin-left: -30px;
   margin-right: -30px;
   background: #F4E9D2 url("./../../img/map-mobile@1x.jpg");
@@ -995,8 +1000,10 @@ template {
       fill: rgba(70, 193, 174, 0.3); }
 
 .page-footer {
+  background-color: #fafafa; }
+
+.page-footer__inner {
   padding: 25px 0;
-  background-color: #f1f1f1;
   text-align: center; }
 
 .page-footer__copyright {
@@ -1113,7 +1120,7 @@ template {
   position: relative;
   display: -ms-flexbox;
   display: flex;
-  height: 463px;
+  min-height: 463px;
   -ms-flex-direction: column;
       flex-direction: column;
   margin-bottom: 60px;
@@ -1129,7 +1136,7 @@ template {
   display: block;
   max-width: 150px;
   max-height: 200px;
-  margin: 13px auto 22px;
+  margin: 11px auto 22px;
   padding-left: 58px;
   font-size: 17px;
   line-height: 24px; }
@@ -1161,6 +1168,7 @@ template {
   left: 50%;
   width: 100px;
   height: 76px;
+  padding: 0;
   transform: translate(-50%, -50%);
   border: none;
   background: url("./../../img/icon-play.svg") no-repeat 50% 50%;
@@ -1176,7 +1184,7 @@ template {
   display: block;
   width: 100%;
   height: 100%;
-  min-width: 300px; }
+  min-height: 151px; }
 
 .order-form {
   margin-left: -30px;
@@ -1320,7 +1328,7 @@ template {
   padding: 15px;
   border: 2px solid #000;
   outline: none;
-  font-size: 20px; }
+  font-size: 17px; }
   .order-form__textarea:focus, .order-form__textarea:hover {
     border-color: #56c3b2; }
   .order-form__textarea--content-exists {
@@ -1333,9 +1341,9 @@ template {
 
 @media (min-width: 320px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 320px) and (min-resolution: 144dpi), (min-width: 320px) and (min-resolution: 1.5dppx) {
   .page-header {
-    background-image: linear-gradient(white 0px, white 80px, transparent 80px, transparent 100%), url("./../../img/hero-mobile@2x.jpg"); }
+    background-image: linear-gradient(white 0px, white 79px, #ececec 79px, #ececec 80px, transparent 80px, transparent 100%), url("./../../img/hero-mobile@2x.jpg"); }
   .page-header--no-bg {
-    background: linear-gradient(to bottom, transparent 0px, transparent 80px, #f1f1f1 80px, #f1f1f1 100%); }
+    background: linear-gradient(to bottom, transparent 0px, transparent 79px, #ececec 79px, #ececec 80px, #fafafa 80px, #fafafa 100%); }
   .video-review__video-wrapper {
     background-image: url("./../../img/video-mobile@2x.jpg"); } }
 
@@ -1347,14 +1355,14 @@ template {
     padding-bottom: 68px;
     margin-bottom: 0px; }
   .page-header {
-    height: 820px;
-    background-image: linear-gradient(white 0px, white 92px, transparent 92px, transparent 100%), url("./../../img/hero-desktop@1x.jpg");
+    min-height: 820px;
+    background-image: linear-gradient(white 0px, white 89px, #ececec 89px, #ececec 90px, transparent 90px, transparent 100%), url("./../../img/hero-desktop@1x.jpg");
     background-position: 0 0px, 50% 90px; }
   .page-header--no-bg {
-    background: linear-gradient(to bottom, transparent 0px, transparent 92px, #f1f1f1 92px, #f1f1f1 100%); }
+    background: linear-gradient(to bottom, transparent 0px, transparent 89px, #ececec 89px, #ececec 90px, #fafafa 90px, #fafafa 100%); }
   .page-header:after {
     position: absolute;
-    bottom: -30px;
+    bottom: -14px;
     left: 0;
     right: 0;
     z-index: 10;
@@ -1362,9 +1370,11 @@ template {
     background: transparent url("./../../img/bg-zigzag-fill.svg") repeat-x bottom;
     background-size: auto 23px;
     content: ''; }
+  .page-header {
+    background-size: 1150px 740px; }
   .page-header--no-bg {
-    height: 320px;
-    background: linear-gradient(to bottom, white 0px, white 90px, #f1f1f1 90px, #f1f1f1 100%);
+    min-height: 320px;
+    background: linear-gradient(to bottom, white 0px, white 89px, #ececec 89px, #ececec 90px, #fafafa 90px, #fafafa 100%);
     background-position: 50% 0; }
   .page-header--no-bg .page-header__title {
     padding-top: 37px; }
@@ -1387,8 +1397,7 @@ template {
     flex-grow: 1;
     margin: 0;
     padding: 14px 50px 14px 0;
-    min-height: 90px;
-    border-top: 1px solid #ececec; }
+    min-height: 90px; }
   .page-content {
     margin-left: auto;
     margin-right: auto; }
@@ -1396,7 +1405,6 @@ template {
     height: 145px;
     -ms-flex-pack: distribute;
     justify-content: space-around;
-    margin: 0;
     background-color: transparent; }
   .main-nav--open .main-nav__list {
     position: static; }
@@ -1420,12 +1428,13 @@ template {
     -ms-flex-order: 1;
     order: 1;
     padding-left: 15px;
-    border-top: 1px solid #ececec;
     font-size: 15px; }
   .main-nav__list--links .main-nav__link {
     padding-left: 34px;
     padding-top: 14px;
     padding-bottom: 14px; }
+  .main-nav__list--links .main-nav__link:before {
+    min-height: 90px; }
   .main-nav__list--controls {
     display: -ms-flexbox;
     display: flex;
@@ -1438,6 +1447,8 @@ template {
     padding-right: 50px; }
   .main-nav__list--controls .main-nav__link {
     padding: 0; }
+  .main-nav__list--controls .main-nav__link:before {
+    min-height: 90px; }
   .main-nav__list--controls .main-nav__link:first-of-type {
     border-left: 1px solid #ececec; }
   .main-nav__item {
@@ -1537,7 +1548,7 @@ template {
     align-items: center;
     -ms-flex-line-pack: center;
     align-content: center;
-    margin-top: 65px;
+    margin-top: 50px;
     padding-right: 12px; }
   .product__cost-wrapper {
     margin-top: 56px;
@@ -1547,7 +1558,6 @@ template {
     max-width: 100%;
     margin: auto 30px 0 115px;
     padding: 23px 0 25px;
-    border-top: 1px solid #ececec;
     font-size: 17px; }
   .product__cost-wrapper::before {
     margin-top: -15px; }
@@ -1683,7 +1693,7 @@ template {
     margin-top: 50px;
     margin-bottom: 60px;
     max-width: 230px; }
-  .page-footer {
+  .page-footer__inner {
     display: -ms-flexbox;
     display: flex;
     height: 145px;
@@ -1703,7 +1713,7 @@ template {
   .products {
     padding-top: 72px; }
   .video-review {
-    height: 693px;
+    min-height: 693px;
     padding: 0 0 45px;
     margin-bottom: 62px; }
   .video-review__title {
@@ -1730,7 +1740,7 @@ template {
     order: 1; }
   .video-review__video-wrapper {
     width: 100%;
-    height: 450px;
+    min-height: 450px;
     margin: 0;
     -ms-flex-order: 0;
     order: 0;
@@ -1854,6 +1864,7 @@ template {
   .order-form__field-icon {
     right: 22px; }
   .order-form__textarea {
+    font-size: 20px;
     margin-top: 8px; }
   .order-form__textarea::-webkit-input-placeholder {
     font-size: 20px; }
@@ -1873,9 +1884,9 @@ template {
 
 @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 768px) and (min-resolution: 144dpi), (min-width: 768px) and (min-resolution: 1.5dppx) {
   .page-header {
-    background-image: linear-gradient(white 0px, white 92px, transparent 92px, transparent 100%), url("./../../img/hero-desktop@2x.jpg"); }
+    background-image: linear-gradient(white 0px, white 89px, #ececec 89px, #ececec 90px, transparent 90px, transparent 100%), url("./../../img/hero-desktop@2x.jpg"); }
   .page-header--no-bg {
-    background-image: linear-gradient(to bottom, transparent 0px, transparent 92px, #f1f1f1 92px, #f1f1f1 100%); }
+    background-image: linear-gradient(to bottom, transparent 0px, transparent 89px, #ececec 89px, #ececec 90px, #fafafa 90px, #fafafa 100%); }
   .reviews {
     background-image: url("./../../img/review@2x.jpg"); }
   .map {
@@ -1898,10 +1909,12 @@ template {
   .container--with-separator {
     background-size: auto 24px;
     padding-bottom: 0; }
+  .page-header {
+    background-size: contain; }
   .page-header:after {
     background-size: auto 34px; }
   .page-header--no-bg {
-    height: 340px; }
+    min-height: 340px; }
   .page-header--no-bg:after {
     bottom: -20px; }
   .page-header__title {
@@ -1949,7 +1962,6 @@ template {
     flex-basis: 490px;
     -ms-flex-order: 2;
     order: 2;
-    border-top: 1px solid #ececec;
     font-size: 15px; }
   .main-nav__list--promotions .main-nav__link {
     padding-top: 14px;
@@ -2002,7 +2014,7 @@ template {
     -ms-flex-pack: end;
     justify-content: flex-end;
     z-index: 5;
-    margin-top: 137px; }
+    margin-top: 120px; }
   .product__cost-wrapper {
     margin-top: 110px;
     margin-left: 8px; }
@@ -2024,9 +2036,10 @@ template {
   .product__content {
     padding-right: 585px; }
   .company-features {
+    padding-top: 6px;
     padding-bottom: 75px; }
   .company-features__title {
-    margin-top: 38px;
+    margin-top: 0;
     margin-bottom: 0px;
     font-size: 53px;
     line-height: 56px; }
@@ -2073,7 +2086,7 @@ template {
     right: 50px;
     width: 525px;
     height: 455px; }
-  .page-footer {
+  .page-footer__inner {
     margin-top: 45px; }
   .products {
     display: -ms-flexbox;
@@ -2084,7 +2097,7 @@ template {
     justify-content: space-between;
     padding-top: 130px; }
   .video-review {
-    height: 410px;
+    min-height: 410px;
     padding-left: 705px;
     margin-bottom: 105px; }
   .video-review__title {
@@ -2106,8 +2119,11 @@ template {
     bottom: 0;
     left: 0;
     width: 680px;
-    height: 100%;
+    min-height: 100%;
     background-image: url("./../../img/video-desktop@1x.jpg"); }
+  .video-review__btn-play {
+    left: 51%;
+    transform: translate(-50%, -50%); }
   .order-form__text {
     padding-top: 97px; }
   .order-form__text--comment {
@@ -2144,6 +2160,7 @@ template {
   .order-form__field-icon {
     right: 3px; }
   .order-form__footer {
+    padding-top: 35px;
     padding-bottom: 0px; } }
 
 @media (min-width: 1150px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1150px) and (min-resolution: 144dpi), (min-width: 1150px) and (min-resolution: 1.5dppx) {
